@@ -13,3 +13,5 @@ def unit_converter():
     output_unit = input("what are the output units? ")
     answer = how_far * distance[conversion] 
     print(f' {how_far} {conversion} is {answer} {output_unit}')
+
+unit_converter()
