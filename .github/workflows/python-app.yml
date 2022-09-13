@@ -3,11 +3,11 @@
 
 name: Python application
 
-on:
-  push:
-    paths:
-    - '**.py'
-
+# on:
+#   push:
+#     paths:
+#     - '**.py'
+on: push
 jobs:
   build:
 
