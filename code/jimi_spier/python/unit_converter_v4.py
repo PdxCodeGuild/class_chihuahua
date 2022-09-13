@@ -15,11 +15,12 @@ print("Here are your options: \n") # Options
 for key in choices: #Enumerate units on screen vertically
     print(key)
 print() # extra line for readability
+print("Type your choice exactly as it appears or quit, to quit.")
 
 user_conv_choice_one = " " #initialize variable to start while loop
 user_conv_choice_two = " " #initialize variable to start while loop
 
-while user_conv_choice_one or user_conv_choice_two != "quit": # keep looping until q is entered
+while user_conv_choice_one != "quit": # keep looping until quit is entered
     user_conv_choice_one = input("Enter first unit to convert: ")#grabs first user input for units to convert
     user_conv_choice_two = input(f"What unit do you want to convert into {user_conv_choice_one}: ") #grabs second user input for units to convert
     user_distance = input("what is the distance:? ") #grabs user input for distance to convert

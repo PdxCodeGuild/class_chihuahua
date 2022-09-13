@@ -65,6 +65,9 @@ def conversion_math(unit_one, unit_two, distance):
     elif unit_one ==  "ft": #decides if feet and if entered correctly
        total_conv = converstion_dict_feet[unit_two] * usr_distance #grabs data from feet dict and performs math
        print(f"{distance} {choice_dict[unit_two]} converted into feet is: {total_conv} \n") # prints to console user data with choice spelled out
+    
+    elif unit_one == "quit": #fixes "Invalid Entry error when trying to quit"
+        print() #prints space for readability 
 
     else:
         print("Invalid entry") #if entry is not as prescribed, spits out error message
