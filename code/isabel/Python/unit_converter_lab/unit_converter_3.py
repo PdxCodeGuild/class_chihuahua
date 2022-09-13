@@ -74,6 +74,30 @@ def unit_convert_units():
         elif data_units == "km" and convert_units == "yd":
             answer = data_flo * (1000/0.9144)
             return f"{answer} yd"
+        elif data_units == "in" and convert_units == "ft":
+            answer = data_flo * (1/12)
+            return f"{answer} ft"
+        elif data_units == "ft" and convert_units == "in":
+            answer = data_flo * 12
+            return f"{answer} in"
+        elif data_units == "in" and convert_units == "mi":
+            answer = data_flo * (0.0254/1609.34)
+            return f"{answer} mi"
+        elif data_units == "mi" and convert_units == "in":
+            answer = data_flo * (1609.34/0.0254)
+            return f"{answer} in"
+        elif data_units == "in" and convert_units == "m":
+            answer = data_flo * (0.0254)
+            return f"{answer} m"
+        elif data_units == "m" and convert_units == "in":
+            answer = data_flo * (1/0.0254)
+            return f"{answer} in"
+        elif data_units == "in" and convert_units == "km":
+            answer = data_flo * (0.0254/1000)
+            return f"{answer} km"
+        elif data_units == "km" and convert_units == "in":
+            answer = data_flo * (1000/0.0254)
+            return f"{answer} in"
 
 
 
