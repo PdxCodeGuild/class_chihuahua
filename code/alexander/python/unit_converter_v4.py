@@ -12,8 +12,12 @@ unit_input = input(f'what are the input units? ')
 
 quantity_input = int(input(f'what is the distance? '))
 
+unit_output = input(f'what are the output units? ')
+
 converting = conversions_list[unit_input]
 
-end_number = quantity_input * converting
+middle_number = quantity_input * converting
+
+end_number = middle_number * conversions_list[unit_output]
 
 print(f'{quantity_input} {unit_input} is {end_number} m')
