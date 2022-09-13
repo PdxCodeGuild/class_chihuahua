@@ -159,13 +159,10 @@ else:
 
 Python (and Javascript which will be covered later) make short-circuited evaluations with `or` and `and`. This means that for an `or` if the first argument happens to be true then it will just continue the code instead of checking the second argument. Vice-versa, for an `and` if the first argument is false the comparison will short circuit and continue the code instead of checking the other argument. This is because `True or False` wil always be `True`, and `False and True` will always be `False`. Note that written the other way, `False or True`, the first argument will return `False` but because there is an or it will need to check to see if the second argument is `True` or not before being able to evaluate whether the whole statement is `True` or `False`. The same holds true for `True and False`.
 
-This is useful if you want to check if something exists before trying to access some data on it. Here, `len(nums)` would raise an exception if `nums` was `None` and we didn't have short-circuited evaluation.
-
 ```python
-def has_elements(nums):
-    return nums is not None and len(nums) > 0
-print(has_elements(None)) # False
-print(has_elements([])) # False
+print(x) # returns an error
+True or x #returns True
+False and x #returns False
 ```
 
 
