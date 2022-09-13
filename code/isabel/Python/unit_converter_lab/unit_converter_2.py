@@ -10,16 +10,34 @@ def unit_convert_units():
 
         if data_units == 'ft' and convert_units == 'm':
             answer = data_flo * 0.3048
-            return f"{answer} + m"
+            return f"{answer} m"
+            
         elif data_units == 'ft' and convert_units == 'mi':
             answer = data_flo * (0.3048/1609.34)
-            return f"{answer} + mi"
+            return f"{answer} mi"
         elif data_units == 'ft' and convert_units == 'km':
             answer =  data_flo * (0.3048/1000)
-            return f"{answer} + km"
+            return f"{answer} km"
+        elif data_units == 'm' and convert_units == 'ft':
+            answer = data_flo / 0.3048
+            return f"{answer} ft"
+        elif data_units == 'm' and convert_units == 'mi':
+            answer = data_flo / 1609.34
+            return f"{answer} mi"
+        elif data_units == 'm' and convert_units == 'km':
+            answer = data_flo / 1000
+            return f"{answer} km"
+        elif data_units == 'km' and convert_units == 'ft':
+            answer = data_flo * (0.3048/1000)
+            return f"{answer} ft"
+        elif data_units == 'km' and convert_units == 'm':
+            answer = data_flo * 1000
+            return f"{answer} m"
+            
 
 
-unit_convert_units()
+
 print(unit_convert_units())
+
         
 
