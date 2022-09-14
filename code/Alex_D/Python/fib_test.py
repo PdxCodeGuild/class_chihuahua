@@ -1,7 +1,16 @@
-import unit_converter_1;
-from io import StringIO;
+word = "hello"
+def string_compression(word):
+    count = 0
+    new_string =''
+    for letter in range(len(word)):
+        count+=1
+        print(letter)
+        if  letter + 1 >= len(word) or word[letter] != word[letter+1]:
+            new_string+=word[letter] + str(count)
+            count = 0
+    print(new_string) 
 
-def test_unit_converter_1(monkeypatch):
-    number_inputs = StringIO('12\n')
-    monkeypatch.setattr('sys.stdin', number_inputs)
-    assert unit_converter_1.unit_converter() == "12 ft is 3.6576000000000004 m"
+
+string_compression(word)
+        
+
