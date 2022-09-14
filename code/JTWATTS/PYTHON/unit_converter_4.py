@@ -6,8 +6,6 @@ distance = {
     "mi": 1609.34,
     "m": 1,
     "km": 1000
-    # "yard": 0.9144,
-    # "inch": 0.0254
     }
 
 def unit_converter():
@@ -53,4 +51,5 @@ unit_converter()
     # trying = distance[conversion]
     # if output_unit == distance.keys() is ("ft" or "mi"):
    # answer = how_far * new_conver
-    # else:
+    # else:    # "yard": 0.9144,
+    # "inch": 0.0254
