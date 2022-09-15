@@ -1,9 +1,9 @@
 
 
 
-
+# ----------------------Function---------------------------------------- #
 def num_to_phrase(num):
-
+    # ----------------------Dictionary---------------------------------- #
     number_dict = {
         0 : "",
         1 : "one",
@@ -34,23 +34,38 @@ def num_to_phrase(num):
         80: "eighty",
         90: "ninety",
         100: "one hundred"
-    }
-    tens_digit = num // 10
-    ten_digit_isolated = tens_digit * 10
-    ones_digit = num % 10
+    } #dictionary of available keys and values
+    
+    # ----------------------Math-------------------------------------------- #
+    tens_digit = num // 10 #floor division to isolate tens position as single int
+    ten_digit_isolated = tens_digit * 10 # after getting tens position number, multiply by ten to reconstitute
+    ones_digit = num % 10 # modulus removes tens and reveals ones value
 
-    tens_word = ""
-    ones_word = ""
-    if ten_digit_isolated >= 10:
-        tens_word = number_dict[ten_digit_isolated]
-        ones_word = number_dict[ones_digit]
-    else:
-        tens_word = ""
-        ones_word = number_dict[ones_digit]
-    return (f"Your number is: {tens_word} {ones_word}")
+    tens_word = "" #initialize varible 
+    ones_word = "" #initialize varible 
+    # ----------------------Processing-------------------------------------- #
+    if num > 0 and num < 20:#if the number is between 1 and 19 return value to console
+        return number_dict[num] #load value of number_dict[num] and returns to console
+
+    if num == 100: #if the number is 100
+        return number_dict[num] #load value of number_dict[num] and returns to console
+
+    if ten_digit_isolated >= 10 and ones_digit > 0: #if the number is above ten and the ones digit is above zero, process
+        tens_word = number_dict[ten_digit_isolated] #load value of number_dict[ten_digit_isolated] into tens_word
+        ones_word = number_dict[ones_digit] #load value of number_dict[ones_digit] into ones_word
+        final_word = tens_word + " " + ones_word #return final_word after construction
+
+    elif ten_digit_isolated >=10 and ones_digit == 0:
+        tens_word = number_dict[ten_digit_isolated] #load value of number_dict[ten_digit_isolated] into tens_word
+        final_word = tens_word #return final_word after construction
+
+    else: #not 10 or above, must be in the ones spot...
+        tens_word = "" #tens_word not used. 
+        ones_word = number_dict[ones_digit] #load value of number_dict[ones_digit] into ones_word
+        final_word = ones_word #dump ones word into final_word for return
+    return final_word #return final_word after construction
 
        
 
-
-print(num_to_phrase(21))
- 
+# ----------------------Final-Result------------------------------------ #
+print(num_to_phrase(11)) #calls num_to_phrase and prints result
