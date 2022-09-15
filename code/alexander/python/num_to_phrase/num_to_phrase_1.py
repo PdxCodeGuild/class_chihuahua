@@ -20,9 +20,7 @@ def num_to_phrase(num):
     16: "sixteen",
     17: "seventeen",
     18: "eighteen",
-    19: "nineteen"
-    }
-    tens_digit = {
+    19: "nineteen",
     20: "twenty",
     30: "thirty",
     40: "forty",
@@ -33,17 +31,15 @@ def num_to_phrase(num):
     90: "ninety",
     100: "one hundred"
     }
-    if num <= 20:
-            return numbers
+    if num == 0:
+        return "zero"
+    elif num <= 20:
+            return numbers[num]
     elif num <= 100:
-        return (num//10) + (num)
-    tens_digit = num//10
-        
-    ones_digit = num%10
-    final_number_in_words = numbers[tens_digit] + numbers[ones_digit]
-    return final_number_in_words
+        return numbers[(num//10)*10] + " " + numbers[(num%10)]
+    
 
-print(num_to_phrase(5))
+print(num_to_phrase(97))
 '''
 x = 67
 tens_digit = x//10
