@@ -35,7 +35,7 @@ def num_to_phrase(num):
         70: "seventy",
         80: "eighty",
         90: "ninety",
-        100: "one hundred"
+        100:"one hundred"
     } #dictionary of available keys and values
 
     # ----------------------Math-------------------------------------------- #
@@ -43,8 +43,8 @@ def num_to_phrase(num):
     ten_digit_isolated = tens_digit * 10 # after getting tens position number, multiply by ten to reconstitute
     ones_digit = num % 10 # modulus removes tens and reveals ones value
 
-    tens_word = "" #initialize varible 
-    ones_word = "" #initialize varible 
+    tens_word = "" #initialize variable 
+    ones_word = "" #initialize variable 
     # ----------------------Processing-------------------------------------- #
     if num > 0 and num < 20:#if the number is between 1 and 19 return value to console
         return number_dict[num] #load value of number_dict[num] and returns to console
