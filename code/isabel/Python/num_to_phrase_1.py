@@ -55,11 +55,11 @@ hundreds = {
 # print(num_to_phrase(5))
 
 def num_to_phrase(num):
-
-    tens_or_floor = num // 10 == 2 or num // 10 == 3 or num // 10 == 4 or num // 10 == 5 or num // 10 == 6 or num // 10 == 7 or num // 10 == 8 or num // 10 == 9
-    hundreds_or_floor = num // 100 == 1 or num // 100 == 2 or num // 100 == 3 or num // 100 == 4 or num // 100 == 5 or num // 100 == 6 or num // 100 == 7 or num // 100 == 8 or num // 100 == 9
-    
-    if num % 10 < 1 and num % 10 != 0:
+    tens_or_floor = num // 10 >= 2
+    #tens_or_floor = num // 10 == 2 or num // 10 == 3 or num // 10 == 4 or num // 10 == 5 or num // 10 == 6 or num // 10 == 7 or num // 10 == 8 or num // 10 == 9
+    #hundreds_or_floor = num // 100 == 1 or num // 100 == 2 or num // 100 == 3 or num // 100 == 4 or num // 100 == 5 or num // 100 == 6 or num // 100 == 7 or num // 100 == 8 or num // 100 == 9
+    hundreds_or_floor = num // 100 >= 1
+    if num // 10 == 0 and num % 10 >= 0:
         translated_number = single_digits[num]
         return translated_number
     if num // 10 == 1:
@@ -68,12 +68,13 @@ def num_to_phrase(num):
     if tens_or_floor and num % 10 == 0:
         translated_number = tens_digits[num]
         return translated_number
-    if tens_or_floor and num % 10 != 0:
-        ones_digits = num % 10
-        whole_digit = num - (num % 10)
-        first_digit = tens_digits[whole_digit]
-        second_digit = single_digits[ones_digits]
-        translated_number = f"{first_digit} {second_digit} "
+    if num - (num % 10) in tens_digits:
+    #if tens_or_floor and num % 10 != 0:
+        # ones_digits = num % 10
+        # whole_digit = num - (num % 10)
+        # first_digit = tens_digits[whole_digit]
+        # second_digit = single_digits[ones_digits]
+        translated_number = f"{tens_digits[num - (num % 10)]} {single_digits[num % 10]}"  #translated_number = f"{first_digit} {second_digit} "
         return translated_number
     if hundreds_or_floor and num % 100 == 0:
         translated_number = hundreds[num]
@@ -97,5 +98,5 @@ def num_to_phrase(num):
             return translated_number
     
 
-print(num_to_phrase(525))
+print(num_to_phrase(67))
 
