@@ -1,4 +1,6 @@
-
+# Jimi Spier
+# num_to_phrase_1.py
+# 20220914
 
 
 # ----------------------Function---------------------------------------- #
@@ -35,7 +37,7 @@ def num_to_phrase(num):
         90: "ninety",
         100: "one hundred"
     } #dictionary of available keys and values
-    
+
     # ----------------------Math-------------------------------------------- #
     tens_digit = num // 10 #floor division to isolate tens position as single int
     ten_digit_isolated = tens_digit * 10 # after getting tens position number, multiply by ten to reconstitute
