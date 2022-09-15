@@ -29,7 +29,7 @@ tens_digits = {
     20 : 'twenty',
     30 : 'thirty',
     40 : 'forty',
-    50 : 'fifity',
+    50 : 'fifty',
     60 : 'sixty',
     70 : 'seventy',
     80 : 'eighty',
@@ -56,12 +56,24 @@ hundreds = {
 
 def num_to_phrase(num):
 
+    tens_or_floor = num // 10 == 2 or num // 10 == 3 or num // 10 == 4 or num // 10 == 5 or num // 10 == 6 or num // 10 == 7 or num // 10 == 8 or num // 10 == 9
+    
     if num % 10 < 1 and num % 10 != 0:
         translated_number = single_digits[num]
         return translated_number
     if num // 10 == 1:
         translated_number = double_digits[num]
         return translated_number
+    if tens_or_floor and num % 10 == 0:
+        translated_number = tens_digits[num]
+        return translated_number
+    if tens_or_floor and num % 10 != 0:
+        ones_digits = num % 10
+        whole_digit = num - (num % 10)
+        first_digit = tens_digits[whole_digit]
+        second_digit = single_digits[ones_digits]
+        translated_number = f"{first_digit} {second_digit} "
+        return translated_number
 
-print(num_to_phrase(10))
+print(num_to_phrase(55))
 
