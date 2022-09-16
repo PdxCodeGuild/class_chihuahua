@@ -1,6 +1,6 @@
 # Jimi Spier
-# num_to_phrase_1.py
-# 20220914
+# num_to_phrase_2.py
+# 20220915
 
 
 # ----------------------Function---------------------------------------- #
@@ -52,43 +52,42 @@ def num_to_phrase(num):
         tens_digit = num // 10 #floor division to isolate tens position as single int
         ten_digit_isolated = tens_digit * 10 # after getting tens position number, multiply by ten to reconstitute
         ones_digit = num % 10
-        if ones_digit == 0:
-            tens_word = number_dict[ten_digit_isolated]
+        if ones_digit == 0:#if the the number ends in zero
+            tens_word = number_dict[ten_digit_isolated] #grab tens_digit value from dict
             final_word = tens_word               
-        else:
-            tens_word = number_dict[ten_digit_isolated]
-            ones_word = number_dict[ones_digit]
-            final_word = tens_word + " " + ones_word
-    elif num == 100:
-       hundreds = ten_digit_isolated // 100
+        else:#if the rest of the number do not end in zero
+            tens_word = number_dict[ten_digit_isolated] #grab tens_digit value from dict
+            ones_word = number_dict[ones_digit] #grab ones_digit value from dict
+            final_word = tens_word + " " + ones_word #final_word construction
+
+    elif num == 100: # if the number equals 100
+       hundreds = ten_digit_isolated // 100 #break off left most number
         #hundred_ones_digit = hundreds % 100
-       hundreds_place = number_dict[100]
-       hundreds_left_position = number_dict[hundreds]
-       final_word = hundreds_left_position + " " + hundreds_place
-    elif num >= 101 and num < 1000:
+       hundreds_place = number_dict[100] #hundreds placeholder
+       hundreds_left_position = number_dict[hundreds] # grabs left most position from dict
+       final_word = hundreds_left_position + " " + hundreds_place #final_word construction
+
+
+    elif num >= 101 and num < 1000:# if num is greater than or equal to 101 and less than 1000
         hundreds = tens_digit // 10 #break off left most number
-        hundred_ones_digit = num % 100
-        if hundred_ones_digit >=20 and hundred_ones_digit < 100:
-            new_tens = (hundred_ones_digit // 10) * 10
-            new_ones = hundred_ones_digit % 10
-            hundreds_left_position = number_dict[hundreds]
-            hundreds_place = number_dict[100]
-            tens_place = number_dict[new_tens]
-            ones_place = number_dict[new_ones]
+        hundred_ones_digit = num % 100 # break of right-most digit
+        if hundred_ones_digit >=20 and hundred_ones_digit < 100: # if the tens digit is between 20 and 99
+            new_tens = (hundred_ones_digit // 10) * 10 #isolate "tens" spot and re-constitute
+            new_ones = hundred_ones_digit % 10 #user modulus to drop left position numbers
+            hundreds_left_position = number_dict[hundreds] #places left most digit from dict
+            hundreds_place = number_dict[100] #hundreds placeholder
+            tens_place = number_dict[new_tens] #places tens digit from dict
+            ones_place = number_dict[new_ones] #places ones digit from dict
             final_word = hundreds_left_position + " " + hundreds_place + " " + tens_place + " " + ones_place #final_word construction
         else:
-            hundreds_left_position = number_dict[hundreds]
-            hundreds_place = number_dict[100]
-            ones_word = number_dict[hundred_ones_digit]
+            hundreds_left_position = number_dict[hundreds] #places left most digit from dict 
+            hundreds_place = number_dict[100] #hundreds placeholder
+            ones_word = number_dict[hundred_ones_digit] #places ones digit from dict 
             final_word = hundreds_left_position + " " + hundreds_place + " " + ones_word #final_word construction
     else:
         print("error")   # catch all error 
-        
     return final_word #collect final_word from if statements and send back to console
 
-
-       
-
 # ----------------------Final-Result------------------------------------ #
-for user_input in range(5,100, 1): #using range() for debugging purposes
+for user_input in range(1,1000): #using range() for debugging purposes
     print(num_to_phrase(user_input)) #calls num_to_phrase and prints result
