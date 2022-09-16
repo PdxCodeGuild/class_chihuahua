@@ -1,5 +1,3 @@
-import num_to_phrase_1_test
-
 while True:    
     num_to_phrase = input("Give me a number: ")
 
@@ -12,7 +10,8 @@ while True:
         '6': 'six',
         '7': 'seven',
         '8': 'eight',
-        '9': 'nine'
+        '9': 'nine',
+        '0': 'zero'
 
     }
 
