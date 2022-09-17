@@ -1,4 +1,5 @@
 onez = {
+ 
     0:"zero",
     1:"one",
     2:"two",
@@ -8,12 +9,11 @@ onez = {
     6:"six",
     7:"seven",
     8:"eight",
-    9:"nine",
-    10:"ten"
+    9:"nine"
     }
 
 teen = {
-    0:"zero",
+    #0:"ten",
     1:"eleven",
     2:"twelve",
     3:"thirteen",
@@ -34,27 +34,43 @@ beyond = {
     8:"eighty",
     9:"ninety",
     100:"hundred"
-    }    
+    }  
+thou = {
+
+}      
 
 
-def num_to_phrase():
-    x = int(input("give me a number between 1 and 100:  "))
+def num_to_phrase(x):
+    # x = int(input("give me a number between 1 and 100:  "))
     if x == 100:
-        print(x)
+        
+        return "one hundred"
+    if x == 10:
+        return "ten"    
     #this finds if a user place either a single digit or the second digit
     ones_digit = x%10
     #this finds the first digit if there is one
     tens_digit = x//10
     #determining if the first digit is between 11-19
-    if ones_digit in onez:
-        ones_digit = onez[ones_digit]
+    if ones_digit and tens_digit > 19:
+        ten = teen[ones_digit] 
+        return ten 
+    if ones_digit in onez and tens_digit in teen:
+        pass
+    if ones_digit in onez and tens_digit not in teen:    # return onez[ones_digit]
         #print(ones_digit)
-    if tens_digit == 1:
-        ten = teen[ones_digit]
-        return ten    
+        return onez[ones_digit]
+    if tens_digit ==1 and ones_digit in teen:
+        ten = teen[ones_digit] 
+        return ten 
+         
     #determin if the first digit is between 20-90
+    if tens_digit in beyond and ones_digit == 0:
+        tens_digit = beyond[tens_digit]  
+        return tens_digit
     if tens_digit in beyond:
         tens_digit = beyond[tens_digit]  
+        return tens_digit+ " " +onez[ones_digit]  
         #print(tens_digit)  
      #determin the first digit is
 
@@ -67,7 +83,7 @@ def num_to_phrase():
       
 
 
-print(num_to_phrase())
+print(num_to_phrase(100))
 
    
 
