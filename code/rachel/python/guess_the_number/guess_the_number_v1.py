@@ -16,17 +16,18 @@ while guesses < 10:
     # convert the 'guess' from a string to an integer.
     guess = int(guess)
 
-    # compare 'guess' to 'x', the random number. If they are the same, print 'You win!', and end the loop.
+    # compare 'guess' to 'x', the random number. If they are the same, display 'You win!', and end the loop.
     if guess == x:
         print("\nYou win!")
         break
     
-    # if 
+    # compare 'guess' to 'x', the random number. If they are NOT the same, display 'Try Again' and the code will begin again. Increments 'guesses' by 1.
     elif guess != x:
         print("\nTry again.")
         guesses += 1
         continue
 
+# if the user guesses 10 times without a correct answer, displays 'No more guesses. You lose.'
 if guesses == 10:
     print("\nNo more guesses. You lose.")
     
