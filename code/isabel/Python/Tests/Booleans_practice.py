@@ -16,6 +16,7 @@ def go_hiking(energy, weather):
     
     while True:
 
+        print('So you think you can hike?')
         want_to_hike = input("Let computer help you decide whether you should go on a hike. Please type 'yes' to continue or 'no' to exit: ")
         if want_to_hike == 'yes':
             
