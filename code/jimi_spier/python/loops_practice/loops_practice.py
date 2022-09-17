@@ -1,5 +1,5 @@
 # Jimi Spier
-# file_name.py
+# loops_practice.py
 # 20220916
 
 # Practice 3: While and For Loops
