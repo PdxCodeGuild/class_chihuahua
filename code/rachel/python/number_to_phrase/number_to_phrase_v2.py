@@ -68,12 +68,12 @@ def num_to_phrase(num):
         tens_digit = (num[1] % 10)
         ones_digit = (num[2] % 10)
         return (hundreds[num[0]] + " " + tens[tens_digit] + " " + ones[ones_digit])
+
+print(num_to_phrase(num))  
+
+
+
+     
     
-result = num_to_phrase(num)
-
-print(result)  
-
-
-
      
     
