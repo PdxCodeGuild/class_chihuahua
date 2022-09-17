@@ -19,10 +19,10 @@ def go_hiking(energy, weather):
         want_to_hike = input("Let computer help you decide whether you should go on a hike. Please type 'yes' to continue or 'no' to exit: ")
         if want_to_hike == 'yes':
             
-            # while want_to_hike == 'yes':
+           
             print("Instructions: please choose one feeling: 'tired' or 'spry' and one weather type: 'rainy' or 'sunny'")
-            how_feeling = input('How are you feeling today?')
-            what_weather = input("What's the weather?")
+            how_feeling = input('How are you feeling today? ')
+            what_weather = input("What's the weather? ")
                 
             if how_feeling == 'tired':
                 return False
@@ -32,23 +32,13 @@ def go_hiking(energy, weather):
                 return False
             elif what_weather == 'sunny':
                 return True
-        elif want_to_hike != 'yes' or 'no':
+        
+        elif want_to_hike != 'yes' and want_to_hike != 'no':
             print("Please type 'yes' or 'no'")
         elif want_to_hike == 'no':
             print('good bye')
             break
 
-    # while want_to_hike == 'yes':
-    #     how_feeling = input('How are you feeling today?')
-    #     what_weather = input("What's the weather?")
-    #     if how_feeling == 'tired':
-    #         return False
-    #     elif how_feeling == 'spry':
-    #         return True
-    #     if what_weather == 'rainy':
-    #         return False
-    #     elif what_weather == 'sunny':
-    #         return True
 
 print(go_hiking(how_feeling, what_weather))
 
