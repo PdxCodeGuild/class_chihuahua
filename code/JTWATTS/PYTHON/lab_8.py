@@ -21,7 +21,7 @@ while guess != x:
         break
     if guess!= x:
         #no break statement because they are not done
-        print(f"you failed {tally} times")
+        print(f"try again")
      # as stated fail 10 times and print this  
     # if tally ==10:
     #     print('you failed 10 times')    
