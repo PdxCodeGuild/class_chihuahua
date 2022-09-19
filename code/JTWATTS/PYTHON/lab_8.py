@@ -1,7 +1,7 @@
 import random    
 #x is the random number
 x = random.randint(1,10)
-print(x)
+# print(x)
 # we have to define guess before we can place it in our while loop
 guess = 0
 # we have to define tally before we can place it in our while loop.  Spent too much time trying to make a list with an interger
@@ -19,9 +19,15 @@ while guess != x:
         print(f"correct you guessed {tally} times") 
         #quit the game with break
         break
-    if guess!= x:
+    # if guess!= x we get if guess is too low
+    if x > guess:
+        print("too low")
+        print("try again")
+    # if guess!= x we get if guess is too high   
+    if x < guess:
+        print("too high")    
         #no break statement because they are not done
-        print(f"try again")
+        print("try again")
      # as stated fail 10 times and print this  
     # if tally ==10:
     #     print('you failed 10 times')    
