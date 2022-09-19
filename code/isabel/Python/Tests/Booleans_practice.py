@@ -13,12 +13,12 @@ def go_hiking(energy, weather):
     what_weather = weather
     how_feeling = energy
     
-    feeling_weather_dict = {
-        'tired' : 'sunny',
-        'tired' : 'rainy',
-        'spry' : 'sunny',
-        'spry' : 'rainy'
-        }
+    # feeling_weather_dict = {
+    #     'tired' : 'sunny',
+    #     'tired' : 'rainy',
+    #     'spry' : 'sunny',
+    #     'spry' : 'rainy'
+    #     }
 
 
     if how_feeling == 'spry' and what_weather == 'sunny':
