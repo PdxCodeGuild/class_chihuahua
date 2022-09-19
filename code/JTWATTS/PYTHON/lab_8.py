@@ -16,7 +16,7 @@ while guess != x and tally < 10:
     #we take each time the question is asked and add it to the tally
     tally += 1
     if guess == x:
-        print(f"correct you guessed {tally}") 
+        print(f"correct you guessed {tally}times") 
         #quit the game with break
         break
     if guess!= x:
