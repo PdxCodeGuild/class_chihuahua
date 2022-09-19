@@ -8,43 +8,30 @@
 # Go Hiking
 # Write a function that takes a string indicating energy level and weather
 
-what_weather = ''
-how_feeling = ''
-
 def go_hiking(energy, weather):
 
+    what_weather = weather
+    how_feeling = energy
     
-    while True:
-
-        print('So you think you can hike?')
-        want_to_hike = input("Let computer help you decide whether you should go on a hike. Please type 'yes' to continue or 'no' to exit: ")
-        if want_to_hike == 'yes':
-            
-           
-            print("Instructions: please choose one feeling: 'tired' or 'spry' and one weather type: 'rainy' or 'sunny'")
-            how_feeling = input('How are you feeling today? ')
-            what_weather = input("What's the weather? ")
-                
-            if how_feeling == 'tired':
-                return False
-            elif how_feeling == 'spry':
-                return True
-            if what_weather == 'rainy':
-                return False
-            elif what_weather == 'sunny':
-                return True
-        
-        elif want_to_hike != 'yes' and want_to_hike != 'no':
-            print("Please type 'yes' or 'no'")
-        elif want_to_hike == 'no':
-            print('good bye')
-            break
+    feeling_weather_dict = {
+        'tired' : 'sunny',
+        'tired' : 'rainy',
+        'spry' : 'sunny',
+        'spry' : 'rainy'
+        }
 
 
+    if how_feeling == 'spry' and what_weather == 'sunny':
+        return True     
+    elif how_feeling == 'tired' or what_weather == 'rainy':
+        return False
+    else:
+        return 'invalid'
+
+print("Instructions: please choose one feeling: 'tired' or 'spry' and one weather type: 'rainy' or 'sunny'")
+how_feeling = input('How are you feeling today? ')
+what_weather = input("What's the weather? ")
 print(go_hiking(how_feeling, what_weather))
-
-    
-   
 
 # def test_go_hiking():
 #     assert go_hiking('tired', 'rainy') == False
