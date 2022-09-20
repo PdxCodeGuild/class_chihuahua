@@ -39,10 +39,6 @@ class ContactList:
         # 5) assign the list of dictionaries to self.contacts
         ...
     
-    def count(self):
-        # return the length of self.contacts
-        ...
-    
     def save(self):
         # 1) open 'contacts.json' with open 'w' for write
         # 2) put self.contacts in a dictionary with the key 'contacts'
