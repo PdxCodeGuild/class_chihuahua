@@ -11,9 +11,19 @@ Number to phrase v1;v2
 
 due date: 9/30/2022
 
+<hr> 
+
+Pick 6
+
+due date: 10/3/2022
+
+<hr> 
+
+
 # Course breakdown
 
 Duration - 19 weeks
+
 Presentation day - 1/17/2023
 
 9/5/2022 to 9/23/2022 (4 weeks) - Python
