@@ -13,7 +13,7 @@ due date: 9/30/2022
 
 <hr> 
 
-Pick 6
+Pick 6 v1;v2
 
 due date: 10/3/2022
 
