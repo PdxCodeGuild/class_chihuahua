@@ -34,8 +34,8 @@ tens = {
     9: "ninety",
 } 
 
-num = input("enter a number: ")
-num = int(num)
+#num = input("enter a number: ")
+#num = int(num)
 
 def num_to_phrase(num):
     if num <= 9:
@@ -50,11 +50,9 @@ def num_to_phrase(num):
         return (tens[tens_digit] + " " + ones[ones_digit])
     
     elif num > 99:
-        print("number out of range") 
+        return ("number out of range") 
 
-result = num_to_phrase(num)
-
-print(result)   
+print(num_to_phrase(15))   
 
 
 
