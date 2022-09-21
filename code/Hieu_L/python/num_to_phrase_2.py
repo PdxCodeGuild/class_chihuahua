@@ -6,6 +6,8 @@ numbers_class = {0:'', 1:'one', 2:'two', 3:'three', 4:'four', 5:'five', 6:'six',
 
 
 def num_to_phrase(num):
+    if num == 0:
+        print('zero')
     try:
         return numbers_class[num]
     except KeyError:
@@ -21,8 +23,11 @@ def num_to_phrase(num):
                 return numbers_class[hundreths_value] + ' ' + numbers_class[tenths_value]
             else:
                 tenths_value = tenths_value - ones_value
-                return numbers_class[hundreths_value] + ' '+ numbers_class[tenths_value] + ' ' + numbers_class[ones_value]
+                number = numbers_class[hundreths_value] + ' '+ numbers_class[tenths_value] + ' ' + numbers_class[ones_value]
+                return number.strip()
    
-# print(527 % 10)
 print(num_to_phrase(650))
+
+# print(527 % 10)
+# print(num_to_phrase(650))
 # print(num_to_phrase(8))
