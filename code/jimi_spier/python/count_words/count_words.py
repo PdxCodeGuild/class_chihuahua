@@ -5,7 +5,7 @@
 from string import punctuation as a_punc #import built-in string library. Grab puncuation and call it a_punc
 
 # ----------------------File-Operations--------------------------------- #
-with open("./dhamma.txt", 'r') as file: # Open text file and call it file
+with open("./bible.txt", 'r') as file: # Open text file and call it file
     text = file.read() #assign variable to the file.read() fucntion and call it text
     
 
