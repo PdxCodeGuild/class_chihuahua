@@ -1,11 +1,3 @@
-# def num_to_phrase(num):
-#     pass
-
-
-# print(num_to_phrase(5))
-
-
-
 def num_to_phrase(num):
     ones_digit = {1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six", 7: "seven", 8:"eight", 9: "nine", 10: "ten"}
     tens_digit = {2:"twenty", 3:"thirty", 4:"forty", 5:"fifty", 6:"sixty", 7:"seventy", 8:"eighty", 9:"ninety"}
@@ -13,15 +5,13 @@ def num_to_phrase(num):
     
     if num in range(0, 11):
         return ones_digit[num]
-    elif num in range(11, 19):
+    elif num in range(11, 20):
         return teens_digit[num]
-    elif num in range(20, 99):
-        return tens_digit(int[num/10]) and ones_digit[num%10]
+    elif num in range(20, 100):
+        return (f"{tens_digit[(num//10)]} {ones_digit[(num%10)]}")
         #return tens_digit[num] and ones_digit[num]
-
-    #ones_digit == int((num)%10):
-    #tens_digit == num_to_phrase(int(num/10)) + ones_digit:
-    #     print(tens_digit + ones_digit)
+        # tens_digit = x//10
+        # ones_digit = x%10
 
 num = (input("Please enter a number: "))
 print(num_to_phrase(int(num)))
