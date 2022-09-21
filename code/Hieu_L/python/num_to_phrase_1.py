@@ -23,3 +23,5 @@ pass
 
 
 print(num_to_phrase(5))
+
+print(42 % 100)
