@@ -1,6 +1,6 @@
 # Jimi Spier
-# pick6.py
-# 20220919
+# pick6_v2.py
+# 20220921
 
 import random 
 
@@ -47,6 +47,7 @@ def main():
     expense = 0
     purse = 0
     final_total = 0
+    roi =0
     for num in range(10000): #how many times to run game
         expense += ticket_cost
         user_number, computer_number = pick6() # spits out numbers for both opponents
@@ -55,17 +56,20 @@ def main():
         if winning > 0:
             user_profit = money_bag(winning)
             purse = (purse + user_profit) - ticket_cost # adds winning to winning streak
-            print(expense)
+            #print(expense)
         
 
         
         print(user_number)
         print(computer_number)
         final_total = purse - ticket_cost
+        roi = (purse- expense)/expense
 
      
 
      
-    return final_total
+    return final_total, roi, expense
 
-print(f"Your winnings (minus ticket cost):${main()}")
+final_total, roi, expense = main()
+float_roi = "{:.2e}".format(roi)
+print(f"Your winnings (minus ticket cost):${final_total} and your return on investment is: ${float_roi} because you spent: ${expense} on the tickets")
