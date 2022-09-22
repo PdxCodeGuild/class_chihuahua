@@ -5,8 +5,8 @@
 import random 
 
 def pick6():
-    random_numbers_computer = [random.randint(0,99) for nums in range(1,7)]
-    random_numbers_user = [random.randint(0,99) for nums in range(1,7)]
+    random_numbers_computer =[random.randint(0,10) for nums in range(1,7)]
+    random_numbers_user = [random.randint(0,10) for nums in range(1,7)]
     return random_numbers_user, random_numbers_computer
 
 
@@ -17,7 +17,7 @@ def num_matches(user_number, computer_number):
             winning +=1
         else:
             continue
-    print(winning)
+    #print(winning)
     
     return winning
 
@@ -42,20 +42,25 @@ def money_bag (winning):
 
 
 def main():
-    
+    ticket_cost = 2
     user_profit = [] #empty list to hold user profits
-    for num in range(10000): #how many times to run game
+    winning_streak = 0
+    purse = 0
+    for num in range(random.randint(150,1200)): #how many times to run game
         user_number, computer_number = pick6() # spits out numbers for both opponents
 
         winning = num_matches(user_number, computer_number) # see how many numbers match and reveal number matched
-        winning_streak =+ winning # adds winning to winning streak
-        print(winning_streak)
+        if winning > 0:
+            user_profit = money_bag(winning)
+            purse = purse + user_profit # adds winning to winning streak
+            #print(purse)
         
 
         
         print(user_number)
         print(computer_number)
-    user_profit = money_bag(winning_streak) #take value from winning streak and send it to money bag to get winning value
-    return print(f"You have won: $ {user_profit}")
+     #take value from winning streak and send it to money bag to get winning value
+     
+    return purse - ticket_cost
 
-print(main())
+print(f"Your winnings (minus ticket cost):${main()}")
