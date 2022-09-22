@@ -105,12 +105,12 @@ class Person:
         return "%s %s" % (self.name, self.surname)
     
     @classmethod
-    def allowed_titles_starting_with(cls, startswith): # class method
+    def titles_starting_with(cls, startswith): # class method
        # class or instance object accessible through cls
        return [t for t in cls.TITLES if t.startswith(startswith)]
  
  
-print(Person.allowed_titles_starting_with("M"))
+print(Person.titles_starting_with("M"))
 ```
 
 What are class methods good for? Sometimes there are tasks associated with a class which we can perform using constants and other class attributes, without needing to create any class instances. If we had to use instance methods for these tasks, we would need to create an instance for no reason, which would be wasteful. 
