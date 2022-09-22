@@ -1,7 +1,5 @@
 import random
 
-winning_number = [random.randint(1,10) for num in range(6)]
-
 money_count = {
     0 : 0,
     1 : 4,
@@ -13,6 +11,7 @@ money_count = {
 }
 
 def num_matches():
+    winning_number = [random.randint(1,100) for num in range(6)]
     balance = 0
     ticket_quantity = 0
     grand_total = 0
@@ -23,9 +22,11 @@ def num_matches():
         for char in range(len(winning_number)):
             if winning_number[char] == ticket_generated[char]:
                 counter += 1
-        print(counter)
         grand_total += money_count[counter]
         counter = 0 
-        ticket_quantity += 1 
-        print(balance)
+        ticket_quantity += 1
+
+    return_on_investment = grand_total + balance
+    print(f"you spent {balance} on tickets.\nyou made {grand_total} in winnings.\nyour ROI is {return_on_investment}.\ndon't quit your day job :)")
+
 num_matches()
