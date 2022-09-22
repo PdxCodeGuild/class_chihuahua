@@ -10,10 +10,11 @@ with open('hyde10.txt', 'r') as book:
 
     # }
 
-
-
-
 lowercase_hyde = contents.lower()
+
+# def format_hyde(str):
+
+    
 
 char = 0
 while char <= len(lowercase_hyde) - 1:
@@ -21,19 +22,39 @@ while char <= len(lowercase_hyde) - 1:
         lowercase_hyde = lowercase_hyde.replace(lowercase_hyde[char], '')
     else:
         char += 1
+    # return lowercase_hyde
 
 while char <= len(lowercase_hyde) - 1:
     if lowercase_hyde[char].isaplha() == False and lowercase_hyde[char].isspace() == False:
         lowercase_hyde = lowercase_hyde.replace(lowercase_hyde[char], '')
     else:
         char += 1
-        
+    # return lowercase_hyde
+
 print(lowercase_hyde)
+
+
+
+# print(format_hyde(contents))
 
 
 pattern = r'\W+'
 just_words = re.split(pattern, lowercase_hyde)
 print(just_words)
+
+
+word_frequency = {}
+
+for element in just_words:
+    if element in word_frequency:
+        word_frequency[element] += 1
+    else:
+        word_frequency[element] = 1
+print(word_frequency)
+
+
+
+
 
 # # i = 0
 # for word in just_words:
