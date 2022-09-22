@@ -21,6 +21,13 @@ while char <= len(lowercase_hyde) - 1:
         lowercase_hyde = lowercase_hyde.replace(lowercase_hyde[char], '')
     else:
         char += 1
+
+while char <= len(lowercase_hyde) - 1:
+    if lowercase_hyde[char].isaplha() == False and lowercase_hyde[char].isspace() == False:
+        lowercase_hyde = lowercase_hyde.replace(lowercase_hyde[char], '')
+    else:
+        char += 1
+        
 print(lowercase_hyde)
 
 
