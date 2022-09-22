@@ -40,7 +40,8 @@ print(lowercase_hyde)
 
 pattern = r'\W+'
 just_words = re.split(pattern, lowercase_hyde)
-print(just_words)
+# print(type(just_words))
+# print(just_words)
 
 
 word_frequency = {}
@@ -50,7 +51,36 @@ for element in just_words:
         word_frequency[element] += 1
     else:
         word_frequency[element] = 1
-print(word_frequency)
+# print(word_frequency)
+
+# def sort_this(dict):
+sorted_word_frequency = sorted(word_frequency.items(), key=lambda x: x[1], reverse=True)
+
+new_word_frequency = {}
+
+for tup in sorted_word_frequency:
+    tup[0], tup[1]
+    for tup in enumerate(word_frequency):
+        key = tup[0]
+        value = tup[1]
+        new_word_frequency[key] = value
+print(new_word_frequency)
+
+    
+# print(sorted_word_frequency)
+
+
+
+# word_frequency = {}
+
+# for element in just_words:
+#     if element in word_frequency:
+#         word_frequency[element] += 1
+#     else:
+#         word_frequency[element] = 1
+
+
+# print(word_frequency)
 
 
 
