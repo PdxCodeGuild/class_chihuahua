@@ -7,7 +7,6 @@
 - Create a constructor with parameters: account_number, name, balance.
 - Create a deposit() method which manages the deposit actions.
 - Create a withdrawal() method  which manages withdrawals actions.
-- Create an bankFees() method to apply the bank fees with a percentage of 5% of the balance account.
 - Create a display() method to display account details.
 
 
