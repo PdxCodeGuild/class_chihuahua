@@ -3,7 +3,7 @@ import random
     
 def pick6(list):
     while len(list) < 6:
-        list.append(random.randint(1,10))
+        list.append(random.randint(1,100))
 
 def computer_attemps(list):
     print(f' Here are the winning numbers: {list}')
@@ -21,7 +21,7 @@ def computer_attemps(list):
     while tries > -1 or comput_list == list:
         money -= 2
         for x in range(6):
-            x = random.randint(1,10)
+            x = random.randint(1,100)
             comput_list.append(x)
         for x in range(len(list)):
             if comput_list[x] == list[x]:
