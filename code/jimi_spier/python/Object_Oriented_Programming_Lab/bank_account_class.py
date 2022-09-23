@@ -3,7 +3,7 @@
 # bank_account_class.py
 # 20220922
 
-
+# ----------------------Class------------------------------------------- #
 class Bank_account: 
     # ----------------------Constructor------------------------------------- #
 
@@ -12,7 +12,7 @@ class Bank_account:
         self.name = name                                #Name constructor
         self.balance = balance                          #Balance constructor
 
-    # ----------------------Function---------------------------------------- #
+    # ----------------------Method------------------------------------------ #
     
     def deposit(self, deposit_amt): #Method will add funds to balance based on deposit_amt
         self.deposit_amt = deposit_amt #Setting up the variable deposit_amt
@@ -20,7 +20,7 @@ class Bank_account:
         self.balance = new_amt # dumping value from new_amt into self.balance
         return self.balance #return the updated self.balance
 
-    # ----------------------Function---------------------------------------- #
+    # ----------------------Method------------------------------------------ #
         
     def withdrawl(self, withdraw_amt): #Method will remove funds from balance based on withdraw_amt
         self.withdraw_amt = withdraw_amt #Setting up the variable withdraw_amt
@@ -28,7 +28,7 @@ class Bank_account:
         self.balance = new_amt # dumping value from new_amt into self.balance
         return self.balance #return the updated self.balance
 
-    # ----------------------Function---------------------------------------- #
+    # ----------------------Method------------------------------------------ #
 
     def display(self): # Method will give the user a readable version of their account information
         return(f"{self.name}, your account number is: {self.account} and your balance is: ${self.balance}") 
@@ -50,6 +50,6 @@ usr2.withdrawl(50000) #usr2 is asking to withdraw 50,000 from his account
 # ----------------------Final-Result------------------------------------ #
 
 print()#space for readability
-print(usr1.display()) #calls display function, inserting usr1's information into it.
+print(usr1.display()) #calls display method, inserting usr1's information into it.
 print() #space for readability
-print(usr2.display()) #calls display function, inserting usr2's information into it. 
+print(usr2.display()) #calls display method, inserting usr2's information into it. 
