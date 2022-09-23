@@ -25,6 +25,12 @@ due date: 10/4/2022
 
 <hr> 
 
+Object Oriented Programming
+
+due date: 10/6/2022
+
+<hr> 
+
 # Course breakdown
 
 Duration - 19 weeks
