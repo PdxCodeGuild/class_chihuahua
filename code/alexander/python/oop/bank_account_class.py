@@ -1,8 +1,8 @@
 class bank_account:
     def __init__(self, account_number, name, balance):
-        self.account_number = 0####what makes this number ready
+        self.account_number = account_number####what makes this number ready
         self.name = name
-        self.balance = 0####what makes this ready to receive numbers
+        self.balance = balance####what makes this ready to receive numbers
     def deposit(self, amount):
         self.balance += amount
         print(f'current balance is {self.balance}')

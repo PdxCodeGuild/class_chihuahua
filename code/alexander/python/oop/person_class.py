@@ -8,4 +8,4 @@ class student(person):
     def glasses(person):
         print('wears glasses')
     def display_all(person):
-        print(f'{person.name}\n{person.age}\n{person.glasses}')
+        print(f'{person.name}\n{person.age}\n{student.glasses}')
