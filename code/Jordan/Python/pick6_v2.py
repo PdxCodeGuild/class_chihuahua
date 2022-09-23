@@ -48,3 +48,5 @@ def return_on_investment(earnings,expenses):
 earnings_a = player_winnings()
 expenses_b = 100000 * 2
 print(return_on_investment(earnings_a,expenses_b))
+
+# hi Jis
