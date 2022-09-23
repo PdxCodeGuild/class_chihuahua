@@ -42,3 +42,5 @@ def player_winnings():
     return totals_won
 
 print(player_winnings())
+
+# hi alex
