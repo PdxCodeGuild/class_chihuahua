@@ -6,12 +6,14 @@ Create a withdrawal() method which manages withdrawals actions.
 Create a display() method to display account details.
 '''
 # Create a class 'Bank_account'
-class Bank_account():
+class Bank_account:
+
     # define attributes for the 'Bank_account': account number, name, and balance
     def __init__(self, account_number, name, balance):
         self.account_number = int(account_number)
         self.name = str(name)
         self.balance = float(balance)
+    
     # create new method 'deposit' which adds money to the account and returns the amount added and the new balance
     def deposit(self, dep_amount):
         self.balance += float(dep_amount)
