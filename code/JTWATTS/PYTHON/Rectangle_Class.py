@@ -24,7 +24,8 @@ display=Rectangle(12,14)
 
 
 
-# NewHire=Bank_Account()        
+        
 print(display.lenght,display.width) 
 print(display.perimeter(),display.area())
+#test
 
