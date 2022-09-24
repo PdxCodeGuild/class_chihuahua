@@ -3,11 +3,10 @@
 
 ### Bank Account Class
 
-- Create a Python class called BankAccount which represents a bank account, having as attributes: accountNumber (numeric type), name (name of the account owner as string type), balance.
-- Create a constructor with parameters: accountNumber, name, balance.
+- Create a Python class called Bank_account which represents a bank account, having as attributes: account_number (numeric type), name (name of the account owner as string type), balance.
+- Create a constructor with parameters: account_number, name, balance.
 - Create a deposit() method which manages the deposit actions.
 - Create a withdrawal() method  which manages withdrawals actions.
-- Create an bankFees() method to apply the bank fees with a percentage of 5% of the balance account.
 - Create a display() method to display account details.
 
 
@@ -20,8 +19,8 @@
 
 ### Person Class
 
-- Create a Python class Person with attributes: name and age of type string.
+- Create a Python class Person with attributes: name and age.
 - Create a display() method that displays the name and age of an object created via the Person class.
 - Create a child class Student  which inherits from the Person class and which also has a section attribute.
-- Create a method displayStudent() that displays the name, age and section of an object created via the Student class.
+- Create a method display_student() that displays the name, age and section of an object created via the Student class.
 

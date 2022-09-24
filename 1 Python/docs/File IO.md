@@ -66,6 +66,7 @@ This is rather verbose, so Python provides a `with` statement, which guarantees 
 ```python
 with open('filename.txt', 'r') as f:
     contents = f.read()
+    print(contents)
 ```
 
 ## Modes
@@ -98,6 +99,7 @@ You can read all the text at once:
 ```python
 with open('phonebook.txt', 'r') as phone_book_file:
     contents = phone_book_file.read()
+    print(contents)
 ```
 
 You can read the file as a list of strings with `readlines()`. Each string will have a `'\n'` at the end, which may make `file.read().split('\n')` preferable.

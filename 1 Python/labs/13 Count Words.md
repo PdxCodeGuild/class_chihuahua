@@ -18,7 +18,7 @@ We can also download a file of english words and place it next our `.py` file an
 ```python
 with open('the_raven.txt', 'r', encoding='utf-8') as file:
     text = file.read()
-print(text)
+    print(text)
 ```
 
 Take the following steps to build up our dictionary. The result should look something like `{'a': 3, 'the': 4}`
