@@ -1,5 +1,5 @@
 import string
-punctuation = string.punctuation #cleaning up punctuation
+punctuation = string.punctuation #for added cleaning up of punctuation
 
 with open('labtext.txt', 'r', encoding='utf-8') as file:
     text = file.read()
