@@ -25,17 +25,17 @@ following_list = {}
 
 index = -1
 for word in word_list:
-    if word == chosen:
-        following = word_list[index + 1]
-        if following in following_list:
-            following_list[following] += 1
-        else:
-            following_list[following] = 1
+    if index < len(word_list):
+        index += 1
+        if word == chosen:
+            following = word_list[index + 1]
+            if following in following_list:
+                following_list[following] += 1
+            else:
+                following_list[following] = 1
 
 most_following = list(following_list.items())
 most_following.sort(key=lambda tup: tup[1], reverse=True)
 
 for word_index in range(10):
     print(most_following[word_index])
-
-# this file is currently under construction while I try to figure out what's wrong with it
