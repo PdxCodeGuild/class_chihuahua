@@ -281,3 +281,48 @@ parrot.flight()
 penguin.intro()
 penguin.flight()
 ```
+
+# Pen exercise!
+
+```python
+class Pen:
+  def __init__(self, ink_level, life):
+    self.ink_level = ink_level
+    self.life = life
+  
+  def write(self):
+    data = requests.get("https://api.chucknorris.io/jokes/random")
+    response = data.json()
+    self.ink_level -= 50
+    print(response['value'] )
+    return self.check_ink_level()
+    
+  
+  def check_life(self):
+    if self.life <= 0:
+      print("The pen is now broken, go buy a new one")
+      return False
+  
+  def check_ink_level(self):
+    if self.ink_level <= 30:
+      print(f"Ink level is running low! it's currently {self.ink_level}")
+      return self.change_cartridge()
+    else:
+      print(f"Ink level is good, currently is {self.ink_level}")
+  
+  def change_cartridge(self):
+    self.ink_level = 100
+    print(f"the cartridge has been changed, the ink level is now {self.ink_level}")
+    self.life -= 50
+    print(f"life of the pen is now {self.life}")
+    return self.check_life()
+ 
+
+mont_blanc = Pen(50, 100)
+
+while True:
+  is_working = mont_blanc.write()
+  if is_working == False:
+    break
+
+```
