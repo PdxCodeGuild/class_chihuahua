@@ -18,9 +18,9 @@ def current_weather(zipcode):
     # ----------------------Processing-------------------------------------- #
 
     #---------Current-Data-Storage-----------#
-    data_out = response['main']["temp"]                 # Places current weather in data_out
+    data_out = response['main']["temp"]                     # Places current weather in data_out
 
-    zip_place = response["name"]                        # Grabs City Name based off of zipcode
+    zip_place = response["name"]                            # Grabs City Name based off of zipcode
     
     # ----------------------Output-to-Console--------------------------------#
     return print(f"The current temp for {zip_place} is: {data_out}F\n")
@@ -42,10 +42,10 @@ def forcast_3hr_5day(zipcode):
     data_four = response["list"][3]['main']["temp"]         # Forecast Day Four
     data_five = response["list"][4]['main']["temp"]         # Forecast Day Five
 
-    zip_place = response["city"]["name"]                    #Grabs City Name based off of zipcode
+    zip_place = response["city"]["name"]                    # Grabs City Name based off of zipcode
     # ----------------------Output-to-Console--------------------------------#
     return print(f"\nYour forecast for {zip_place} is:\nDay One  : {data_one}F\nDay Two  : {data_two}F\nDay Three: {data_three}F\nDay Four : {data_four}F\nDay Five : {data_five}F")
-                                                            #returns a readable string for user
+                                                            # returns a readable string for user
 
 
 # ----------------------Function---------------------------------------- #
@@ -57,13 +57,13 @@ def user_inquiry():
     print() # Space for readability
 
     # ----------------------Processing-------------------------------------- #
-    if choice == 1 and choice != 2:                         #if choice is 1 but not 2 call current_weather with zipcode inserted
+    if choice == 1 and choice != 2:                         # if choice is 1 but not 2 call current_weather with zipcode inserted
         current_weather(zipcode)
-    elif choice == 2 and choice != 1:                       #if choice is 2 but not 1 call forcast_3hr_5day with zipcode inserted
+    elif choice == 2 and choice != 1:                       # if choice is 2 but not 1 call forcast_3hr_5day with zipcode inserted
         forcast_3hr_5day(zipcode) 
     else:
-        print("error")                                      #catch all error for when user puts in wrong data
+        print("error")                                      # catch all error for when user puts in wrong data
 
 
-user_inquiry()                                              #Calls function
+user_inquiry()                                              # Calls function
     
