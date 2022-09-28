@@ -6,41 +6,40 @@ def random_numbers(times):
         number = random.randint(1, 99)
         six_numbers.append(number)
     return six_numbers
-6
+
 def pick6():
     balance = 0
     winning_numbers = random_numbers(6)
     for i in range(100000):
         ticket = random_numbers(6)
         balance -= 2
-        print(balance)
+        # print(balance)
         same_numbers = []
         for num in ticket:
             if num in winning_numbers:
                 same_numbers.append(num)
-            while len(same_numbers) > 0:
-                if len(same_numbers) == 0:
+                while len(same_numbers) > 0:
+                    if len(same_numbers) == 1:
+                        balance += 2
+                        return balance
+                    elif len(same_numbers) == 2:
+                        balance += 7
+                        return balance
+                    elif len(same_numbers) == 3:
+                        balance += 100
+                        return balance
+                    elif len(same_numbers) == 4:
+                        balance += 50000
+                        return balance
+                    elif len(same_numbers) == 5:
+                        balance += 1000000
+                        return balance
+                    elif len(same_numbers) == 6:
+                        balance += 25000000
+                        return balance
+                else:
                     balance += 0
                     return balance
-                elif len(same_numbers) == 1:
-                    balance += 2
-                    return balance
-                elif len(same_numbers) == 2:
-                    balance += 7
-                    return balance
-                elif len(same_numbers) == 3:
-                    balance += 100
-                    return balance
-                elif len(same_numbers) == 4:
-                    balance += 50000
-                    return balance
-                elif len(same_numbers) == 5:
-                    balance += 1000000
-                    return balance
-                elif len(same_numbers) == 6:
-                    balance += 25000000
-                    return balance
-
 print(pick6())
 
 # winning_ticket = random_numbers(6)
