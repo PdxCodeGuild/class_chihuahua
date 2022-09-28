@@ -32,7 +32,8 @@ class rectangle:
         return perimeter
 
     def __repr__(self):
-        return print(f"rectangle dimensions: \n length: {self.length} \n width: {self.width} \n area:")
+        area = area()
+        return f"rectangle dimensions: \n length: {self.length} \n width: {self.width} \n area: {area}"
 
 class parallelepiped(rectangle):
     def __init__(self, height):
