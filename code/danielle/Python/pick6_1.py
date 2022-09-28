@@ -10,8 +10,9 @@ def pick6():
     print(ticket)
 
     def num_matches(winning, ticket):
-        if winning == ticket:
-            print("Your ticket matches the winning ticket")
+        for winning in ticket:
+            if winning == ticket:
+                print("Your ticket matches the winning ticket")
     
     num_matches(winning, ticket)
 
