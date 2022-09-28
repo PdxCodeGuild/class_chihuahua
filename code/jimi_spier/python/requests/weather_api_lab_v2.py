@@ -3,9 +3,7 @@
 # 20220927
 
 
-
 # ----------------------Import------------------------------------------ #
-
 import requests                                             # imports request module for api processing
 
 # ----------------------Function---------------------------------------- #
@@ -73,8 +71,6 @@ def user_inquiry():
     else:
         print("Error")                                                                          # catch all error for when user puts in wrong data
 
-                                                             
-
 
 
 def main():
@@ -94,7 +90,6 @@ def main():
         if user_str == 'n' and user_str != 'y':                                # if user_str is equal to n but not y
 
             break                    
-
 
 
 main()                                                                         # calls main function
