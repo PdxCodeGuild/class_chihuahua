@@ -16,9 +16,14 @@ class Bank_account:
     
     def deposit(self, number):
         self.balance += number
+        print(f"\nYou have successfully deposited ${number}\n")
     
     def withdrawl(self, number):
-        self.balance -= number
+        if number > self.balance:
+            print(f"\nSorry ${number} is greater than your balance. Your current balance is: ${self.balance}\n")
+        else:
+            self.balance -= number
+            print(f'\nYou have successfuly withdrawn ${number} from your account. Your current balance is: ${self.balance}\n')
 
 
 
@@ -42,13 +47,10 @@ while True:
         print(david.display())
     elif menu == '2':
         money = int(input('How much money would you like to add: '))
-        david.balance += money
+        david.deposit(money)
     elif menu == '3':
         money = int(input('How much money would you like to withdrawl: '))
-        if money > david.balance:
-            print("\nSorry you're too broke for that\n")
-        else:
-            david.balance -= money
-        
+        david.withdrawl(money)
+
 
     
