@@ -1,0 +1,12 @@
+winning numbers =  6 random numbers (1-99)
+
+play 100000 times (while loop
+
+calculate wins per turn
+
+calculate ticket cost per turn
+
+order of the numbers matter.
+
+ticket cost = 2
+
