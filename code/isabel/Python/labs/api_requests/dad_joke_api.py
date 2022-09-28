@@ -8,6 +8,7 @@ import time
 
 url = 'https://icanhazdadjoke.com/'
 
-response = requests.get(url, headers = {"HTTP_ACCEPT":'application/json'})
-print(response.json())
+response = requests.get(url, headers ={'Accept':'application/json'})
+data = response.json()
+print(data['joke'])
 
