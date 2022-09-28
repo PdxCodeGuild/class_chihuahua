@@ -10,5 +10,13 @@ url = 'https://icanhazdadjoke.com/'
 
 response = requests.get(url, headers ={'Accept':'application/json'})
 data = response.json()
-print(data['joke'])
+joke = data['joke']
+print(joke)
+
+for letter in range(0, len(joke)):
+    print(joke[letter], end="")
+    time.sleep(0.25)
+
+
+
 
