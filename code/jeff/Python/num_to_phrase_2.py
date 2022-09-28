@@ -113,7 +113,7 @@ def num_to_phrase(num):
 
 
 
-print(num_to_phrase(100))
+print(num_to_phrase(965))
 
         
     
