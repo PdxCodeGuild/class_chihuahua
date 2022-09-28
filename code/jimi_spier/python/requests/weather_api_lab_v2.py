@@ -67,7 +67,7 @@ def user_inquiry():
     
     elif choice ==3 and choice != 2 and choice != 1:                                            # if choice is 3 but not 2 not 1 call forcast_3hr_5day with zipcode inserted - skip a line - call current_weather with zipcode inserted
         forcast_3hr_5day(zipcode)
-        print()
+        print()                                                                                 # space for readability
         current_weather(zipcode)
     
     else:
