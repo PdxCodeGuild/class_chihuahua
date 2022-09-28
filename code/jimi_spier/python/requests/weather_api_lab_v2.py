@@ -16,12 +16,12 @@ def current_weather(zipcode):
     # ----------------------Processing-------------------------------------- #
 
     #---------Current-Data-Storage-----------#
-    data_out  = response['main']["temp"]                    # places current weather in data_out
+    data_out  = response['main']['temp']                    # places current weather in data_out
 
-    zip_place = response["name"]                            # grabs City Name based off of zipcode
+    zip_place = response['name']                            # grabs City Name based off of zipcode
     
     # ----------------------Output-to-Console--------------------------------#
-    return print(f"The current temp for {zip_place} is: {data_out}F\n")
+    return print(f"The current temp for {zip_place} is: {data_out} F\n")
                                                             # returns a readable string for user
 
 
@@ -35,15 +35,15 @@ def forcast_3hr_5day(zipcode):
     # ----------------------Processing-------------------------------------- #
 
     #---------Five-Days-Data-Storage-----------#
-    data_one   = response["list"][0]['main']["temp"]        # forecast Day One
-    data_two   = response["list"][1]['main']["temp"]        # forecast Day Two
-    data_three = response["list"][2]['main']["temp"]        # forecast Day Three
-    data_four  = response["list"][3]['main']["temp"]        # forecast Day Four
-    data_five  = response["list"][4]['main']["temp"]        # forecast Day Five
+    data_one   = response['list'][0]['main']['temp']        # forecast Day One
+    data_two   = response['list'][1]['main']['temp']        # forecast Day Two
+    data_three = response['list'][2]['main']['temp']        # forecast Day Three
+    data_four  = response['list'][3]['main']['temp']        # forecast Day Four
+    data_five  = response['list'][4]['main']['temp']        # forecast Day Five
 
-    zip_place  = response["city"]["name"]                   # grabs City Name based off of zipcode
+    zip_place  = response['city']['name']                   # grabs City Name based off of zipcode
     # ----------------------Output-to-Console--------------------------------#
-    return print(f"\nYour forecast for {zip_place} is:\nDay One  : {data_one}F\nDay Two  : {data_two}F\nDay Three: {data_three}F\nDay Four : {data_four}F\nDay Five : {data_five}F")
+    return print(f"\nYour forecast for {zip_place} is:\nDay One  : {data_one} F\nDay Two  : {data_two} F\nDay Three: {data_three} F\nDay Four : {data_four} F\nDay Five : {data_five} F")
                                                             # returns a readable string for user
 
 
@@ -57,13 +57,13 @@ def user_inquiry():
     print()                                                                                     # space for readability
 
     # ----------------------Processing----------------- #
-    if choice == 1 and choice != 2 and choice != 3:                                             # if choice is 1 but not 2 not 3 call current_weather with zipcode inserted
+    if   choice == 1 and choice != 2 and choice != 3:                                           # if choice is 1 but not 2 not 3 call current_weather with zipcode inserted
         current_weather(zipcode)
     
     elif choice == 2 and choice != 3 and choice != 1:                                           # if choice is 2 but not 3 not 1  call forcast_3hr_5day with zipcode inserted
         forcast_3hr_5day(zipcode) 
     
-    elif choice ==3 and choice != 2 and choice != 1:                                            # if choice is 3 but not 2 not 1 call forcast_3hr_5day with zipcode inserted - skip a line - call current_weather with zipcode inserted
+    elif choice == 3 and choice != 2 and choice != 1:                                           # if choice is 3 but not 2 not 1 call forcast_3hr_5day with zipcode inserted - skip a line - call current_weather with zipcode inserted
         forcast_3hr_5day(zipcode)
         print()                                                                                 # space for readability
         current_weather(zipcode)
@@ -74,7 +74,7 @@ def user_inquiry():
 
 
 def main():
-    user_str = "y"                                                             # initialize user_str with y as default value
+    user_str = 'y'                                                             # initialize user_str with y as default value
     
     user_inquiry()                                                             # run first iteration of user_inquiry to get started
     
