@@ -73,18 +73,28 @@ def user_inquiry():
     else:
         print("Error")                                                                          # catch all error for when user puts in wrong data
 
-user_inquiry()                                                             # run first iteration of user_inquiry to get started
+                                                             
 
-user_str = "y"                                                             # initialize user_str with y as default value
 
-while True:                                                                # keep running until something breaks it
-    # ----------------------User-Data-Collect----------------------- #
-    user_str = input("Would you like to enter another zip code y/n: ")     # grabs user_str from input
-    # ----------------------Processing------------------------------ #
-    if user_str == 'y' and user_str != 'n':                                # if user_str is equal to y but not n
 
-        user_inquiry()                                                     # if conditions are met, run another iteration of user_inquiry
+def main():
+    user_str = "y"                                                             # initialize user_str with y as default value
+    
+    user_inquiry()                                                             # run first iteration of user_inquiry to get started
+    
+    while True:                                                                # keep running until something breaks it
+        # ----------------------User-Data-Collect----------------------- #
+        user_str = input("Would you like to enter another zip code y/n: ")     # grabs user_str from input
+        
+        # ----------------------Processing------------------------------ #
+        if user_str == 'y' and user_str != 'n':                                # if user_str is equal to y but not n
 
-    if user_str == 'n' and user_str != 'y':                                # if user_str is equal to n but not y
+            user_inquiry()                                                     # if conditions are met, run another iteration of user_inquiry
 
-        break                                                              # breaks program
+        if user_str == 'n' and user_str != 'y':                                # if user_str is equal to n but not y
+
+            break                    
+
+
+
+main()                                                                         # calls main function
