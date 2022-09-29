@@ -1,6 +1,6 @@
 # 2022-09-05 Full-Stack Python/JavaScript Evening Class
 
-Repo for the PDX Code Guild Python Full Stack Evening course starting 09/05/2022
+Repo for the PDX Code Guild Class Chihuahua Full Stack Evening course starting 09/05/2022
 
 Class is held from **September 5th, 2022 to January 17th, 2023**
 M-F 6:00 pm – 9:36 pm
