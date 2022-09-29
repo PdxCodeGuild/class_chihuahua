@@ -55,20 +55,8 @@ Presentation Day: January 17th, 2023
 
 ## Odds and Ends
 
-Uploading Files with VueJS and Axios  
-https://serversideup.net/uploading-files-vuejs-axios/
-
 A Friendly Guide to Promise.all  
 https://levelup.gitconnected.com/a-friendly-guide-to-promise-all-68e7cd57b65d
-
-SQL Island  
-https://sql-island.informatik.uni-kl.de/
-
-Select Star SQL  
-https://selectstarsql.com/
-
-SQL Murder Mystery  
-https://mystery.knightlab.com/walkthrough.html
 
 An Illustrated (and Musical) Guide to Map, Reduce, and Filter Array Methods  
 https://css-tricks.com/an-illustrated-and-musical-guide-to-map-reduce-and-filter-array-methods/
@@ -102,16 +90,6 @@ http://ohshitgit.com/
 
 Atlassian Git Tutorials  
 https://www.atlassian.com/git
-
-Vue Video Tutorial and Solution Repo  
-https://www.youtube.com/watch?v=5LYrN_cAJoA&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa  
-https://github.com/iamshaunjp/vuejs-playlist/tree/lesson-1
-
-Vue Introduction Documentaion  
-https://vuejs.org/v2/guide/
-
-jQuery vs Vanilla vs Vue/React/Angular  
-https://www.academind.com/learn/javascript/jquery-future-angular-react-vue/
 
 Start an HTTP server on your local machine:
 
@@ -245,9 +223,6 @@ https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/
   - https://www.freecodecamp.org/ (Practice, projects, (almost) textbook all-in-one!)
   - https://sayazamurai.github.io/python-vs-javascript/#control-flow (Python3 and ES6 JS side by side comparisons)
   - https://sass-lang.com/guide (SASS: CSS preprocessor tutorial)
-  - https://vuejs.org/v2/guide/ (Vue.js official guide)
-  - https://www.youtube.com/watch?v=5LYrN_cAJoA&list=PL4cUxeGkcC9gQcYgjhBoeQH7wiAyZNrYa (Vue.js video tutorial)
-    REPO: https://github.com/iamshaunjp/vuejs-playlist/tree/master
 - Django:
   - https://tutorial.djangogirls.org/
   - https://docs.djangoproject.com/en/3.2/intro/tutorial01/ (Official tutorial)
