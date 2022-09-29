@@ -1,4 +1,4 @@
-# 2022-09-05 Full-Stack Python/JavaScript Day Class
+# 2022-09-05 Full-Stack Python/JavaScript Evening Class
 
 Repo for the PDX Code Guild Python Full Stack Evening course starting 09/05/2022
 
