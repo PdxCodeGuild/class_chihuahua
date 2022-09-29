@@ -83,9 +83,13 @@ def test_combine():
 # Find Pair
 # Given a list of numbers, and a target number, find a pair of numbers from the list that sum to a target number. Optional: return a list of all pairs of numbers that sum to a target value.
 
-
+##---Had to look this one up - Don't give credit--##
 def find_pair(nums, target):
-    ...
+    for position in range(len(nums)-1):
+        for numbers in range(position + 1, len(nums)):
+            if nums[position] + nums[numbers] == target:
+                return (nums[position], nums[numbers])
+    
 
 
 def test_find_pair():
