@@ -46,10 +46,10 @@ while True:
     if menu == "1":
         print(david.display())
     elif menu == '2':
-        money = int(input('How much money would you like to add: '))
+        money = int(input('\nHow much money would you like to add: '))
         david.deposit(money)
     elif menu == '3':
-        money = int(input('How much money would you like to withdrawl: '))
+        money = int(input('\nHow much money would you like to withdrawl: '))
         david.withdrawl(money)
 
 
