@@ -31,6 +31,18 @@ due date: 10/6/2022
 
 <hr> 
 
+Weather API
+
+due date: 10/10/2022
+
+<hr> 
+
+Dad Joke API
+
+due date: 10/11/2022
+
+<hr> 
+
 # Course breakdown
 
 Duration - 19 weeks
