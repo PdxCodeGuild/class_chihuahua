@@ -8,16 +8,16 @@ api_key = "884cfd64f3a52a3354c76c381207cf1e"
 def air_pollution():
     response = requests.get(f'http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={api_key}')
     data = response.json()
-    print(data)
-def current_weather():
+    print(f"aqi = {data['list'][0]['main']['aqi']}")
+def wind_speed():
     response = requests.get(f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={api_key}')
     data = response.json()
-    print(data)
+    print(f"wind speed = {data['wind']['speed']}")
 
 def choose():
-    inp = input("would you like to know the current weather or the level of air pollution?\nchoose 1 for current weather\nchoose 2 for the air pollution level\n")
+    inp = input("would you like to know the current weather or the level of air pollution?\nchoose 1 for current wind speed\nchoose 2 for the air pollution level\n")
     if inp == "1":
-        return current_weather()
+        return wind_speed()
     elif inp == "2":
         return air_pollution()
         # whatevercodeyouwant_2()
