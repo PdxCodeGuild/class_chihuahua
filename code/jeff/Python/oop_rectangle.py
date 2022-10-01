@@ -1,6 +1,8 @@
-
 # define class
-class Rectancle:
+from turtle import clear
+
+
+class Rectangle:
     def __init__(self, length, width):
         self.length = length
         self.width = width
@@ -12,13 +14,23 @@ class Rectancle:
     def area(self):
         return self.length * self.width
 
+class Parallelepipede(Rectangle):
+    def __init__(self, length, width , height):
+        Rectangle.__init__(self, length, width)
+        self.height = height
         
-rectangle_1 = Rectancle(1,2)
-rectangle_2 = Rectancle(30,5)
-rectangle_3 = Rectancle(2,10)
-rectangle_4 = Rectancle(10,25)
+    #volume method
+    def volume(self):
+        return self.length*self.width*self.height
+        
+rectangle_1 = Rectangle(1,2)
+rectangle_2 = Rectangle(30,5)
+rectangle_3 = Rectangle(2,10)
+rectangle_4 = Rectangle(10,25)              
 
-print(rectangle_3.perimeter())
+test_parallelepipede = Parallelepipede(7,7,7)
+print("the volume of Parallelepipede is: " , test_parallelepipede.volume())
+#print(Parallelepipede.volume(rectangle_1))
 
 
 #Rectangle Class
