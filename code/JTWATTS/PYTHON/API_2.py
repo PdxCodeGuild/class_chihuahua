@@ -15,10 +15,21 @@ weather_temp=requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat=
 # question1=input("")
 # print(data)
 # print(data1)
+# print(weather_temp)
+
 five_day=Five_Day_3_Hour.json()
 forcast=weather_temp.json()
-Current_Weather=input("Do you want to check for the Current Weather or 3-hour Forcast 5 days?: ")
-if Current_Weather=='weather':
-    print(forcast.get('main')) 
-if Current_Weather=='5 day':
-    print(five_day)  
+# print(forcast['main']['temp'])
+
+Current_Weather=input("Do you want to check for the Current Weather or 3-hour Forcast for 5 days?: ")
+if Current_Weather=='Current Weather':
+
+    print(forcast['main']['temp'])
+if Current_Weather=='3-hour Forcast for 5 days':
+ 
+    print(five_day['list'][0]['main']['temp'])
+"""
+44.34
+10.99
+
+"""
