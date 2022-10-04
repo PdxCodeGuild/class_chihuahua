@@ -74,7 +74,8 @@ def thousand_tries():
 
 wins_thousand_tries = thousand_tries()[0]
 loss_thousand_tries = thousand_tries()[1]
-print(f" Your net win is {main(wins_thousand_tries, loss_thousand_tries)} bucks")
+ROI = (wins_thousand_tries - loss_thousand_tries) / loss_thousand_tries
+print(f" Your net win is {main(wins_thousand_tries, loss_thousand_tries)} bucks and your return on investments is {ROI}")
 
 
 
