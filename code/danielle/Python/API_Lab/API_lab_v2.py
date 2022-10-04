@@ -10,7 +10,7 @@ def weather_API():
         Five_Day = input("Do you want to receive the five day forecast? (Y/N): ")
         five_day_response = requests.get(f"https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=884cfd64f3a52a3354c76c381207cf1e")
         five_day_data = five_day_response.json()
-        five_day_description = five_day_data['weather']
+        five_day_description = five_day_data['list'][2]
         if Five_Day == "Y":
             print(f"The five day forecast is: {five_day_description}")
         elif Five_Day == "N":
