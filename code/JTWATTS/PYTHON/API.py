@@ -4,6 +4,10 @@ import requests
 # #must ask the user for  latitude, longitude or city
 lat = float(input('What is the latitude?:'))
 long = float(input('What is the longitude?:'))
+
+Five_Day_3_Hour=requests.get(f'https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={long}&appid=884cfd64f3a52a3354c76c381207cf1e')
+
+#current weather
 weather_temp=requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={long}&appid=884cfd64f3a52a3354c76c381207cf1e")
 # f''https://api.openweathermap.org/data/2.5/weather?lat={}lon={}')
 # data=response.json()
@@ -11,5 +15,10 @@ weather_temp=requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat=
 # question1=input("")
 # print(data)
 # print(data1)
+five_day=Five_Day_3_Hour.json()
 forcast=weather_temp.json()
-print(forcast.get('main'))  
+Current_Weather=input("Do you want to check for the Current Weather or 3-hour Forcast 5 days?: ")
+if Current_Weather=='weather':
+    print(forcast.get('main')) 
+if Current_Weather=='5 day':
+    print(five_day)  
