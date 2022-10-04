@@ -9,14 +9,14 @@ while True:
         lon = float(user_ask_lon)
         response_current_weather = requests.get(f'https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=884cfd64f3a52a3354c76c381207cf1e')
         data_current = response_current_weather.json()
-        print(data_current)
+        print(f"{data_current['weather'][0]['description']} and feels like: {data_current['main']['feels_like']}")
         break
     elif user_choose_api == 'forecast':
         user_ask_city_name = input('Please enter name of city: ')
         cityname = user_ask_city_name
         response_forecast = requests.get(f'https://api.openweathermap.org/data/2.5/forecast?q={cityname}&appid=884cfd64f3a52a3354c76c381207cf1e')
         data_forecast = response_forecast.json()
-        print(data_forecast)
+        print(f"{data_forecast['list'][0]['weather'][0]['description']} and feels like {data_forecast['list'][0]['main']['feels_like']}")
         break
 
     else:
