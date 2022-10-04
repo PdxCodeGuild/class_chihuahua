@@ -78,6 +78,7 @@ else:
     False
 
 roi = return_on_investment(wins, investment)
-
+print(wins)
+print(investment)
 print(f"Your final balance is {investment + wins}.")
 print(f"Your return on investment is {roi}")
