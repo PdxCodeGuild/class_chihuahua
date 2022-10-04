@@ -39,6 +39,15 @@ M-F 6:00 pm – 9:36 pm
 
 </details>
 
+<details>
+  <summary>HTML/CSS/Flask</summary>
+
+| Lab Number | Title                                                                                                                              | Due Date |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Lab 01     | Bio                                                                                                                                | 17 Oct   |
+
+</details>
+
 ## Capstone Dates:
  
 Presentation Day: January 17th, 2023
