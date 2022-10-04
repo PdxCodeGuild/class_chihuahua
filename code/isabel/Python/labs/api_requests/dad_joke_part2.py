@@ -19,4 +19,4 @@ while True:
     # for i in data['results']:
     #     if data[i]['joke'].find(terms) == terms: 
     # print(data['results'][1]['joke'])
-    print(data['results'])
+    print(f"1: {data['results'][0]['joke']}\n2: {data['results'][1]['joke']}\n3: {data['results'][2]['joke']}")
