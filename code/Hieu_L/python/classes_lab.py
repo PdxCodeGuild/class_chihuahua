@@ -3,17 +3,18 @@ class bank_account:
     def __init__(self, name, balance, account_number):
         self.name = name
         self.balance = balance
-        self.account_number = random.randint(0,9)
+        self.account_number = account_number
+        # self.account_number = random.randint(0,9)
     def __repr__(self):
         return print(f"account number: {self.account_number} \n name: {self.name} \n account number: {self.account_number}")
 
-    def deposit(self):
-        amount = input('enter deposit amount: ')
+    def deposit(self, amount):
+        # amount = input('enter deposit amount: ')
         self.balance += amount
         return self.balance
     
-    def withdrawal(self):
-        amount = input('enter withdrawal amount: ')
+    def withdrawal(self, amount):
+        # amount = input('enter withdrawal amount: ')
         self.balance -= amount
         return self.balance
 
@@ -31,7 +32,8 @@ class rectangle:
         return perimeter
 
     def __repr__(self):
-        return print(f"rectangle dimensions: \n length: {self.length} \n width: {self.width} \n area:")
+        area = area()
+        return f"rectangle dimensions: \n length: {self.length} \n width: {self.width} \n area: {area}"
 
 class parallelepiped(rectangle):
     def __init__(self, height):
