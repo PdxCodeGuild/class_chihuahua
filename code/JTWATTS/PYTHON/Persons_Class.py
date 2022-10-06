@@ -1,4 +1,3 @@
-from turtle import clear
 
 
 class Person:
@@ -13,13 +12,19 @@ class Person:
     def display(self):
            print(self.age,self.name)
            return self.display
+    
+
+class Student(Person):
+    def __init__(self,age,name,section):
+        super().__init__(age,name)
+        self.section = section
     def display_student(self):
-            print(self.age,self.name,self)
-            return self.display_students
+        self.display_student=print(self.age,self.name,self.section)
 
 
-Student=Person(12,'jack')
-print(Student.age,Student.name)
+new_guy=Student(12,'jack','coder')
+
+print(new_guy.age,new_guy.name,new_guy.section)
     # def display(self):
         # return(f'{self.account_number},{self.name},{self.balance}' )
 

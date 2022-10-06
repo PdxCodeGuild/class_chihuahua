@@ -1,3 +1,4 @@
+
 class Rectangle:
     
     def __init__(self,lenght,width):
@@ -16,16 +17,26 @@ class Rectangle:
            
             return self.area   
    
-    # def display(self):
-        # return(f'{self.account_number},{self.name},{self.balance}' )
-    # def Parallelepipede(self):    
+
 
 display=Rectangle(12,14)      
 
+class Parallelepipede(Rectangle):
+    def __init__(self,lenght,width,height):
+        super().__init__(lenght,width)#super is referencing old attributes from rectangel
+        self.height = height
+    def volume(self):
+         self.volume=self.lenght *2 +self.width *2+ self.height *2
+         return self.volume
+#attribute
+#method
 
+vol=Parallelepipede(12,14,5)
 
         
 print(display.lenght,display.width) 
 print(display.perimeter(),display.area())
+print(vol.lenght,vol.width,vol.height) 
+print(vol.perimeter(),vol.area(),vol.volume())
 #test
 
