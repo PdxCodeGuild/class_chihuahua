@@ -1,1 +1,15 @@
-.title { color: red;}
+body {
+    display: flexbox;
+    margin-top: 3em;
+    margin-left: 2rem;
+}
+
+p {
+    color: yellowgreen;
+    background-color: darkgreen;
+    border-style: groove;
+}
+
+body {
+    background-color: darkolivegreen;
+}
