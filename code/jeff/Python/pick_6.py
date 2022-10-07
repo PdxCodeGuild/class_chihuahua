@@ -1,45 +1,60 @@
-import random 
+import random
 
-bank = int(input('\nHow much do you want to deposit?: \n'))
-ticket_cost = 2
-winning_key= {
+#class Pick6:
+
+def user_nums():
+    numbers = []
+    for num in range(6):
+        numbers.append(random.randint(1, 99))
+    return numbers
+
+def winning_nums(first, second):
+    match = 0
+    for index in range(len(first)):
+        if first[index] == second[index]:
+            match += 1
+    return match
+
+def start_game(winners):
+    winning_key = {
         0: 0,
         1: 4,
         2: 7,
         3: 100,
         4: 50000,
-        5: 1000000,
+        5: 100000,
         6: 25000000
-    } 
+    }
+    ticket = user_nums()
+    score = winning_nums(winners, ticket)
+    return winning_key[score]
 
-def random_nums():
-    winning_instances = ()
-    player_numbers = [random.randint(0,100) for num in range(1,7)]
-    computer_numbers = [random.randint(0,100) for num in range(1,7)]
-    for num in range(10): #how many times to run, change to 10,000
-        if player_numbers(0) == computer_numbers(0):
-            return winning_instances += 1
-        elif player_numbers(1) == computer_numbers(1):
-            return winning_instances += 1
-        elif player_numbers(2) == computer_numbers(2):
-            return winning_instances += 1
-        elif player_numbers(3) == computer_numbers(3):
-            return winning_instances += 1
-        elif player_numbers(4) == computer_numbers(4):
-            return winning_instances += 1
-        elif player_numbers(5) == computer_numbers(5):
-            return winning_instances += 1
-        elif player_numbers(6) == computer_numbers(6):
-            return winning_instances += 1
-        else: return f"No matches"
-
-        
+winning = user_nums()
+#starting balances. Bank starts with $100 
+bank = 100
+loss = 0
+win = 0
 
 
+#loops to play set ammount of instances. set ammount with loop
+loop = 100000
+for l in range(loop):
+    bank -= 2
+    loss += 2
+    result = start_game(winning)
+    bank += result
+    win += result
+    #break loop if user runs out of money
+    if bank < 0:
+        print(f"you are out of money")
+        break
 
-    return player_numbers, computer_numbers,
 
-print(random_nums())
+#print statements
+print(f"Bank: ${bank}")
+print(f"Won: ${win}")
+print(f"Spent: ${loss}")
 
 
-
+#version 2
+print(f"ROI per attempt: ${(win - loss)/loss}")
