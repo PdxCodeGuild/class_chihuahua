@@ -2,6 +2,13 @@ html {
     background-color: green;
     margin: auto;
     align-items: center;
+    font-family: monospace;
+}
+
+nav li {
+    border-spacing: 2rem;
+    border-style: ridge;
+    display: inline;
 }
 
 body {
