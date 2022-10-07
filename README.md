@@ -7,7 +7,6 @@ M-F 6:00 pm – 9:36 pm
 
 ### Holidays
 
-- Oct 10th (Indigenous People's Day)
 - Nov 24th (Thanksgiving)
 - Nov 25th (Day After Thanksgiving)
 - More Pending...
@@ -36,6 +35,17 @@ M-F 6:00 pm – 9:36 pm
 | Lab 05     | OOP                                                                                                                                | 06 Oct   |
 | Lab 06     | Weather API                                                                                                                        | 10 Oct   |
 | Lab 07     | Dad Joke API                                                                                                                       | 11 Oct   |
+
+</details>
+
+<details>
+  <summary>HTML/CSS/Flask</summary>
+
+| Lab Number | Title                                                                                                                              | Due Date |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------- | -------- |
+| Lab 01     | Bio                                                                                                                                | 17 Oct   |
+| Lab 02     | Blog                                                                                                                               | 20 Oct   |
+
 
 </details>
 
