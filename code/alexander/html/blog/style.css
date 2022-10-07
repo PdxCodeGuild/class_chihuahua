@@ -1,0 +1,41 @@
+body{
+    background-color: rgb(2, 64, 91);
+    line-height: 2;
+    font-family: 'Courier New', monospace;
+}
+.container {
+    display: flex;
+
+}
+#title{
+    text-align: center;
+    color:red;
+    background-color: white
+
+}
+.sec{
+    display: flex;
+    
+}
+#sec1{
+    display: flex;
+    background-color: grey
+}
+#sec2{
+    background-color: white
+}
+#boss{
+    font-size: xx-large;
+}
+#vice{
+    height: 300px;
+    width: 300px;
+
+}
+#vamp{
+    height: 300px;
+    width: 500px;
+}
+/* .image{
+    margin-bottom: 50px;
+} */
