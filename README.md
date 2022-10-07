@@ -7,7 +7,6 @@ M-F 6:00 pm – 9:36 pm
 
 ### Holidays
 
-- Oct 10th (Indigenous People's Day)
 - Nov 24th (Thanksgiving)
 - Nov 25th (Day After Thanksgiving)
 - More Pending...
