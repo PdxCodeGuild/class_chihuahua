@@ -39,3 +39,4 @@ for x in range(0,99999):
     counter=0
 ROI=total-won    
 print("Your ROI is",ROI)
+print("You won",won)
