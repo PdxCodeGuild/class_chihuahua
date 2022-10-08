@@ -50,6 +50,12 @@ Bio v1;v2;v3
 
 due date: 10/17/2022
 
+# HTML
+
+Company Lab
+
+due date: 10/21/2022
+
 # Course breakdown
 
 Duration - 19 weeks
