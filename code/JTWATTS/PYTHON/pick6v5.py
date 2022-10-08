@@ -22,17 +22,17 @@ char_list=[]
 for x in range(0,99999):
     counter=0
     random_ticket = pick_6()
-    print('winning ticket', winning_ticket)
-    print('random ticket', random_ticket)
+    # print('winning ticket', winning_ticket)
+    # print('random ticket', random_ticket)
     
     for char in range(len(winning_ticket)):
         # char=[]
         if winning_ticket[char] == random_ticket[char]:
             
-            print("We have a match", char)
+            # print("We have a match", char)
             counter+=1
             
-            print(counter)
+            # print(counter)
             
     total+=money[counter] 
     total-=2
