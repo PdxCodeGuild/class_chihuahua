@@ -56,6 +56,11 @@ Company Lab
 
 due date: 10/21/2022
 
+# Videos
+
+10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing)
+
+
 # Course breakdown
 
 Duration - 19 weeks
