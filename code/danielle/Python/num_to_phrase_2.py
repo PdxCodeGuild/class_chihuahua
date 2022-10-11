@@ -13,7 +13,7 @@ def num_to_phrase(num):
     elif num in range(20, 100):
         return (f"{tens_digit[(num//10)]} {ones_digit[(num%10)]}")
     elif num in range(100, 999):
-        return (f"{hundreds_digit[(num//100)]} {tens_digit[(num//10)]} {ones_digit[(num%10)]}")
+        return (f"{hundreds_digit[(num//100)]} {tens_digit[(num%100//10)]} {ones_digit[(num%10)]}")
 
 num = (input("Please enter a number: "))
 print(num_to_phrase(int(num)))
