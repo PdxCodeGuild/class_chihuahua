@@ -1,5 +1,6 @@
 # Lists of required labs
 
+# Python
 
 Unit Converter v1;v2;v3;v4
 
@@ -30,6 +31,35 @@ Object Oriented Programming
 due date: 10/6/2022
 
 <hr> 
+
+Weather API
+
+due date: 10/10/2022
+
+<hr> 
+
+Dad Joke API
+
+due date: 10/11/2022
+
+<hr> 
+
+# HTML
+
+Bio v1;v2;v3
+
+due date: 10/17/2022
+
+# HTML
+
+Company Lab
+
+due date: 10/21/2022
+
+# Videos
+
+10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing)
+
 
 # Course breakdown
 

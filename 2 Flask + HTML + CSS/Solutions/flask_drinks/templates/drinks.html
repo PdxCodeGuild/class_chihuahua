@@ -1,0 +1,17 @@
+{%extends "base.html"%} {%block content%}
+
+<h1>Select your ingredient</h1>
+<p>Generate a drink!</p>
+
+
+<form action="/drinks/" method="post">
+  <select name="ingredients" class="form-select" aria-label="Default select example">
+    <option selected>Ingredients list</option>
+    {%for ingredient in list_ingredients%}
+    <option value="{{ingredient}}">{{ingredient}}</option>
+   {%endfor%}
+  </select>
+  <button type="submit" class="btn btn-primary mt-5">Have fun!</button>
+</form>
+
+{%endblock%}
