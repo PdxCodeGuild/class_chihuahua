@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(2, 64, 91);
+    background-color: #1f0318;
     line-height: 2;
     font-family: 'Courier New', monospace;
 }
@@ -9,33 +9,53 @@ body{
 }
 #title{
     text-align: center;
-    color:red;
-    background-color: white
+    color:#bb4430;
+    background-color: white;
 
 }
 .sec{
     display: flex;
-    
+    border-radius: 5px;
 }
 #sec1{
     display: flex;
-    background-color: grey
+    background-color: #d8d2e1
+}
+#sec11{
+    font-family: fantasy;
 }
 #sec2{
-    background-color: white
+    background-color: #8c705f;
+    color: white
 }
 #boss{
     font-size: xx-large;
+    font-style: 
 }
 #vice{
-    height: 300px;
     width: 300px;
+    border-radius: 15px;
 
 }
 #vamp{
-    height: 300px;
     width: 500px;
 }
-/* .image{
-    margin-bottom: 50px;
-} */
+
+#sec21{
+    border-right-style: ridge;
+    border-right-width: 5px;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+#endersgame{
+    display: flex;
+}
+#sendoff{
+    font-size: xx-large;
+    text-align: center;
+    color: white;
+}
+#fusion{
+    height: 200px;
+    width: 200px;
+}
