@@ -1,0 +1,17 @@
+
+
+.flex-container{
+    
+    flex: 1 0 100px;
+    display: flexbox;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100;
+
+}
+
+.item {
+    display: flex;
+}
