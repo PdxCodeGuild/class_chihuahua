@@ -34,7 +34,6 @@
 
 .container-1 div{
   padding:10px;
-  /* align-items: center; */
 }
 
  .box-1{
@@ -54,10 +53,6 @@
   flex:.5;
   order: 3;
 }
-
-/* .container-2-box{
-  flex-basis: 27%;  
-} */
 
 .container-3-box{
   flex-basis:12%;
