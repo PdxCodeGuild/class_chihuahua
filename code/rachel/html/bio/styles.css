@@ -1,40 +1,42 @@
 body {
     background-color: darkolivegreen;
+    align: center
+    font-family: "sans-serif";
+}
+
+.header-box {
+    text-align: center;
+    background-image: url("images/oak_restoration\ \(1\).jpg");
+    width: 98%;
+    margin: 0px;
+    border: 1px solid black;
 }
 
 h1 {
-    font-size: 40px;
+    align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    margin: 5px 0px 0px 0px;    
 }
 
-div.flex-container {
-    display: flex;
-    flex-direction: row;
-
+h3 {
+    color: black;
+    font-weight: bold;
+    margin-top: 0px;
 }
 
 img {    
-    width: 60%;
-    height: 80%;
-    align: left;
-    border: 1px solid black;
-   
+    float: right;
+    width: 350px;
+    margin: 10px 10px 10px 10px;
+    border: 1px solid black;  
+}
+h4 {
+    margin: 10px 0px 5px 0px;
 }
 
-header {
-    text-align: right;
-}
-
-.box {
-    align: right;
-    width: 40vw;
-    margin: 30px;
-    border: 1px solid black;
-    opacity: 0.4;
-
-}
-
-.box p {
-    margin: 5%;
-    font-weight: bold;
-    color: #000000;
+p {
+    margin: 5px 10px 5px 10px;
+    color: #000000; 
 }
