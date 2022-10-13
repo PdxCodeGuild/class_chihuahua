@@ -1,21 +1,27 @@
 import random
 
 def pick6():
-    winning = []
-    n = 6
-    num = 5
-    for i in range(n):
-        winning.append(random.randint(1,100))
-        while num < 10:
-            print(winning)
-    ticket = []
+    pick6 = []
     n = 6
     for i in range(n):
-        ticket.append(random.randint(1,100))
-    print(ticket)
+        pick6.append(random.randint(1,100))
+    return
+
+pick6()
+
+def lottery():
+    ticket = pick6()
+    for n in range(5):
+        return ticket
+    winning_ticket = pick6()
+    for n in range(1):
+        return winning_ticket
+    print(f"{ticket} and {winning_ticket}")
+
+lottery()
     
 
-
+"""
     def num_matches(winning, ticket):
         while ticket in winning:
             if ticket[0] == winning[0]:
@@ -34,3 +40,4 @@ def pick6():
         num_matches(winning, ticket)
 
 pick6()
+"""
