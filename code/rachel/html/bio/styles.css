@@ -1,0 +1,40 @@
+body {
+    background-color: darkolivegreen;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+div.flex-container {
+    display: flex;
+    flex-direction: row;
+
+}
+
+img {    
+    width: 60%;
+    height: 80%;
+    align: left;
+    border: 1px solid black;
+   
+}
+
+header {
+    text-align: right;
+}
+
+.box {
+    align: right;
+    width: 40vw;
+    margin: 30px;
+    border: 1px solid black;
+    opacity: 0.4;
+
+}
+
+.box p {
+    margin: 5%;
+    font-weight: bold;
+    color: #000000;
+}
