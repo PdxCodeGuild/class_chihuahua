@@ -1,0 +1,11 @@
+header {
+    color: orangered;
+    border-color: aqua;
+    background-blend-mode: luminosity;
+    background-image: linear-gradient(to bottom right, yellow,rgb(198, 142, 38),rgb(99, 226, 99));
+    height: 10rem;
+    width:100%;
+    text-align: center;
+    font-size: 8rem;
+    font-family: impact;
+}
