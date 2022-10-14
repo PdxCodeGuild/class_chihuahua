@@ -8,8 +8,7 @@ M-F 6:00 pm – 9:36 pm
 ### Holidays
 
 - Nov 24th (Thanksgiving)
-- Nov 25th (Day After Thanksgiving)
-- More Pending...
+- Dec 25th (Christmas)
 
 ### Staff
 
