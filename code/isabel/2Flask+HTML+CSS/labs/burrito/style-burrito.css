@@ -9,9 +9,49 @@ header {
     font-size: 8rem;
     font-family: impact;
     animation: color-moves 14s linear infinite;
-
 }
-
+.burrito-pics {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width:100%;
+}
+img {
+    vertical-align: middle;
+    width: 25%;
+    height: 8rem;
+}
+.info-title {
+    text-align: left;
+    font-size: 2rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:darkred;
+    -webkit-text-stroke: 0.05rem;
+    -webkit-text-stroke-color: yellowgreen;
+}
+.form-group {
+    margin-right: 4rem;
+}
+.entry-form {
+    background-color: rgb(95, 16, 160);
+}
+.choices {
+    font-size: 2rem;
+    color: darkgoldenrod;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form-inline {
+    background-color: rgb(111, 5, 48);
+}
+option {
+    margin-right: 4rem !important;
+}
+select.custom-select {
+    margin-right: 4rem !important;
+}
+.mr-sm-2 {
+    margin-right: 4rem !important;
+}
 
 @keyframes color-moves {
     0% {color: green}
