@@ -8,4 +8,14 @@ header {
     text-align: center;
     font-size: 8rem;
     font-family: impact;
+    animation: color-moves 14s linear infinite;
+
+}
+
+
+@keyframes color-moves {
+    0% {color: green}
+    25% {color: white}
+    50% {color: black}
+    100% {color: orangered}
 }

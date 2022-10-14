@@ -18,6 +18,7 @@
     </figure>
     
     <form class="entry-form">
+      <h2 class="info-title">Steps: 1) Please enter your email and password so we can match burrito to person! 2) Choose your burrito options! 3) Pick up burrito and enjoy!</header>
         <div class="form-group">
           <label for="exampleInputEmail1">Email address</label>
           <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
@@ -29,6 +30,60 @@
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
+
+      <form class="form-inline">
+        <h3 class="choices">What type of burrito do you want?</h3>
+        <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Preference</label>
+        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+          <option selected>Choose type of BuRrItO</option>
+          <option value="1">bowl aka no tortilla</option>
+          <option value="2">traditional tortilla</option>
+          <option value="3">mo' veggie aka lettuce wrap</option>
+          <option value="4">flammin' aka if you have to ask...</option>
+          <optino value="5">blue corn tortilla</optino>
+        </select>
+      
+        <div class="custom-control custom-checkbox my-1 mr-sm-2">
+          <input type="checkbox" class="custom-control-input" id="customControlInline">
+          <label class="custom-control-label" for="customControlInline">Remember my preference</label>
+        </div>
+      
+        <button type="submit" class="btn btn-primary my-1">Submit</button>
+      </form>
+
+      <select class="custom-select" multiple>
+        <option selected>Choose your protein</option>
+        <option value="1">carne asada</option>
+        <option value="2">pollo</option>
+        <option value="3">tofu</option>
+        <option value="4">beans</option>
+        <option value="5">cheese</option>
+      </select>
+
+      <div class="custom-control custom-checkbox">
+        <h4 class="toppings">What fillings do you want?</h4>
+        <input type="checkbox" class="custom-control-input" id="customCheck1">
+        <label class="custom-control-label" for="customCheck1">Cheese</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck2">
+        <label class="custom-control-label" for="customChec2">jalapenos</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck3">
+        <label class="custom-control-label" for="customChec3">ghost pepper</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck4">
+        <label class="custom-control-label" for="customChec4">rice</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck5">
+        <label class="custom-control-label" for="customChec5">black beans</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck6">
+        <label class="custom-control-label" for="customChec6">corn chips</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck7">
+        <label class="custom-control-label" for="customChec7">avocado</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck8">
+        <label class="custom-control-label" for="customChec8">lettuce</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck9">
+        <label class="custom-control-label" for="customChec9">tomatoe</label>
+        <input type="checkbox" class="custom-control-input" id="customCheck10">
+        <label class="custom-control-label" for="customChec10">sour cream</label>
+
+      </div>
 
 
 </body>
