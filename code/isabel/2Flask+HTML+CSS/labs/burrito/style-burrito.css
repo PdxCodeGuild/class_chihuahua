@@ -9,12 +9,14 @@ header {
     font-size: 8rem;
     font-family: impact;
     animation: color-moves 14s linear infinite;
+    position: fixed;
 }
 .burrito-pics {
     margin: 0;
     padding: 0;
     display: flex;
     width:100%;
+    padding-top: 10rem;
 }
 img {
     vertical-align: middle;
@@ -33,7 +35,8 @@ img {
     margin-right: 4rem;
 }
 .entry-form {
-    background-color: rgb(95, 16, 160);
+    /* background-color: rgb(95, 16, 160); */
+    background-image: linear-gradient(to bottom right, rgb(189, 21, 189),rgb(95, 16, 160),rgb(123, 49, 227));
 }
 .choices {
     font-size: 2rem;
@@ -41,21 +44,81 @@ img {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 .form-inline {
-    background-color: rgb(111, 5, 48);
+    /* background-color: rgb(111, 5, 48); */
+    background-image: linear-gradient(to top left, rgb(169, 10, 10),rgb(111, 5, 38),red);
+    color: yellow;
 }
-option {
+/* option {
     margin-right: 4rem !important;
-}
+} */
 select.custom-select {
     margin-right: 4rem !important;
+    width: -webkit-fill-available;
+    background-color: rgb(134, 134, 12);
+    color: yellow;
 }
 .mr-sm-2 {
     margin-right: 4rem !important;
 }
+.toppings {
+    color: #37ec90;
+    background-color:rgb(39, 87, 129);
+}
+.proteins {
+    background-color:red;
+}
+.spicy {
+    display: flex;
+    flex-direction: column;
+    background-color: lightyellow;
+}
+.strong {
+    text-align: right;
+    margin-left: 85rem;
+}
+.range-scaling {
+    display: flex;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+    background-image: linear-gradient(to bottom right, rgb(228, 228, 170), yellow, rgb(241, 72, 11));
+}
+.top_toppings {
+    background-image: linear-gradient(to bottom left, rgb(67, 128, 182), rgb(70, 152, 153), rgb(151, 223, 219));
+    color:black;
+    font-weight: 300;
+}
+.burrito-size {
+    background-color: orange;
+    color:black;
+}
+.checkout {
+    background-color: orange;
+    color:black;
+}
+.btn-primary {
+
+    animation: button-moves 14s linear infinite;
+
+}
+.checkout > .btn {
+    width:auto;
+    padding-left:10rem;
+    margin-left: 5rem;
+    align-items: center;
+}
+
 
 @keyframes color-moves {
     0% {color: green}
     25% {color: white}
     50% {color: black}
     100% {color: orangered}
+}
+
+@keyframes button-moves  {
+    0% {color:green}
+    25% {color:red}
+    50% {color:rgb(245, 71, 18)}
+    100% {color:red}
+    
 }
