@@ -109,6 +109,10 @@ select.custom-select {
 body {
     background-color: rgb(236, 236, 169);
 }
+.bg-light {
+    opacity: 0.5;
+    height: 2rem;
+}
 
 
 @keyframes color-moves {
