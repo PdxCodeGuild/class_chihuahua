@@ -1,0 +1,113 @@
+body{
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Roboto Slab', 'Roboto Serif', serif;
+    color: darkslategray;
+}
+
+header {
+    height: 200px;
+    width: 100%;
+    background: url(images/oregonoak.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0%;
+    background-color: darkkhaki;
+    border-bottom: 1px solid black;
+}
+
+.header h1 {
+    margin: 15px 50px 5px 0px;
+    font-size: 60px;
+    font-style: italic;
+    text-align: right;
+}
+
+.header h3 {
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 0px 50px 0px 0px;
+    text-align: right;
+}
+
+article {
+    background-image: url(images/Quercus_garryanna_xera.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+a:link {
+    color: darkolivegreen
+}
+
+a:visited{
+    color: midnightblue;
+}
+
+a:hover {
+    color: goldenrod;
+}
+
+a:active {
+    color: orangered;
+}
+
+
+
+section.quote {
+    font-family: 'Roboto Serif', serif;
+    font-style: italic;
+    padding: 20px 20px 20px 20px;
+    text-align: justify;
+}
+
+aside.urban_forestry {
+    width: 20%;
+    padding: 20px 20px 20px 20px;
+    font-size: smaller;
+    text-align: justify;
+    float: right;
+    background-color: khaki;
+    border: 0px solid khaki;
+}
+
+.urban_forestry h4{
+    text-align: center;
+}
+
+aside img {
+    width: 100%;
+    border-radius: 25px;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+    margin: 0;
+    padding: 0;
+}
+
+div.text_box {
+    margin: 0% 25% 0% 25%;
+    padding: 20px;
+    background-color: darkkhaki;
+    border: 2px solid darkkhaki;
+    opacity: 0.8; 
+}
+
+
+div.text_box p, h4 {
+    padding: 0px 20px 0px 20px;
+    margin: 5px 5px 10px 5px;
+    text-align: justify;
+}
+
+div.text_box h4 {
+    margin: 5px 5px 5px 5px;
+    padding: 5px 10px 5px 10px; 
+}
+
+.enjoy {
+    font-weight: bold;
+}

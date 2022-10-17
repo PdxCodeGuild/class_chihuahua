@@ -1,0 +1,87 @@
+body{
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*Calibri, 'Trebuchet MS', sans-serif; */
+    font-family: 'Roboto Slab', serif;
+}
+
+header {
+    height: 200px;
+    width: 100%;
+    background: url(images/oregonoak.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0%;
+    background-color: darkkhaki;
+    border-bottom: 1px solid black;
+}
+
+.header h1 {
+    margin: 15px 50px 5px 0px;
+    font-size: 60px;
+    font-style: italic;
+    color: black;
+    
+    text-align: right;
+}
+
+.header h3 {
+    color: black;
+    margin-top: 10px;
+    font-style: italic;
+    font-weight: lighter;
+    padding: 0px 50px 0px 0px;
+    text-align: right;
+}
+
+article {
+    background-image: url(images/Quercus_garryanna_xera.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+
+}
+
+aside.quote {
+    padding: 20px 20px 20px 20px;
+    text-align: justify;
+}
+
+aside.urban_forestry {
+    width: 20%;
+    padding: 20px 20px 20px 20px;
+    color: black;
+    font-size: smaller;
+    text-align: justify;
+    float: right;
+    background-color: khaki;
+    border: 0px solid khaki;
+}
+
+aside img {
+    width: 100%;
+    padding-top: 20px;
+}
+
+div.transbox {
+    margin: 0% 25% 0% 25%;
+    padding: 20px;
+    background-color: darkkhaki;
+    border: 2px solid darkkhaki;
+    opacity: 0.7; 
+}
+
+
+div.transbox p, h4 {
+    padding: 0px 20px 0px 20px;
+    margin: 5px 5px 10px 5px;
+    color: black;
+    text-align: justify;
+}
+
+div.transbox h4 {
+    margin: 5px 5px 5px 5px;
+    padding: 5px 10px 5px 10px; 
+}
+
+.enjoy {
+    font-weight: bold;
+}

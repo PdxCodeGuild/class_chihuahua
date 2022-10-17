@@ -1,42 +1,55 @@
-body {
-    background-color: darkolivegreen;
-    align: center
-    font-family: "sans-serif";
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;/*Calibri, 'Trebuchet MS', sans-serif; */
+    background-color:beige;
+    color: midnightblue;
 }
 
-.header-box {
-    text-align: center;
-    background-image: url("images/oak_restoration\ \(1\).jpg");
-    width: 98%;
-    margin: 0px;
-    border: 1px solid black;
+header {
+    height: 200px;
+    width: 100%;
+    background: url(images/oregonoak.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50px;
+    background-color: darkkhaki;
 }
 
-h1 {
-    align: center;
-    font-size: 60px;
-    font-weight: bold;
-    color: black;
-    margin: 5px 0px 0px 0px;    
+.header h1 {
+    vertical-align: middle;
+    font-size: 50px;
+    padding:  0px 50px 0px 0px;
+    text-align: right;
 }
 
-h3 {
-    color: black;
-    font-weight: bold;
-    margin-top: 0px;
+.header h3 {
+    font-style: italic;
+    padding: 0px 50px 50px 0px;
+    text-align: right;
 }
 
-img {    
+div.quote {
+    padding: 10px 20px 5px 20px;
+    font-size: smaller;
+    font-weight: lighter;
+    text-align: justify;
+    border: 1px solid beige;
+}
+
+aside.urban_forestry {
+    width: 20%;
+    padding: 20px 20px 20px 20px;
+    font-size: smaller;
+    font-weight: lighter;
+    text-align: justify;
     float: right;
-    width: 350px;
-    margin: 10px 10px 10px 10px;
-    border: 1px solid black;  
-}
-h4 {
-    margin: 10px 0px 5px 0px;
+    background-color: khaki;
 }
 
-p {
-    margin: 5px 10px 5px 10px;
-    color: #000000; 
+div.main_text{
+    padding: 10px 20px 10px 20px;
+    text-align: left;
+}
+
+h4 {
+    font-style: bold;
 }
