@@ -30,3 +30,14 @@ p {
 nav li:hover {
     background-color: greenyellow
 }
+
+img {
+    border: 5px dashed darkgreen;
+  }
+
+span {
+    color: darkgreen;
+    background-color: yellowgreen;
+    border-style: groove;
+    border-color: lawngreen;
+}
