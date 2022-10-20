@@ -17,7 +17,7 @@ Flask is a light-weight web application framework written in Python. It performs
 
 You can install Flask with `pip install flask`. The [official flask quickstart](https://flask.palletsprojects.com/en/1.1.x/quickstart/) provides walkthrough of flask's major features.
 
-Below is a minimal Flask application, it receives a request at `localhost:5000/` and returns a response that simply contains "Hello World!". Copy-paste this code into a file `app.py`.
+Below is a minimal Flask application, it receives a request at `localhost:5000/` and returns a response that simply contains "Hello World!". Copy-paste this code into a file `app.py`. Then type in the terminal `flask --debug run`
 
 ```python
 from flask import Flask

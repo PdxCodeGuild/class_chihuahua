@@ -58,9 +58,11 @@ due date: 10/21/2022
 
 # Videos
 
-10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing)
-10/11/22 - [Animations and Transitions](https://drive.google.com/file/d/16iU-oIWdWfQPH1kWKfuKz14tqJV7ebfu/view?usp=sharing)
-10/12/22 - [Bootstrap](https://drive.google.com/file/d/1_OpUuVw51emDv8oVGrO9GqwNjhpAoMVn/view?usp=sharing)
+10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing) <br>
+10/11/22 - [Animations and Transitions](https://drive.google.com/file/d/16iU-oIWdWfQPH1kWKfuKz14tqJV7ebfu/view?usp=sharing) <br>
+10/12/22 - [Bootstrap](https://drive.google.com/file/d/1_OpUuVw51emDv8oVGrO9GqwNjhpAoMVn/view?usp=sharing) <br>
+10/17/22 - [Flask](https://drive.google.com/file/d/1ablBm_O1j1FWS7VUDsu91wvPRBG_TJGo/view?usp=sharing) <br>
+
 
 # Course breakdown
 
