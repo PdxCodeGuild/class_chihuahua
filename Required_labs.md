@@ -70,8 +70,8 @@ due date: 11/1/2022
 10/11/22 - [Animations and Transitions](https://drive.google.com/file/d/16iU-oIWdWfQPH1kWKfuKz14tqJV7ebfu/view?usp=sharing) <br>
 10/12/22 - [Bootstrap](https://drive.google.com/file/d/1_OpUuVw51emDv8oVGrO9GqwNjhpAoMVn/view?usp=sharing) <br>
 10/17/22 - [Flask](https://drive.google.com/file/d/1ablBm_O1j1FWS7VUDsu91wvPRBG_TJGo/view?usp=sharing) <br>
-10/18/22 = [Flask Forms](https://drive.google.com/file/d/1aRumGVYMwFv3TZEICfKBdcSBfUq1BItX/view?usp=sharing) <br>
-
+10/18/22 - [Flask Forms](https://drive.google.com/file/d/1aRumGVYMwFv3TZEICfKBdcSBfUq1BItX/view?usp=sharing) <br>
+10/19/2022 - [Flask Drinks API](https://drive.google.com/file/d/1A7W28GClhotgctgxl_sk5VYHMIOeZUdV/view?usp=sharing)
 
 # Course breakdown
 
