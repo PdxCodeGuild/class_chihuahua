@@ -1,0 +1,19 @@
+{%extends 'base.html'%} {%block content%}
+
+<h1>List of drinks</h1>
+
+{%for drink in all_drinks%}
+<form method="POST" action="{%url 'mark_as_fav' drink.id%}">
+  {% csrf_token%}
+
+  <h5 class="mt-4">{{drink.drink_name}}</h5>
+  <img src="{{drink.drink_url}}" />
+
+  <button
+    type="submit"
+    class="btn btn-{% if drink.favourite == False%}primary{%else%}warning{%endif%}"
+  >
+    {%if drink.favourite == False%}Add me as fav{%else%}Added as fav{%endif%}
+  </button>
+</form>
+{%endfor%} {%endblock%}
