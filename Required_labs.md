@@ -1,6 +1,5 @@
 # Lists of required labs
 
-# Python
 
 Unit Converter v1;v2;v3;v4
 
