@@ -54,6 +54,19 @@ def results():
 
     return render_template('results.html', r_data= r_data, r_data_name = r_data_name, r_drink_catagory = r_drink_catagory, ingred_messure = ingred_messure, ingred_list = ingred_list, r_drink_imgaine = r_drink_imgaine )
 
+
+@app.route('/custom')
+def custom():
+    random_request = requests.get('https://www.thecocktaildb.com/api/json/v1/1/random.php')
+    r_data = random_request.json()['drinks'][0]
+    r_drink_imgaine = r_data['strDrinkThumb']
+    spirits = ['Rum', 'Vodka', 'Whiskey', 'Whisky', 'Gin', 'Beer']
+    select_ingred = ['Lime', 'Lemon', 'Tonic', 'Mint', 'Orange', 'Grenadine', 'Orange juice', 'Amaretto', 'Egg', 'Sugar', 'Salt', 'Milk', 'Vanilla extract']
+    
+    return render_template('customized.html', picture = r_drink_imgaine, spirits = spirits, select_ingred = select_ingred)
+    
+
+
 if __name__ == '__main__':
     # run app in debug mode on port 5000
     app.run(debug=True, port=5000)

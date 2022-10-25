@@ -6,7 +6,7 @@
         <img src="{{ r_drink_imgaine }}" class="img-thumbnail" alt="...">
       </div>
       <div class="col">
-        <h1>Your Drink Name</h1>
+        <h1>Drink Name</h1>
         <br>
         <p>{{ r_data_name }}</p>
       {% endblock %}
@@ -23,7 +23,7 @@
       {% endblock %}
       {% block ingred %}
       <div class="col">
-        <h1>Ingrediants</h1>
+        <h1>ingredients</h1>
             {% for ingred in ingred_list %}
                 {% if r_data[ingred] != None %}
                 <p>{{ r_data[ingred] }}</p>
