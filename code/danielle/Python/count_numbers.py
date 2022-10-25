@@ -1,8 +1,11 @@
 import requests
+import string
 response = requests.get('https://www.gutenberg.org/files/62897/62897-0.txt')
 response.encoding = 'utf-8' # set encoding to utf-8
-print(response.text)
+punctuation_removal = str.maketrans('', '', string.punctuation)
+# print(response.text.lower().translate(punctuation_removal).split())
 
-# Make everything lowercase, strip punctuation, split into a list of words.
-# Your dictionary will have words as keys and counts as values. If a word isn't in your dictionary yet, add it with a count of 1. If it is, increment its count.
-# Print the most frequent top 10 out with their counts. You can do that with the code below.
+words = list(response.text.lower().translate(punctuation_removal).split())
+words.sort(key=lambda tup: tup[0], reverse=True) 
+for i in range(min(10, len(words))):  # print the top 10 words, or all of them, whichever is smaller
+    print(words[i])
