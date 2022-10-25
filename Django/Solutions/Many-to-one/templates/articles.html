@@ -1,0 +1,24 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container mt-4">
+  <h4 class="mb-4">Add an article</h4>
+  <form action="{%url 'add_article'%}" method="POST">
+    {% csrf_token%}
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Headline</label>
+      <input type="text" name="headline" class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
+      <label for="exampleFormControlTextarea1">Publication Date</label>
+      <input type="date" name="pub_date" class="form-control" id="exampleFormControlTextarea1" rows="3"></input>
+      <label for="reporter">Publication Date</label>
+      <select id='reporter' class="form-control" name='reporter' aria-label="Default select example">
+        <option selected>Select reporter</option>
+        {%for reporter in reporters%}
+        <option value="{{reporter.id}}">{{reporter}}</option>
+        {%endfor%}
+      </select>
+    </div>
+    <button type="submit" class="mt-3 btn btn-primary mb-3">Create</button>
+  </form>
+
+  {%endblock%}
+</div>

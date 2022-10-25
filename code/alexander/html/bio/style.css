@@ -1,0 +1,23 @@
+.center {
+    text-align: center;
+}
+
+ul {
+list-style: none;
+} /* Remove default bullets */
+
+li::before {
+font-family: "Font Awesome 5 Free";
+content: "\f35a";
+color: rgb(0, 90, 128);
+
+margin-right: 10px; /* Optional tweak */
+}
+body{
+    background-color: pink;
+    line-height: 2;
+    text-align: center;
+}
+img {
+    border-radius: 8px;
+}
