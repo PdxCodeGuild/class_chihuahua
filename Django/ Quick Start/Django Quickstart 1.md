@@ -1,26 +1,22 @@
 # Django Quickstart 1 - Creating URLs, Views and Static folders.
 
-## Set up Virtual Environment with Pipenv
-
-This document covers the content in the folder 'Views'.
-
-If you do not have Pipenv, install it globally on your machine. In the terminal run
-
-`pip install pipenv`
-
-I usually set Pipenv to the latest Python version available on my machine, so I run `pipenv --python 3.6`
-
-Make sure that your virtual environment is running. You can run `pipenv shell`
-
-Then run: `pipenv install django`
 
 ## Set up Virtual Environment with Virtual ENV
+
+Mac Users:
 
 ```bash
 python3 -m venv env
 source env/bin/activate
 python3 -m pip install django
 deactivate ##to deactivate
+```
+Window Users (Using GitBash):
+```bash
+py -m venv env
+cd env
+cd Scripts
+. activate
 ```
 
 [Virtual Env with Python](https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/)
