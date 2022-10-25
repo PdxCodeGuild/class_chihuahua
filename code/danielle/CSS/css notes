@@ -1,0 +1,21 @@
+cascading style sheet - reading from top to bottom
+h1 {
+    color: red
+}
+
+h1{
+    color: blue
+}
+Color blue overides the red color for h1 due to cascading properties
+
+Order of priority: style tags in html, in the header line, have higher priority in style sheet or style tag. 
+
+class="title"
+considered an attribute
+must use . in the beginning of class to target it in css, for example .title
+
+id= 
+cannot be reused. 
+
+Selector - write things in a more functional way.
+

@@ -1,0 +1,590 @@
+"""
+WHILE LOOPS
+"""
+
+# my_list = [1,2,3,4,5]
+# i=0
+# while i < len(my_list):
+#     print(i)
+#     i+1
+# else:
+#     print('done')
+#
+# for i in range(0,10,2):
+#     print(i, end=" ")
+#
+# a_string = ["hello world", 1,2,3,4]
+
+# for element in a_string:
+#     print(element, end=' ')
+
+# a_list = ["hello world", 1,2,3,4]
+
+# for element in range(len(a_list)):
+#     # for element in range(0,5)
+#     print(a_list[element], end=' ')
+#
+# a_list = ["hello world", 1,2,3,4]
+
+# for element in range(len(a_list)):
+#     # for element in range(0,5)
+#     print(element, a_list[element])
+#
+"""
+BREAK AND CONTINUE
+"""
+# list_1 = [2,4,6,7,8]
+# list_2 = []
+# for num in list_1:  #for every number in the list
+#     if num % 2 == 0: #if it returns 0, or it's even then
+#         list_2.appen(num) #it appends to this list
+#     else:
+#         continue
+################################
+# for i in range(100):
+#     print(i, end= ' ')
+#     if i == 5:
+#         break
+################################
+# nums = []
+
+# while True:
+#     num = input('enter a number')
+#     print(nums)
+#     try:
+#         result = int(num)
+#         nums.append(result)
+#     except:
+#         print('number entered is invalid')
+#     if num == 'done':
+#         break
+####################################
+"""
+Strings - Slicing
+"""
+# x = "hello world"
+
+# print(x[3:8])
+# print(x[::-1])
+# print(x.find("l"))
+# print(x.upper())
+
+# fruits = ["apple", "banana", "peach"]
+# # How do we print banana out of fruits?
+# print(fruits[0]) # This prints apple since 0 is the first index
+
+# num = [ [1,2,3], [3,4,5], fruits ]
+# How to access nested list:
+# print(num[2][1]) # 2 access the second index and 1 accesses the 1st index in that element
+###########################################
+# fruits1 = ["apple", "banana"]
+# fruits2 = ["pear", "kiwi"]
+
+# fruits1.insert()
+# fruits1.remove()
+# fruits1.pop()
+# fruits1.extend(fruits2)
+# fruits3 = fruits1.copy()
+############################################
+# nums = [4, 56, 73, 12, 17, 99, 42, 87]
+# nums.sort() # sorts from lower to higher
+# nums.reverse() # reverses order
+# print(nums[:2:]) #only the first two (?)
+# print(nums[::-1]) #reverses list
+#############################################
+"""
+List Comprehension
+"""
+# nums = []
+
+# for x in range():
+#     nums.append(x**2)
+
+# print
+#above code is the same as below code
+# nums = [x**2 for x in range(10)]
+
+# print(nums)
+###############################
+# names = ["David", "Helen", "Mark"]
+
+# lower_names = [name.lower() for name in names]
+# print(lower_names)
+########################
+# numbers = [1,2,3,4,5]
+# doubled_odds = []
+# double_odds = [num * 2 for num in numbers if num % 2 ==1]
+# print(double_odds)
+# below code is the same as above code
+# for num in numbers:
+#     if num % 2 == 1:
+#         doubled_odds.append(num *2)
+
+# print(doubled_odds)
+######################################
+# """
+# Tuples
+# """
+# my_list = [] #can include variety of elements
+# my_tuple = () #elements have a relationship
+###################################
+"""
+Dictionary
+my_dictionary = {#this is a key that maps to a value "apple" : #this is the value, can be a boolean, number, etc }
+"""
+# my_dict = {"apple" : 1.5, "pear": 1.5}
+# print(my_dict["apple"]) #recalls the value
+
+# my_dictionary = {"apple": 1.0
+# "pear": 1.5,
+# "grapes": .75
+# "coins": [1,2,3,4 {"old_coin": "silver"}],
+# "veggies": {"celery": 2, "tomatoes": 4}
+# }
+#print(my_dictionary["coins][0]"]) #accesses 1 from the coins list
+#print(my_dictionary.get("apple")) #prints value of apple
+#my_dictionary["apple"] = 2.0 #prints the increased value of apple
+
+#for values, keys in my_dictionary.items()
+#    print(values)
+#this prints values. Can swap for keys or values or both in print statement
+
+# word = "aaiuhfewauhauehfauhfe"
+# counted =  {}
+
+# for char in word:
+#     if char in counted:
+#         counted[char] += 1
+#     else:
+#         counted[char] = 1
+
+# print(counted)
+"""
+REVIEW OF FUNCTIONS
+"""
+# print("hello world")
+
+# for num in range (1,10):
+#     print(num)
+
+# my_list = [1,4,5,6]
+
+# print(sorted(my_list)) #should include the above instruction in one function "def ...():"
+#functions help us organize code.
+
+"""
+SCOPE
+"""
+# statement = "I'd like to learn more about scope"
+
+# def print_statement():
+#     print(statement)
+
+# print_statement() #this activates the function and prints the statement
+###########################################
+# def print_statement():
+#     statement = "I'd like to learn more about scope"
+#     print(statement)
+
+# print_statement() #this understands that statement exists within the function
+# print(statement) #this does not register the statement withint the function
+##############
+#functions within functions, calling functions:
+# def say_hello(first_name, last_name):
+#     print(f"hello {first_name} {last_name}")
+
+# def collect_name():
+#     first_name = input("Tell me your first name: ")
+#     last_name = input("Tell me your last name: ")
+#     collect_name(first_name, last_name)
+
+# def main():
+#     collect_name()
+#     say_hello()
+#######################################
+# def subtract(a,b):
+#     return a - b
+
+# another_variable = subtract(4,2)
+# print(2 + another_variable)
+##################################
+# def subtract(a,b=2):
+#     return a - b
+
+# another_variable = subtract(4) #we don't have to provide a value to b here like the previous function, since its already defined in this example.
+# print(2 + another_variable)
+#######################################
+"""
+HELPER FUNCTIONS can be used as parameters for other functions
+"""
+# my_numbers = [1,2,3,4,5]
+
+# def double_numbers(num):
+#     return num * 2
+
+# def iterate_numbers(my_numbers):
+#     for num in range(len(my_numbers)):
+#         current_number = my_numbers[num]
+#         current_number = double_numbers(current_number[num])
+#         print(current_number)
+
+# iterate_numbers(my_numbers)
+"""
+CLOSURES
+"""
+# def outer_function(msg):
+
+#     def inner_function():
+#         print(msg)
+
+#     return inner_function
+
+# my_variable = outer_function("hello there")
+# print(inner_function()) #this would give us an error since its inside the function.
+########################
+# def adder(x):
+#     def inner(y):
+#         return x + y
+#     return inner
+
+# adds = adder(5)
+# print(adds(2))
+#FUNCTIONS have a specific SCOPE
+#MOVING FORWARD: NO floating variables - should be defined within function
+
+# def get_dimension():
+#     return 200, 300
+
+# width, height = get_dimension()
+
+# print(width, height)
+##################################
+"""
+Lambda functions AKA "anonumous functions"
+"""
+#define lambda functions for quick simple functions
+
+# my_variable = lambda x:x + 1 #this does nothing, you have to add a variable
+
+# print(my_variable(2))
+####################################
+"""
+args & kwargs
+"""
+# blog_1 = "I don't like the Beatles"
+# blog_2 = "I'd like to travel more"
+# blog_3 = "This is super awesome"
+# lists = [1,2,3,4,5]
+
+# def blogs(*args): #asterick arg is a placeholder for however many arguments you will pass
+#     for element in args:
+#         print(element)
+
+# blogs(blog_1, blog_2, blog_3, lists)
+
+# def blogs(**kwargs):
+#     for name in kwargs:
+#         print(name, kwargs[name])
+
+# blogs(alex = "pop", joe = "rock", jack = "classic")
+
+# def blogs(*args, **kwargs):
+#     for variable in args:
+#         print(variable)
+#     for name in kwargs:
+#         print(name, kwargs[name])
+
+# blogs(blog_3, blog_1, alex = "pop", joe = "rock", jack = "classic")
+############################################
+"""
+Importing files
+"""
+# ./ = current directory
+# book = open('./file.txt')
+# contents = book.read()
+# print(content)
+##############
+# phone_book = {
+#     "David": "503-543-5675",
+#     "Alice": "234-987-3746"
+# }
+
+# with open("test.txt", "w") as book:
+#     for name, number in phone_book.items(): #name is key and number is value
+#         line = f"{name}, {number} \n"
+#         book.write(line)
+###############################
+"""
+TWO POINTERS
+"""
+
+# def reverse_list(my_list):
+#     a = len(my_list) - 1
+#     b = 0
+
+#     while (b < a):
+#         [my_list[a], my_list[b]] = [my_list[b], my_list[a]]
+#         b = b + 1
+#         a = a - 1
+
+#     return my_list
+
+# print(reverse_list([1,2,3,4]))
+################################################
+"""
+String Compression
+"""
+"""
+- keep track of occurence
+- loop through
+"""
+#word = "aabeetey11"
+#" a a b e e t e y 1 1 "
+#"a2b1e2t1e1y1l2l"
+
+# def string_compression(word):
+#     new_string = ''
+#     count = 0
+#     for letter in range(len(word)):
+#         count += 1
+#         if word[letter] != word[letter+1]:
+#             new_string += word[letter] + str(count)
+#             count = 0
+#     return new_string
+###################################
+"""
+Recursion
+"""
+# a function that recalls itself over and over again
+# def hello_there():
+#     hello_there()
+
+# def printFib(n):
+#     if n >= 3:
+#         return printFib(n-1) + printFib(n-2)
+#     elif n == 0:
+#         return 0
+#     else:
+#         return 1
+
+# print(printFib())#enter number here
+##################################################
+"""
+OOP
+1) Create a class
+2) Method and properties
+3) Instantiate a class by creating an object
+"""
+# print(type("hello"))
+# x = "etetg"
+
+# class Employee: # Employee represents the class
+#    Titles = ("Dr.", "Mr.", "Mrs.", "Ms.")
+#   def __init__(self, first, last, pay):
+#       self.first = first
+#       self.last = last
+#       self.pay = pay
+#   def fullname(self):
+#       return self.first + " " + self.last
+#   #classmethod # no addtional functionality, signals class method for other coders
+#   def titles_stat_with(cls, startswith):
+#       return [t for t in cls.Titles if t.startswith(startswith)]
+
+# print(Employee.titles_start_with("M"))
+
+# empl_1 = Employee("dani", "cantu", "50")
+# empl_2 = Employee("John", "doe", "150")
+
+# print(empl_2.first)
+"""
+Every class can have attributes and methods.
+Attributes are properties, ie, blue
+Properties are action(function) = "can quit", "is late"
+"""
+
+# empl_1 = Employee()
+# empl_2 = Employee()
+
+# empl_1.first = "dani"
+# empl_1.last = "cantu"
+# empl_1.pay = 50
+#can treat this as a dictionary because you're defining elements
+# empl_2.first = "john"
+# empl_2.last = "doe"
+# empl_2.pay = 150
+# print(empl_1.first)
+####################################
+"""
+Inheritance
+"""
+
+# from operator import le
+
+
+# class Animal:
+#     def __init__(self, legs, color):
+#         self.legs = legs
+#         self.color = color
+#     def speak(self):
+#         print(f"I have {self.legs} and I am {self.color}")
+
+# penguin = Animal(2, "black and white") #blue print
+
+# penguin.speak() #evokes the function
+
+# class rabbit(Animal):
+#     def __init__(self, legs, color, ears):
+#         super().__init__(legs, color)
+#         self.ears = ears
+#     def speak(self):
+#         print("rabbits speak very fast") #this def speak(self) overrides the above function
+#     def say_hello(self):
+#         print("I am a Rabbit!")
+
+# base_animal = Animal(2, "red")
+# rabbit = rabbit(2, "white")
+# rabbit.speak()
+# rabbit.say_hello()
+##############################################
+"""
+4 PILLARS OF OBJECT ORIENTED PROGRAMING (OOP)
+"""
+"""
+Encapsulation
+Inheritance
+Abstraction
+Polymorphism
+"""
+# from abc import ABC, abstractmethod
+
+# class Company(ABC):
+#     def work(self):
+#         pass #leaves open ended
+
+# class Manager(Company): #this employs abstraction AND inheritance
+#     def work(self):
+#         print("I assign to my team")
+
+# class Employee(Company):
+#     def work(self):
+#         print("I complete the work that is assigned to me")
+#############################
+# class Bird():
+#     def intro(self):
+#         print("There are different types of birds")
+
+#     def flight(slef):
+#         print("Most birds can fly, but some cannot")
+
+# class Parrot(Bird):
+#     def flight(self):
+#         print("Parrots can fly") #overrides
+
+# class Penguin(Bird):
+#     def flight(self):
+#         print("Penguins cannot fly")
+
+# #we define different classes, but parrot and penguin override flight method
+
+# bird = Bird()
+# parrot = Parrot()
+# penguin = Penguin()
+
+# bird.flight()
+# parrot.flight()
+# penguin.Flight
+##################################
+# INCOMPLETE NOTES FROM MISSED CLASS ON FRIDAY
+## __ dunder (?) can use __ to make code private
+# import requests
+# class Pen:
+#     def __init__(self, ink_level, life):
+#         self.ink_level = ink_level
+#         self.life = life
+
+# def write(self):
+#     self.ink_level -= 50
+#     print(" I am writing something")
+
+
+# def __check_life(self):
+
+# mont_blanc = Pen(50, 100)
+# print(mont_blanc.__check_life())
+"""
+REQUESTS
+"GET" - getting something from the server, like Google server
+"POST" - creating something that was existing before, usually updating a database
+"PUT" - edit something that already exists
+"DELETE" - removes resouce from database
+"""
+# import requests
+
+# response = requests.get("https://api.chucknorris.io/jokes/random")
+
+# print(response.url)
+
+# data = response.json()
+# print(data["value"])
+###################################
+
+# my_dict = {"food": "bar"}
+# try: 
+#     my_value = my_dict["sky"]
+# except KeyError: 
+#     print("Try Again")
+
+# try: 
+#     print(my_dict["sky"])
+# except: 
+#     print("Try again")
+#     for x in range(0,5):
+#         print(x)
+
+# Try and Except is very powerful
+
+# while True: 
+#     try: 
+#         x = int(input("Enter a number: "))
+#         break
+#     except: 
+#         print("Try again")
+#     else: 
+#     finally: 
+
+# import requests
+# response = requests.get("url")
+
+# try: 
+#     data = response.json()
+#     print(data["value"]) #can add indexs like [0] to access dictionaries within a dictionary
+# except: 
+#     print("There is no data!")
+
+########################################
+
+# A set looks like: {2,4,5,6} 
+# It uses curly braces
+# my_set = set([1,2,3,4,4,4,5,6,6,7])
+
+# print(my_set)
+# Prints the set but removes the extra numbers.
+# Orders the data in a specific way
+
+# my_set = set("hello")
+
+# print(my_set)
+# Output will have h e l o, it removes the extra l.
+
+# my_set_1 = {1,2,3,4}
+# my_set_2 = {2,3}
+# Check to see if sets are subsets of each other
+# print(my_set_2.issubset(my_set_1)
+# Check to see if one set is greater than or less than the other
+# print(my_set_2 <= my_set_1)
+
+###########################################
+
+# def __repr__(self):
+#     return f"I am the representation of this class, {self.ink_level}"
+# repr method allows you to print exactly how you want something to appear
