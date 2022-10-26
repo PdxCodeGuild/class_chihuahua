@@ -91,14 +91,14 @@ class Blog(models.Model):
 
 Create a few entries:
 
-- run `Blog.objects.create(title='I made my kittens bark', text='lorem ipsum', pub_date='2009-11-12')`
+- run `Blog.objects.create(title='my kittens can bark', text='lorem ipsum', pub_date='2009-11-12')`
 - run `Blog.objects.create(title='The economy of the 20th century', text='another lorem ipsum', pub_date='2020-01-12')`
 
 Filtering:
 
-- run `Blog.objects.filter(title = 'I made my kittens bark')`
+- run `Blog.objects.filter(title = 'my kittens can bark')`
 - run `Blog.objects.filter(id = 1)`
-- run `Blog.objects.filter(title__startswith='I made')`
+- run `Blog.objects.filter(title__startswith='my kittens')`
 
 - run `a = Blog.objects.all()` to assign all posts to a variable
 - run `a` to see all blog posts
