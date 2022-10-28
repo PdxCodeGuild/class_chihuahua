@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class CrunchConfig(AppConfig):
+class FlyConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'crunch'
+    name = 'fly'
