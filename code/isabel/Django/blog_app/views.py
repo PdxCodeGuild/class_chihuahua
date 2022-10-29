@@ -26,3 +26,22 @@ def add_post(request):
         pub_date = request.POST['pub_date']
         Blog.objects.create(title = title, text = text, pub_date = pub_date)
         return redirect('posts')
+
+def delete_post(request, id):
+    blog_post = Blog.objects.get(id=id)
+    print(blog_post)
+    blog_post.delete()
+    return redirect('posts')
+
+def see_details(request, id):
+    post = Blog.objects.get(id = id)
+    return render(request, 'pages/details.html', {"post": post})
+
+def update_post(request, id):
+    blog_post = Blog.objects.get(id=id)
+    blog_post.title = request.POST['title']
+    blog_post.text = request.POST['text']
+    blog_post.pub_date = request.POST['pub_date']
+    print(blog_post)
+    blog_post.save()
+    return redirect('posts')
