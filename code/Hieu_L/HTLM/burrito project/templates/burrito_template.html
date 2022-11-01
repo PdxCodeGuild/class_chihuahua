@@ -30,42 +30,74 @@
     </section>
 
     <section id="order">
-        <div id="tortilla">
-            <div class="input-group">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="radio" aria-label="Radio button for following text input">flour
-                        <input type="radio" aria-label="Radio button for following text input">corn
-                    </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center m-3" id="tortilla">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                    <label class="form-check-label" for="inlineRadio1">flour</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">corn</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">wheat</label>
                 </div>
             </div>
-        </div>
-        <div if="meat">
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" aria-label="Checkbox for following text input"> beef
-                        <input type="checkbox" aria-label="Checkbox for following text input"> pork
-                        <input type="checkbox" aria-label="Checkbox for following text input"> chicken
-                    </div>
+            <div class="row justify-content-center mb-3" id="filling">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">pork</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">beef</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">chicken</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">vegetarian</label>
                 </div>
             </div>
-        </div>
-        <div id="vegetable"></div>
-            <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                    <div class="input-group-text">
-                        <input type="checkbox" aria-label="Checkbox for following text input"> lettice
-                        <input type="checkbox" aria-label="Checkbox for following text input"> onion
-                        <input type="checkbox" aria-label="Checkbox for following text input"> green pepper
-                    </div>
+            <div class="row justify-content-center mb-3" id="vegetables">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">lettuce</label>
                 </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">corn</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">tomato</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">onions</label>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>pick-up or delivery?</option>
+                    <option value="1">delivery</option>
+                    <option value="2">pickup</option>
+                </select>
             </div>
         </div>
     </section>
 
     <section id="submit">
-        <a class="btn btn-primary" href="" role="button">submit</a>
+        <div class="row justify-content-center">
+            <a class="btn btn-primary" href="" role="button">submit</a>
+        </div>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
