@@ -63,6 +63,14 @@ Burrito
 
 due date: 11/1/2022
 
+<hr>
+
+# Django
+
+Todo
+
+due date: 11/14/2022
+
 # Videos
 
 10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing) <br>
@@ -71,7 +79,7 @@ due date: 11/1/2022
 10/17/22 - [Flask](https://drive.google.com/file/d/1ablBm_O1j1FWS7VUDsu91wvPRBG_TJGo/view?usp=sharing) <br>
 10/18/22 - [Flask Forms](https://drive.google.com/file/d/1aRumGVYMwFv3TZEICfKBdcSBfUq1BItX/view?usp=sharing) <br>
 10/19/2022 - [Flask Drinks API](https://drive.google.com/file/d/1A7W28GClhotgctgxl_sk5VYHMIOeZUdV/view?usp=sharing)
-
+10/31/2022 - [Many to one Django](https://drive.google.com/file/d/1A6tFs9cahWF3aC_nTdJGuG5Vxqpvkt18/view?usp=share_link)
 # Course breakdown
 
 Duration - 19 weeks
