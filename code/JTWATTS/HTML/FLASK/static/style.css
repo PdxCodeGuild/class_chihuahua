@@ -1,0 +1,101 @@
+/* *{
+    box-sizing: border-box;
+    margin: 100;
+    padding: 100;
+    
+} */
+
+body {
+    /* border-image: round; */
+    background-color:rgb(213, 106, 106);
+    /* background: url("Static-Electricity.png"); */
+  
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
+   
+    /* background-color: #cccccc; */
+  }
+.flex-container1 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.item {
+    width: 150px;
+    height: 200px;
+    background: rgb(161, 39, 6);
+    margin: 100px;  
+    padding: 0px;
+    justify-content: flex-end;
+    /* flex-wrap: wrap; */
+   
+  }
+.flex-container2 {
+   display: flex;
+  flex-direction: column;
+/* flex-wrap: wrap; */
+}
+.items {
+    width: 450px;
+    height: 200px;
+    background: rgb(0, 255, 76);
+    margin: 90px;  
+    padding: 0px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+   
+  }
+.flex-container3 {
+  display: flex;
+  flex-direction: column;
+/* flex-wrap: wrap; */
+
+}
+.itemz {
+    width: 450px;
+    height: 200px;
+    background: rgb(14, 162, 207);
+    margin: 90px;  
+    padding: 0px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+   
+  }
+.flex-container4 {
+  display: flex;
+  flex-direction: column;
+/* flex-wrap: wrap; */
+                
+}  
+.iteme {
+    width: 450px;
+    height: 200px;
+    background: rgb(217, 160, 15);
+    margin: 90px;  
+    padding: 0px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+   
+  }            
+.flex-container5 {
+  display: flex;
+  flex-direction: column;
+/* flex-wrap: wrap; */
+
+}
+.itemr {
+    width: 450px;
+    height: 200px;
+    background: rgb(19, 12, 231);
+    margin: 90px;  
+    padding: 0px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+   
+  }
+.flex-container6 {
+  display: flex;
+  flex-direction: column;
+/* flex-wrap: wrap; */
+}
