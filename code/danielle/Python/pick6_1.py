@@ -3,10 +3,15 @@ import random
 
 def pick6():
     winning = []
+<<<<<<< HEAD
     ticket = []
+=======
+    user_ticket = []
+>>>>>>> 28a5ab8527a406c2de2ec6719bb2230bfeed4894
     n = 6
-    for i in range(n):
+    for num in range(n):
         winning.append(random.randint(1,100))
+<<<<<<< HEAD
     ticket = input("Choose 6 numbers (1-99), separated by a comma and space: ")
     print(f"Winning ticket: {winning} Your ticket: [{ticket}]")
    
@@ -43,3 +48,20 @@ pick6()
 # Find how many numbers match
 # Add to your balance the winnings from your matches
 # After the loop, print the final balance
+=======
+    for num in range(0,6):
+        user = input("Choose 6 numbers, pressing enter after each selection: ")
+        user_ticket.append(user)
+    print(user_ticket)
+
+    def num_matches(winning, user_ticket):
+        balance = 0
+        for winning in user_ticket:
+            if winning == user_ticket:
+                balance = balance - 2
+                print(f"{balance}")
+    
+    num_matches(winning, user_ticket)
+
+pick6()
+>>>>>>> 28a5ab8527a406c2de2ec6719bb2230bfeed4894

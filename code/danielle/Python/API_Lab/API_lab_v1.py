@@ -8,4 +8,7 @@ response = requests.get(f"https://api.openweathermap.org/data/2.5/weather?lat={l
 data = response.json()
 data_description = data['weather']
 print(data_description)
+<<<<<<< HEAD
 
+=======
+>>>>>>> 28a5ab8527a406c2de2ec6719bb2230bfeed4894
