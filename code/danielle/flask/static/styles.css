@@ -1,1 +1,5 @@
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
+body {
+    font-size: large;
+    color: white;
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/11/80/mexican-fiesta-background-banner-vector-14671180.jpg");
+}
