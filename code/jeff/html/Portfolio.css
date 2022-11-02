@@ -1,0 +1,78 @@
+*{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font: Georgia;
+}
+
+
+h1 {
+    text-align: center;
+    transition: 2s;
+}
+  
+h2 {
+    font-size: smaller;
+    text-align: center;
+    transition: 2s;
+}
+
+a{
+    font-weight: 600;
+    background-color: white;
+}
+
+ul{
+    background-color: white;
+    transition: 3s;
+}
+
+li{
+    font-weight: 600;
+}
+
+#link{
+    font-weight: 600;
+}
+
+.headers{
+    padding-top: .5in;
+}
+
+.headers:hover {
+    color: aliceblue;
+    transition: 5s;    
+}
+  
+ul:hover {
+    background-color:rgb(105, 122, 135);
+    transition: 4s;
+}
+
+li:hover{
+    background-color: rgba(208, 223, 241, 0.404);
+    transition: 10s;
+}
+
+a{
+    color:black !important
+}
+
+.carousel-item{
+    padding-top: 1in;
+    padding-left: .25in;
+    padding-right: .25in;
+}
+
+.accordion{
+    padding-top: .5in;
+    padding-bottom: .5in;
+
+}
+
+.card-body{
+    text-align: center;
+}
+
+div{
+    padding-top: 1in;
+    -moz-box-align: center;
+}
