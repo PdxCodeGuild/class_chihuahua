@@ -1,13 +1,27 @@
 {% extends 'base.html' %}
 {% block content %}
-<a href="{%url 'add_posts' %}">add a blog post</a>
+<a href="{% url 'add_posts' %}">Add a to-do item</a>
 <ul>
+  <h1>To-do List</h1>
   {% for post in blogs %}
-  <p><a href="{%url 'details' post.id %}">Title: {{ post.title }}</a></p>
-  <p>ID: {{ post.id }}</p>
+  {% if post.completed_task == False %}
+  <p><a href="{% url 'see_details' post.id %}">Title: {{ post.title }}</a></p>
+  <p><a href="{% url 'delete_post' post.id %}">Delete</a></p>
+  <p><a href="{% url 'complete_post' post.id %}">Complete</a></p>
   <p>Description: {{ post.text }}</p>
-  <p>Pub Date: {{post.pub_date}}</p>
+  <p>Publish Date: {{post.created_date}}</p>
+  {% endif %}
+  {% endfor %}
+  <h1>Completed Task</h1>
+  {% for post in blogs %}
+  {% if post.completed_task == True %}
+  <p><a href="{% url 'see_details' post.id %}">Title: {{ post.title }}</a></p>
+  <p><a href="{% url 'delete_post' post.id %}">Delete</a></p>
+  <p><a href="{% url 'complete_post' post.id %}">Incomplete</a></p>
+  <p>Description: {{ post.text }}</p>
+  <p>Publish Date: {{post.completed_date}}</p>
+  {% endif %}
   {% endfor %}
 </ul>
-{% endblock %}
 
+{% endblock %}
