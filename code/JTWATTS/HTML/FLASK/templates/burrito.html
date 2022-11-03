@@ -1,9 +1,93 @@
 {% extends 'base.html' %}
 {% block content %}
-{{tortilla}}
-{{rice}}
-{{beans}}
-{{meats}}
+<H1>CHOOSE YOUR OPTIONS</H1>
 
-<H1> Take your order<H1/>
+<div class="container">
+    <form>
+<select class="form-select" aria-label="Default select example">
+    <option selected>TORTILLA</option>
+    {% for tortilla  in tortilla %}
+    <option value="{{tortilla}}">{{tortilla}}</option>
+ 
+   
+ 
+    {% endfor %}
+  </select>
+  <button type="submit" class="btn mt-5btn-primary"> choice</button>
+</form>
+</div>
+
+<div class="container">
+    <form>
+  <select class="form-select" aria-label="Default select example">
+    <option selected>RICE</option>
+    {% for rice  in rice %}
+    <option value="rice">{{rice}}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit" class="btn btn-primary"> choice</button>
+</form>
+</div>
+<div class="container">
+    <form>
+
+  <select class="form-select" aria-label="Default select example">
+    <option selected>BEANS</option>
+    {% for beans  in beans %}
+    <option value="beans">{{beans}}</option>
+    {% endfor %}
+  </select>
+  <div class="container">
+    <form>
+
+  <button type="submit" class="btn btn-primary"> choice</button>
+</form>
+</div>
+
+<div class="container">
+    <form>
+  <select class="form-select" aria-label="Default select example">
+    <option selected>MEATS</option>
+    {% for meats  in meats %}
+    <option value="meats">{{meats}}</option>
+    {% endfor %}
+  </select>
+
+
+  <button type="submit" class="btn btn-primary"> choice</button>
+</form>
+</div>
+
+<div class="container">
+    <form>
+  <select class="form-select" aria-label="Default select example">
+    <option selected>DAIRY</option>
+    {% for dairy  in dairy %}
+    <option value="dairy">{{dairy}}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit" class="btn btn-primary"> choice</button>
+</form>
+</div>
+
+<div class="container">
+    <form>
+
+  <select class="form-select" aria-label="Default select example">
+    <option selected>SAUCE</option>
+    {% for sauce  in sauce %}
+    <option value="sauce">{{sauce}}</option>
+    {% endfor %}
+  </select>
+
+  <button type="submit" class="btn btn-primary"> choice</button>
+</form>
+</div>
+
+
+
+<H1> TAKE YOUR ORDER<H1/>
 {% endblock %}
+

@@ -9,11 +9,13 @@ def index():
     rice = ['white', 'brown']
     beans = ['brown', 'black']
     meats = ['carnitas', 'sofritas', 'chicken']
-    return render_template('burrito.html', meats = meats, rice = rice, beans = beans, tortilla = tortilla )
+    dairy = ['sour cream', 'cheese']
+    sauce = ['guac', 'salsa']
+    return render_template('burrito.html', meats = meats, rice = rice, beans = beans, tortilla = tortilla , dairy = dairy, sauce = sauce)
 
-# @app.route('//')
-# def about():
-#     return render_template('style.css')
+@app.route('//')
+def about():
+    return render_template('style.css')
 
 # @app.route('//')
 # def index():

@@ -1,9 +1,9 @@
-/* *{
+*{
     box-sizing: border-box;
-    margin: 100;
-    padding: 100;
+    margin: 0;
+    padding: 0;
     
-} */
+}
 
 body {
     /* border-image: round; */
@@ -17,85 +17,100 @@ body {
     /* background-color: #cccccc; */
   }
 .flex-container1 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    display: flex ;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
 }
 .item {
-    width: 150px;
-    height: 200px;
+  /* flex-direction: row; */
+    width: 900px;
+    height: 700px;
     background: rgb(161, 39, 6);
-    margin: 100px;  
-    padding: 0px;
-    justify-content: flex-end;
+    /* margin: 100px;  
+    padding: 0px; */
+   
     /* flex-wrap: wrap; */
    
   }
 .flex-container2 {
    display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
 /* flex-wrap: wrap; */
 }
 .items {
-    width: 450px;
-    height: 200px;
-    background: rgb(0, 255, 76);
-    margin: 90px;  
-    padding: 0px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+  width: 900px;
+  height: 800px;
+    background: rgb(166, 233, 225);
+    /* margin: 90px;  
+    padding: 0px; */
+    
+    
    
   }
 .flex-container3 {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: row; */
 /* flex-wrap: wrap; */
 
 }
 .itemz {
-    width: 450px;
-    height: 200px;
-    background: rgb(14, 162, 207);
-    margin: 90px;  
-    padding: 0px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+  width: 900px;
+  height: 800px;
+    background: rgb(81, 116, 5);
+    /* margin: 90px;  
+    padding: 0px; */
+  
    
   }
 .flex-container4 {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
 /* flex-wrap: wrap; */
                 
 }  
 .iteme {
-    width: 450px;
-    height: 200px;
-    background: rgb(217, 160, 15);
-    margin: 90px;  
-    padding: 0px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+  width: 900px;
+  height: 800px;
+    background: rgb(171, 30, 190);
+    /* margin: 90px;  
+    padding: 0px; */
    
   }            
 .flex-container5 {
   display: flex;
-  flex-direction: column;
+  width: 900px;
+  height: 500px;
+  /* display: flex; */
+  
+ 
+  background: #9f20ee;
+
 /* flex-wrap: wrap; */
 
 }
 .itemr {
-    width: 450px;
-    height: 200px;
-    background: rgb(19, 12, 231);
-    margin: 90px;  
-    padding: 0px;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+    width: 900px;
+    height: 700px;
+    background: #bcebd5;
+    /* margin: 90px;  
+    padding: 0px; */
+  
    
   }
 .flex-container6 {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column;
+  width:10px;
+  height:10px; */
 /* flex-wrap: wrap; */
+}
+.itemq {
+  width: 900px;
+  height: 500px;
+  background: rgb(19, 12, 231);
+  /* margin: 90px;  
+  padding: 0px; */
+  /* justify-content: flex-end;
+  flex-wrap: wrap; */
+ 
 }
