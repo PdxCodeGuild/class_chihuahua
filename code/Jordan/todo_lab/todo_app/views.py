@@ -33,7 +33,7 @@ def home(request):
     if request.method == 'GET':
         return render(request, 'pages/home.html')
 
-def see_details(request, id): ##we get the id of the element. Remember, all elements are created with an ID in the database.
+def see_details(request, id): #we get the id of the element. Remember, all elements are created with an ID in the database.
     post = Blog.objects.get(id = id) ## we are assigning the element to a variable
     return render(request, 'pages/details.html', {"post": post}) ## we are passing the context to the page
 
@@ -45,18 +45,9 @@ def complete_post(request, id):
     blog_post.save()
     return redirect('posts')
 
-# def complete_post(request, id):
-#     blog_post = Blog.objects.get(id=id)
-#     blog_post.title = request.POST['title']
-#     blog_post.text = request.POST['text']
-#     #blog_post.pub_date = request.POST['pub_date']
-#     print(blog_post)
-#     blog_post.save()
-#     return redirect('posts')
-
-
-# need to add a function for a completed date
-
-# need to add a function representing whether it was completed
-
-# def completed(request, id)
+def edit_post(request, id):
+    blog_post = Blog.objects.get(id=id)
+    blog_post.title = request.POST['title']
+    blog_post.text = request.POST['text']
+    blog_post.save()
+    return redirect('posts')
