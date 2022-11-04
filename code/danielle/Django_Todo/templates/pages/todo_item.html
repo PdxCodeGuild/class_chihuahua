@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url 'todo_item' %}" method="POST">
+    {% csrf_token %} To-do Item: <br />
+    <input type="text" name="description" placeholder="enter todo item" /><br /><br />
+    {% csrf_token %} Date created: <br />
+    <input type="date" id="start" name="created_date" value="" min="2018-01-01" max="2030-12-31"><br />
+    {% csrf_token %} Date completed: <br />
+    <input type="date" id="end" name="completed_date" value="" min="2018-01-01" max="2030-12-31">
+    <br />
+    <input type="submit" />
+</form>
+{% endblock %}
