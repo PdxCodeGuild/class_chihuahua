@@ -1,51 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-<meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>FEED THE HUNGER BURRITOS</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-  <body>
-    <header>
-    <h1>BURRITOS</h1>
-    
-  </body>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"/>
-   <h1>Chose your tortilla<h1/>
-    <p>
-    <div class="flex-container1">
-        <p>tortillas<p/>
-    <div class="item"><img src="{{ url_for('static', filename='white_flour_tortilla.jpg') }}" /><div/>
-        <p>white<p/>
-    <div class="item"><img src="{{ url_for('static', filename='wheat_flour.jpg') }}" /><div/>
-        <p>wheat<p/>
-    <div class="item"><img src="{{ url_for('static', filename='corn.jpg') }}" /><div/>
-        <p>corn<p/>
-    <div class="item"><img src="{{ url_for('static', filename='spinach.jpg') }}" /><div/>
-        <p>spinach<p/>
-    <div/>
-    <p/>
-    <p>
-    <h1>Rice<h1/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+
+<body>
+    <header>
+        <h1>BURRITOS</h1>
+
+            <h1>Fix Your Burritos</h1>
+
+
+            <div class="flex-container1">
+                <p>tortillas</p>
+
+                <div class="item"><img src="{{ url_for('static', filename='white_flour_tortilla.jpg') }}" />
+
+                    <h2>white</h2>
+                </div>
+
+
+                <div class="item"><img src="{{ url_for('static', filename='wheat_flour.jpg') }}" />
+                    <h2>wheat</h2>
+                </div>
+
+                <div class="item"><img src="{{ url_for('static', filename='corn.jpg') }}" />
+
+                    <h2>corn</h2>
+                </div>
+                <div class="item"><img src="{{ url_for('static', filename='spinach.jpg') }}" />
+                    <h2>spinach</h2>
+                </div>
+
+
+
+
+            </div>
+        </div>
+        </div>
+
+
+
+</body>
+    
+    <h2>Rice</h2>
     <div class="flex-container2">
         
     <div class="items"><img src="{{ url_for('static', filename='brown_rice.jpg') }}" /><div/>
-        <p>brown<p/>
+        <h2>brown</h2>
     <div class="items"><img src="{{ url_for('static', filename='white_rice.jpg') }}" /><div/>
-        <p>white<p/>
+        <h2>white</h2>>
    
     <div/>
-    <p/>
-    <p>Beans<p/>
+    
+    <h2>Beans</h2>>
 
     <div class="flex-container3">
     <div class="itemz"><img src="{{ url_for('static', filename='brown_beans.jpg') }}" /><div/>
-        <p>brown<p/>
+        <h2>brown</h2>>
     <div class="itemz"><img src="{{ url_for('static', filename='black_beans.jpg') }}" /><div/>
-        <p>black<p/>
+        <h2>black</h2>>
      
                    
     <div/>

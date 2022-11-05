@@ -1,93 +1,157 @@
-{% extends 'base.html' %}
-{% block content %}
-<H1>CHOOSE YOUR OPTIONS</H1>
-
-<div class="container">
-    <form>
-<select class="form-select" aria-label="Default select example">
-    <option selected>TORTILLA</option>
-    {% for tortilla  in tortilla %}
+{% extends 'base.html' %} {% block content %}
+<form>
+  <select class="form-select" aria-label="Default select example">
+    <option selected>Tortillia</option>
+    {% for tortilla in tortilla %}
     <option value="{{tortilla}}">{{tortilla}}</option>
- 
-   
- 
     {% endfor %}
   </select>
-  <button type="submit" class="btn mt-5btn-primary"> choice</button>
 </form>
-</div>
 
-<div class="container">
-    <form>
+<form>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Rice</option>
+      {% for rice in rice %}
+      <option value="{{rice}}">{{rice}}</option>
+      {% endfor %}
+    </select>
+  </form>
+
+<form>
   <select class="form-select" aria-label="Default select example">
-    <option selected>RICE</option>
-    {% for rice  in rice %}
-    <option value="rice">{{rice}}</option>
+    <option selected>Beans</option>
+    {% for beans in beans %}
+    <option value="{{beans}}">{{beans}}</option>
     {% endfor %}
   </select>
-
-  <button type="submit" class="btn btn-primary"> choice</button>
 </form>
-</div>
-<div class="container">
-    <form>
 
+
+<form>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Meats</option>
+      {% for meats in meats %}
+      <option value="{{meats}}">{{meats}}</option>
+      {% endfor %}
+    </select>
+  </form>
+
+
+<form>
   <select class="form-select" aria-label="Default select example">
-    <option selected>BEANS</option>
-    {% for beans  in beans %}
-    <option value="beans">{{beans}}</option>
+    <option selected>Dairy</option>
+    {% for dairy in dairy %}
+    <option value="{{dairy}}">{{dairy}}</option>
     {% endfor %}
   </select>
-  <div class="container">
-    <form>
-
-  <button type="submit" class="btn btn-primary"> choice</button>
 </form>
-</div>
-
-<div class="container">
-    <form>
-  <select class="form-select" aria-label="Default select example">
-    <option selected>MEATS</option>
-    {% for meats  in meats %}
-    <option value="meats">{{meats}}</option>
-    {% endfor %}
-  </select>
-
-
-  <button type="submit" class="btn btn-primary"> choice</button>
-</form>
-</div>
-
-<div class="container">
-    <form>
-  <select class="form-select" aria-label="Default select example">
-    <option selected>DAIRY</option>
-    {% for dairy  in dairy %}
-    <option value="dairy">{{dairy}}</option>
-    {% endfor %}
-  </select>
-
-  <button type="submit" class="btn btn-primary"> choice</button>
-</form>
-</div>
-
-<div class="container">
-    <form>
-
-  <select class="form-select" aria-label="Default select example">
-    <option selected>SAUCE</option>
-    {% for sauce  in sauce %}
-    <option value="sauce">{{sauce}}</option>
-    {% endfor %}
-  </select>
-
-  <button type="submit" class="btn btn-primary"> choice</button>
-</form>
-</div>
 
 
 
-<H1> TAKE YOUR ORDER<H1/>
+<form>
+    <select class="form-select" aria-label="Default select example">
+      <option selected>Sauce</option>
+      {% for sauce in sauce %}
+      <option value="{{sauce}}">{{sauce}}</option>
+      {% endfor %}
+    </select>
+  </form>
+
+  <fieldset class="form-group">
+    <div class="row">
+      <legend class="col-form-label col-sm-2 pt-0">Queso</legend>
+      <div class="col-sm-10">
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gridRadios"
+            id="gridRadios1"
+            value="option1"
+            checked
+          />
+          <label class="form-check-label" for="gridRadios1">
+            Chips and Queso small
+          </label>
+        </div>
+        <div class="form-check">
+          <input
+            class="form-check-input"
+            type="radio"
+            name="gridRadios"
+            id="gridRadios2"
+            value="option2"
+          />
+          <label class="form-check-label" for="gridRadios2">
+            Chips and Queso Large
+          </label>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+  <div class="form-group row">
+    <div class="col-sm-2">EXTRAS</div>
+    <div class="col-sm-10">
+      <div class="form-check">
+        <input name='check' value ='blue' class="form-check-input" type="checkbox" id="gridCheck1" />
+        <label checkclass="form-check-label" for="gridCheck1">
+          MEATS
+        </label>
+      </div>
+      <div class="form-check">
+          <input name='check' value ='red' class="form-check-input" type="checkbox" id="gridCheck2" />
+          <label class="form-check-label" for="gridCheck2">
+            HOT SAUCE
+          </label>
+        </div>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-10">
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 {% endblock %}
-
