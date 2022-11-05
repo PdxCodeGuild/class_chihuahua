@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form id='author-form' action="{% url 'update' todo.id %}" method="POST">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="title">Title for Update</label>
+    <input type="text" class="form-control" name="title" id="title" aria-describedby="title"
+      placeholder="{{ todo.title }}">
+  </div>
+  <div class="form-group">
+    <label for="description">Description</label>
+    <textarea class="form-control" name="task" id="description" placeholder="{{ todo.task }}" rows="3"></textarea>
+  </div>
+  <div class="input-group input-group-lg">
+    <span class="input-group-text" id="start_date">Date To Start List</span>
+    <input data-provide="datepicker-inline" type="text" class="form-control" aria-label="Sizing example input"
+      name="start_date" aria-describedby="inputGroup-sizing-lg">
+  </div>
+
+  <div class="input-group input-group-lg">
+    <span class="input-group-text" id="end_date">Date To End List</span>
+    <input data-provide="datepicker-inline" type="text" class="form-control" aria-label="Sizing example input"
+      name="end_date" aria-describedby="inputGroup-sizing-lg">
+  </div>
+  <br><h2>Did you complete the tasks on the TODO List?</h2>
+  <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="True" name="completion" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+          YES
+      </label>
+  </div>
+  <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="False" name="completion" id="flexCheckChecked">
+      <label class="form-check-label" for="flexCheckChecked">
+          NO
+      </label>
+  </div>
+
+  <!-- <div class="form-group">
+    <label for="exampleFormControlSelect1">Example select</label>
+    <select class="form-control" name="completion" id="completion">
+      <option>True</option>
+      <option>False</option>
+    </select>
+  </div> -->
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+{% endblock %}

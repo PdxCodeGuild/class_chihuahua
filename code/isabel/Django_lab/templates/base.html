@@ -16,7 +16,8 @@
 <body>
 <!-- ADD href with url that links to views.py name= ; if condition checks if authenticated links to  -->
   <nav style='padding: 20px' class=" navbar navbar-expand-lg navbar-dark bg-dark main-nav">
-    <a class="navbar-brand" href="{%url 'home'%}">Home</a>
+    <!--add spaces after %, url links urls.py in apps based on the name=  -->
+    <a class="navbar-brand" href="{% url 'home' %}">Home</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
       aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -25,16 +26,16 @@
     <div class=" collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav ml-auto">
         <li class="nav-item navbar-link profile">
-          <a class="nav-link" href="{% url 'home'%}">Welcome to TODO Home</a>
+          <a class="nav-link" href="{% url 'home' %}">Welcome to TODO Home</a>
         </li>
         <li class="nav-item navbar-link profile">
-          <a class="nav-link" href="{% url 'add_todo'%}">Add TODO Item</a>
+          <a class="nav-link" href="{% url 'add' %}">Add TODO Item</a>
         </li>
         <li class="nav-item navbar-link profile">
-            <a class="nav-link" href="{% url 'show_todo'%}">Show All TODO Items</a>
+            <a class="nav-link" href="{% url 'show' %}">Show All TODO Items</a>
         </li>
         <li class="nav-item navbar-link profile">
-            <a class="nav-link" href="{% url 'update'%}">Update TODO Items</a>
+            <a class="nav-link" href="{% url 'update' %}">Update TODO Items</a>
           </li>
     </div>
   </nav>
