@@ -1,4 +1,13 @@
-{% extends "./base.html"}
+{% extends "todo/base.html" %}
 {% block content %}
-    <h1>item entry page</h1>
+<div class="container mt-5">
+    <form action="{% url 'list' %}" method="POST">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="text">chore</label>
+            <input type="text" name="text" class="form-control" placeholder="enter todo item here" />
+            <input type="submit" />
+        </div>
+    </form>
+</div>
 {% endblock content %}

@@ -1,4 +1,10 @@
-{% extend "./base.html"}
+{% extends "todo/base.html" %}
 {% block content %}
-    <h1> list page</h1> 
+<ul>
+    <a href="{% url 'chore entry form' %}">add a chore</a>
+    {% for item in todo_item %}
+    <p>Title: {{ item.text }}</p>
+    {% empty %}
+    {% endfor %}
+</ul>
 {% endblock content %}
