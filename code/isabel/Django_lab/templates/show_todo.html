@@ -8,14 +8,16 @@
 
     {% for todo in todos %}
     <h4>
-        <a href="{% url 'show' %}">{{ todo.title }}</a>
+        <p>Title: {{ todo.title }}</p>
     </h4>
     <p>ID: {{ todo.id }}</p>
     <p>Description: {{ todo.task }}</p>
     <p>Start Date: {{ todo.start_date }}</p>
     <p>End Date: {{ todo.end_date }}</p>
     <p>Completion: {{ todo.completion }}</p>
-
+    <a href="{% url 'remove' todo.id %}" class="btn btn-secondary btn-block active mb-5" role="button" aria-pressed="true"> Delete Tasks</a>
+    <a href="{% url 'update' todo.id %}" class="btn btn-secondary btn-block active mb-5" role="button" aria-pressed="true"> Update Tasks</a>
+    
     {% empty %}
     <p>you have nothing to do.</p>
     {% endfor %} 

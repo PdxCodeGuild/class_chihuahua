@@ -25,13 +25,7 @@ def add_todo(request):
         task = request.POST['task']
         start_date = request.POST['start_date']
         end_date = request.POST['end_date']
-        completion = request.POST['completion']
-        if (request.POST['completion'] == 'False'):
-            completion = False
-        else:
-            completion = True
-        # print(task, start_date, end_date, completion)
-        TodoItem.objects.create(title=title, task=task, start_date=start_date, end_date=end_date, completion=completion)
+        TodoItem.objects.create(title=title, task=task, start_date=start_date, end_date=end_date)
         return redirect('show')
 
     
@@ -44,7 +38,7 @@ def update(request, id):
         return render(request, 'update.html', context)
     elif request.method == "POST":
         todo.title = request.POST['title']
-        todo.task = request.POST['text']
+        todo.task = request.POST['task']
         todo.start_date = request.POST['start_date']
         todo.end_date = request.POST['end_date']   
         if (request.POST['completion'] == 'FALSE'):
@@ -53,9 +47,12 @@ def update(request, id):
             todo.completion = True 
 
         todo.save()
-        return redirect('show_todo.html', todo.id)
+        # return redirect('show_todo.html', todo.id)
+        return redirect('show')
 
 def remove_todo(request, id):
     todo = TodoItem.objects.get(id=id)
+    print(todo)
     todo.delete()
-    return redirect('show_todo.html')
+    return redirect('show')
+# REDIRECT SHOW CORRESPONDS TO NAME= OF APP>URLS.PY

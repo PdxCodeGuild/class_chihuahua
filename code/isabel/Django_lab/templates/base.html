@@ -14,7 +14,7 @@
 </head>
 
 <body>
-<!-- ADD href with url that links to views.py name= ; if condition checks if authenticated links to  -->
+  <!-- ADD href with url that links to views.py name= ; if condition checks if authenticated links to  -->
   <nav style='padding: 20px' class=" navbar navbar-expand-lg navbar-dark bg-dark main-nav">
     <!--add spaces after %, url links urls.py in apps based on the name=  -->
     <a class="navbar-brand" href="{% url 'home' %}">Home</a>
@@ -32,17 +32,17 @@
           <a class="nav-link" href="{% url 'add' %}">Add TODO Item</a>
         </li>
         <li class="nav-item navbar-link profile">
-            <a class="nav-link" href="{% url 'show' %}">Show All TODO Items</a>
+          <a class="nav-link" href="{% url 'show' %}">Show All TODO Items</a>
         </li>
-        <li class="nav-item navbar-link profile">
-            <a class="nav-link" href="{% url 'update' %}">Update TODO Items</a>
-          </li>
+        <!-- <li class="nav-item navbar-link profile">
+          <a class="nav-link" href="{% url 'show' %}">Update TODO Items</a>
+        </li> -->
     </div>
   </nav>
 
   {% block content %} {% endblock %}
 
-<!-- ADD JS static file -->
+  <!-- ADD JS static file -->
 
   <!-- <script src="{% static 'js/main.js' %}"></script> -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
