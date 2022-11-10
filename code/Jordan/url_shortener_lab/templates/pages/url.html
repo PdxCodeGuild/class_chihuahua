@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Welcome to the URL Shortener</h1>
+
+<h3>What is the URL you would like to shorten?</h3>
+<form action="{% url 'shorten' %}" method = 'post'>
+    {% csrf_token %}
+    <label for="url_link">Enter the URL here:</label>
+    <input id ="url_link" type="url">
+    <input type="submit" value="Submit">
+  </form>
+{% endblock %}
