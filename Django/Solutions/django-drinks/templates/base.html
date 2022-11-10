@@ -32,31 +32,13 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href=""
-              >Add Reporter<span class="sr-only">(current)</span></a
-            >
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'favs' %}">Favs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="">Favs</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="">View All</a>
+            <a class="nav-link" href="{% url 'all' %}">View All</a>
           </li>
         </ul>
-        <form action="" method="POST" class="form-inline my-2 my-lg-0">
-          {% csrf_token%}
-          <input
-            class="form-control mr-sm-2"
-            type="search"
-            placeholder="Search"
-            name="search_blog"
-            aria-label="Search"
-          />
-          <button type="submit" class="btn btn-outline-secondary">
-            Search
-          </button>
-        </form>
       </div>
     </nav>
 
@@ -85,6 +67,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <script src=""></script>
   </body>
 </html>
