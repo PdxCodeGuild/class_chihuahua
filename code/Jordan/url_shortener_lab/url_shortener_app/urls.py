@@ -3,6 +3,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name = 'home'),
-    path('url/', views.shortener, name = 'shortener'),
-    path('shortened/', views.accepted, name = 'shorten')
+    # path('url/', views.create, name = 'create'),
+    path('shorturl/', views.random_, name = 'shortened')
 ]
