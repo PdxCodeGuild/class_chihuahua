@@ -1,8 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 <h1 class='text-center'>Show All URLs</h1>
-<div class="container mt-3">
-    <a href="{% url 'show' %}" class="btn btn-secondary btn-block active mb-5" role="button" aria-pressed="true">Enter URL</a>
-{% for url in 'url_list' %}
-<p class='text-center mt-3 mb-2'><a href='https://{{url.url}}' target='_blank'>{{url.code}}</a></p>
+{% for url in 'shortened' %}
+<p class='text-center mt-4 mb-4'><a href='{{url.url}}' target='_blank'>{{url.code}}</a></p>
 {% endfor %}
+
+
+<div class="container mt-3">
+    <a href="{% url 'enter' %}" class="btn btn-secondary btn-block active mb-5" role="button" aria-pressed="true">Enter URL</a>
 {% endblock %}
