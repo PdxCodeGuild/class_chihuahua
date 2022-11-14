@@ -8,7 +8,7 @@ class Team(models.Model):
 
 class Player(models.Model):
     first_name = models.CharField(max_length=100)
-    team_name = models.ManyToManyField(Team)
+    team_name = models.ManyToManyField(Team, null=True, blank=True)
 
 
     def __str__(self):

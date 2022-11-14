@@ -6,5 +6,6 @@ urlpatterns = [
     path('add_to_team/<int:id>', views.add_to_team, name='add_to_team'),
     path('players/', views.players, name='players'),
     path('teams/', views.teams, name='teams'),
+    path('remove/<int:id>', views.remove_from_team, name='remove'),
 
 ]

@@ -30,3 +30,15 @@ def players(request):
 def teams(request):
     all_teams = Team.objects.all()
     return render(request, 'teams.html', {"all_teams": all_teams})
+
+def remove_from_team(request,id):
+    if request.method=='GET':
+        return render(request,'players.html')
+    elif request.method == 'POST':
+        team_id = request.POST['team_name']
+        print('player id', id)
+        print('team id', team_id)
+        player = Player.objects.get(id=id)
+        team = Team.objects.get(id=team_id)
+        player.team_name.remove(team)
+        return redirect('players')
