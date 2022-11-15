@@ -6,7 +6,8 @@ class Todo(models.Model):
     title = models.CharField(max_length = 200)
     text = models.TextField(max_length = 500)
     status = models.BooleanField(default = False)
-    date = models.DateTimeField(default=datetime.now, blank=True)
+    date = models.DateTimeField(blank=True)
+    completion = models.DateField(blank=True)
     TODO_TYPE = (
         ('p', 'personal'),
         ('s', 'school'),

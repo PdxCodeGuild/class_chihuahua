@@ -26,7 +26,7 @@ def add_todo(request):
             status = True
         # add the new todo to the databse. objects.create() automatically saves the new todo for us so we
         # don't need a separate call to the save() method
-        Todo.objects.create(title = title, text = text, status = status)
+        Todo.objects.create(title = title, text = text, status = status, date="2009-01-01", completion="2022-11-14")
         return redirect('list')   
 
  
