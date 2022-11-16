@@ -4,5 +4,5 @@ from todo_app import views
 
 urlpatterns = [
     path('', views.todo_item, name = 'todo_item'),
-    path('display/', views.display_todo, name = 'display_todo'),
+    path('display/', views.todo_item, name = 'display_todo'),
 ]

@@ -45,3 +45,4 @@ def update_post(request, id):
     blog_posts.save()
     return redirect('posts')
     
+    
