@@ -1,0 +1,19 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container mt-4 ">
+
+    <h5> Add products to cart</h5>
+
+    {% for product in all_products %}
+    <form action="{% url 'add_to_cart' product.id %}" method="POST">
+        {% csrf_token %}
+        <p>{{product.name}}</p>
+        <p>{{product.id}}</p>
+        <p>{{product.description}}</p>
+        <p>{{product.price}}</p>
+        <button type="submit"> Add to Cart</button>
+        <hr>
+    </form>
+    {% endfor %}
+</div>
+{%endblock%}

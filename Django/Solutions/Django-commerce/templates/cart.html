@@ -1,0 +1,17 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container"> 
+
+    <h1> Your Products</h1>
+
+    {% for product in products_in_cart %}
+    <p>{{product.name}}</p>
+    <p>{{product.price}}</p>
+    <p>{{product.description}}</p>
+    {% endfor %}
+
+    <h5> Total</h5>
+    {{total}}
+
+</div>
+{%endblock%}
