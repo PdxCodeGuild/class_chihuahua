@@ -8,9 +8,9 @@ Objects look like Python Dictionaries, but have attributes (variable names) inst
 An object like this below is referred to as an object literal. This is in contrast to objects instantiated from classes, which we'll look at later on.
 
 ```javascript
-const library_user = {
-    first_name: 'Jane',
-    last_name: 'Smith',
+const libraryUser = {
+    firstName: 'Jane',
+    lastName: 'Smith',
     age: 20,
     books: [{
         title: 'A Wrinkle in Time',
@@ -22,17 +22,17 @@ const library_user = {
         published: 1964
     }],
     printFullName() {
-    return `${this.first_name} ${this.last_name}`
+    return `${this.firstName} ${this.lastName}`
   }
    greeting: function() {
-    alert('Hi! I\'m ' + this.first_name + '.');
+    alert('Hi! I\'m ' + this.firstName + '.');
   }:
 };
-};
-console.log(library_user.first_name); // Jane
-console.log(library_user.books[0].title); // A Wrinkle in Time
-console.log(library_user.printFullName)
-console.log(library_user.greeting())
+
+console.log(libraryUser.firstName); // Jane
+console.log(libraryUser.books[0].title); // A Wrinkle in Time
+console.log(libraryUser.printFullName)
+console.log(libraryUser.greeting())
 ```
 
 You can also access the attributes of an object as you would a dictionary.
