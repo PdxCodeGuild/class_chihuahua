@@ -8,31 +8,6 @@ To manage the difficutly (and potential frustration) do the labs in the order li
 
 For rot13 and the unit converter, you'll need to install the [readline-sync](https://www.npmjs.com/package/readline-sync) package to get user input (nodejs is designed to deal with asynchronous tasks, which makes doing asynchronous things like these assignments a real pain). 
 
-Open up a terminal and create a new directory. 'cd' into that directory and type the following commands into your terminal window to download and install readline-sync:
-
-```
-npm init
-```
-press enter through all the prompts to accept the defaults.
-
-then type:
-```
-npm install readline-sync
-```
-
-after you have installed readline-sync, you need to "import" it using the following expression in your .js files:
-
-```javascript
-const readline = require('readline-sync');
-```
-
-You can now handle user input in a similar way to how it was done in python. Use the above line and the code below to test thigns out.
-
-```javascript
-let userInput = parseInt(readline.question('enter a number: '));
-console.log(`you entered: ${userInput}`);
-```
-
 
 # :notebook: unit converter
 
