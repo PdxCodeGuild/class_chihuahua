@@ -11,5 +11,10 @@ def todo(request):
         return render(request, 'todo/todo.html')
     elif request.method == "POST":
         chore = request.POST['text']
-        todo_item.objects.create(text='chore')
+        todo_item.objects.create(text=chore)
         return redirect('item')
+
+def todo_list(request):
+    todo_items = todo_item.objects.all()
+    context = { 'todo_items' : todo_items} 
+    return render(request, 'todo/list.html',context)

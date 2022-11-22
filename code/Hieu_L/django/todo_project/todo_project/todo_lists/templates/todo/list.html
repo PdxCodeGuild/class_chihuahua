@@ -2,7 +2,7 @@
 {% block content %}
 <ul>
     <a href="{% url 'chore entry form' %}">add a chore</a>
-    {% for item in todo_item %}
+    {% for todo_item in todo_items %}
     <p>Title: {{ item.text }}</p>
     {% empty %}
     {% endfor %}
