@@ -6,8 +6,6 @@ Try not to look at your python code. It is tempting, but you'll get much more ou
 
 To manage the difficutly (and potential frustration) do the labs in the order listed: Unit converte, pick6, then rot13.
 
-For rot13 and the unit converter, you'll need to install the [readline-sync](https://www.npmjs.com/package/readline-sync) package to get user input (nodejs is designed to deal with asynchronous tasks, which makes doing asynchronous things like these assignments a real pain). 
-
 
 # :notebook: unit converter
 
