@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% block content %}
+<h1>TODO</h1><br>
+<h2>TODO List</h2>
+
+
+<form class="TodoForm" action="{% url 'add' %}" method="POST">
+    {% csrf_token %}
+
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="L1">TODO Title</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" name="title"
+            aria-describedby="inputGroup-sizing-lg">
+    </div>
+
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="L1">TODO Description</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" name="task"
+            aria-describedby="inputGroup-sizing-lg">
+    </div>
+<!-- THIS IS A DROP DOWN CALENDAR DATE! !  -->
+<!-- <input type="date" id="start" name="pub_date" value="2018-07-22" min="2018-01-01" max="2030-12-31"> -->
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="start_date">Date To Start List</span>
+        <input data-provide="datepicker-inline" type="text" class="form-control" aria-label="Sizing example input"
+            name="start_date" aria-describedby="inputGroup-sizing-lg">
+    </div>
+
+    <div class="input-group input-group-lg">
+        <span class="input-group-text" id="end_date">Date To End List</span>
+        <input data-provide="datepicker-inline" type="text" class="form-control" aria-label="Sizing example input"
+            name="end_date" aria-describedby="inputGroup-sizing-lg">
+    </div>
+    <input class="btn btn-primary" type="submit" value="Submit">
+</form>
+
+{% endblock %}
