@@ -17,7 +17,6 @@
 
 /*above works for version 1*/
 
-
 const unit_converter = {
   askUser() {
     let user_number = Number(prompt('Enter a number to be converted:  '))
@@ -43,7 +42,7 @@ const unit_converter = {
 
   },
   answerAskUser() {
-    return `${unit_converter.askUser()} ${unit_converter.askUserStartUnit} is ${unit_converter.convertFeetToMeters()} ${unit_converter.askUserConversion}.`
+    return `${unit_converter.askUser()} ${unit_converter.askUserStartUnit()} is ${unit_converter.convertFeetToMeters()} ${unit_converter.askUserConversion()}.`
   }
 }
 
