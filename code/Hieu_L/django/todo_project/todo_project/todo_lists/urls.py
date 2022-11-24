@@ -3,6 +3,7 @@ from . import views
 
 
 urlpatterns = [
-    path('list', views.list, name='list'),
-    path('', views.todo, name='chore entry form')
+    path('', views.todo_list, name='list'),
+    path('add/', views.todo, name='add'),
+    path('update/<int:id>', views.update, name = 'update'),
 ]
