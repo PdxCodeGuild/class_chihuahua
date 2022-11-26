@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views
+from .views import display_todo
 from todo_app import views
 
 urlpatterns = [
-    path('', views.todo_item, name = 'todo_item'),
-    path('display/', views.todo_item, name = 'display_todo'),
+    path('', views.todo_item, name="todo_item"),
+    path('redirect/', views.display_todo, name="display_todo")
 ]

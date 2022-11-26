@@ -1,10 +1,18 @@
-{% extends base.html %} {% block content %}
-<p><a href="{% url 'todo' %}">Back to main view</a></p>
-<form action="{% url 'display_todo' display.id %}" method="post">
-    {% csrf_token %} title: <br />
-    <input type="text" name="description" placeholder=" {{ post.description }}" /><br /><br />
-    <input type="date" id="start" name="created_date" cols="30" rows="10" placeholder=" {{ post.created_date }}"><br />
-    <input type="date" id="end" name="completed_date" value="2018-07-22" min="2018-01-01" max="2030-12-31">
-    <br />
-    <input type="submit" />
-</form>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container mt-5">
+    <h1>Your To Do List</h1>
+    {% for todo in all_todos %} 
+    
+        <p>
+            {{todo.description}}
+        </p>
+        <p>
+            {{todo.created_date}}
+        <p>
+            {{todo.completed_date}}
+        </p>
+
+    {% endfor %}
+  </div>
+  {% endblock %}
