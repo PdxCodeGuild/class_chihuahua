@@ -18,35 +18,90 @@
 /*above works for version 1*/
 
 const unit_converter = {
-  askUser() {
+  askUser: function() {
     let user_number = Number(prompt('Enter a number to be converted:  '))
     return user_number
   },
-  askUserStartUnit() {
-    let start_unit = prompt('Enter units to be converted in: m, mi, ft, yd, or km:  ')
+  askUserStartUnit: function() {
+    let start_unit = prompt('Enter START units to be converted in: m, mi, ft, yd, or km:  ')
     return start_unit
   },
-  askUserConversion() {
-    let user_conversion = prompt('Enter units to convert to in: m, mi, ft, yd, or km:  ')
+  askUserConversion: function() {
+    let user_conversion = prompt('Enter END units to convert to in: m, mi, ft, yd, or km:  ')
     return user_conversion
   },
-  convertFeetToMeters() {
-    if (unit_converter.askUserStartUnit() === 'ft' && unit_converter.askUserConversion() === 'm') {
-      let conversion = unit_converter.askUser() * 0.3048
+  convertFeetToMeters: function(finalAskUserConversion1) {
+    const finalAskUser1 = finalAskUser
+    const finalAskUserStartUnit1 = finalAskUserStartUnit
+    
+    
+    if (finalAskUserStartUnit1 === 'ft' && finalAskUserConversion1 === 'm') {
+      let conversion = finalAskUser1 * 0.3048
       return conversion
-    }
-    else if (unit_converter.askUserStartUnit() === 'm' && unit_converter.askUserConversion() === 'ft') {
-      let conversion = unit_converter.askUser() / 0.3048
+    } else if (finalAskUserStartUnit1 === 'mi' && finalAskUserConversion1 === 'm') {
+    let conversion = finalAskUser1 * 1609.34
+    return conversion
+    } else if (finalAskUserStartUnit1 === 'm' && finalAskUserConversion1 === 'm') {
+      let conversion = finalAskUser1 * 1
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'km' && finalAskUserConversion1 === 'm') {
+      let conversion = finalAskUser1 * 1000
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'ft' && finalAskUserConversion1 === 'mi') {
+      let conversion = finalAskUser1 * 0.000189394
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'ft' && finalAskUserConversion1 === 'km') {
+      let conversion = finalAskUser1 * 0.0003048
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'mi' && finalAskUserConversion1 === 'mi') {
+      let conversion = finalAskUser1 * 1
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'ft' && finalAskUserConversion1 === 'ft') {
+      let conversion = finalAskUser1 * 1
+      return conversion 
+    } else if (finalAskUserStartUnit1 === 'km' && finalAskUserConversion1 === 'km') {
+      let conversion = finalAskUser1 * 1
+      return conversion 
+    } else if (finalAskUserStartUnit1 === 'mi' && finalAskUserConversion1 === 'km') {
+      let conversion = finalAskUser1 * 1.60934
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'km' && finalAskUserConversion1 === 'mi') {
+      let conversion = finalAskUser1 / 1.60934
+
+    } else if (finalAskUserStartUnit1 === 'km' && finalAskUserConversion1 === 'ft') {
+      let conversion = finalAskUser1 / 0.0003048
+      return conversion
+
+    } else if (finalAskUserStartUnit1 === 'mi' && finalAskUserConversion1 === 'ft') {
+      let conversion = finalAskUser1 / 0.000189394
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'm' && finalAskUserConversion1 === 'km') {
+      let conversion = finalAskUser1 / 1000
+      return conversion
+    } else if (finalAskUserStartUnit1 === 'm' && finalAskUserConversion1 === 'mi') {
+    let conversion = finalAskUser1 / 1609.34
+    return conversion
+    } else if (finalAskUserStartUnit1 === 'm' && finalAskUserConversion1 === 'ft') {
+      let conversion = finalAskUser1 / 0.3048
       return conversion
     }
 
+
   },
-  answerAskUser() {
-    return `${unit_converter.askUser()} ${unit_converter.askUserStartUnit()} is ${unit_converter.convertFeetToMeters()} ${unit_converter.askUserConversion()}.`
+  answerAskUser: function(finalAskUser, finalAskUserStartUnit,finalAskUserConversion1) {
+  const finalConvertFeetToMeters = unit_converter.convertFeetToMeters(finalAskUserConversion1)
+
+    return `${finalAskUser} ${finalAskUserStartUnit} is ${finalConvertFeetToMeters} ${finalAskUserConversion1}.`
   }
 }
 
-console.log(unit_converter.answerAskUser())
+const finalAskUser = unit_converter.askUser()
+const finalAskUserStartUnit = unit_converter.askUserStartUnit()
+
+let finalAskUserConversion = unit_converter.askUserConversion()
+
+console.log(unit_converter.answerAskUser(finalAskUser, finalAskUserStartUnit, finalAskUserConversion))
+
 
 
 
