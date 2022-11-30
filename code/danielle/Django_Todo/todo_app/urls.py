@@ -1,9 +1,10 @@
 from django.urls import path
 from .views import display_todo, completed_list
 from todo_app import views
+app_name = "todo"
 
 urlpatterns = [
-    path('', views.todo_item, name="todo_item"),
-    path('display/', views.display_todo, name="display_todo"),
+    path('', views.display_todo, name="display_todo"),
+    path('create/', views.create, name="create_todo"),
     path('completed/', views.completed_list, name="completed_list")
 ]
