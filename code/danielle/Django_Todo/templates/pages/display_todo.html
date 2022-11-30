@@ -16,7 +16,7 @@
         <p>
             Date Created: {{todo.created_date}}
         </p>
-    <form action="{% url 'todo:display_todo' %}" method="POST">
+    <form action="{% url 'todo:completed_list' %}" method="POST">
         {% csrf_token %}
         <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -34,7 +34,7 @@
             <p>
                 Date Created: {{todo.created_date}}
             </p>
-            <form action="{% url 'display_todo' %}" method="POST">
+            <form action="{% url 'todo:display_todo' %}" method="POST">
                 {% csrf_token %}
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">

@@ -11,8 +11,8 @@ def create(request):
         return HttpResponseRedirect(reverse("todo:display_todo"))
 
 def display_todo(request):
-    completed_todos = Todo.objects.filter(completed_todo = True)
-    incomplete_todos = Todo.objects.filter(completed_todo = False)
+    completed_todos = Todo.objects.filter(incomplete_todo = True)
+    incomplete_todos = Todo.objects.filter(incomplete_todo = False)
     context = {
         "completed_todos": completed_todos,
         "incomplete_todos": incomplete_todos
@@ -21,5 +21,6 @@ def display_todo(request):
 
 def completed_list(request):
     if request.method=="POST":
-        return redirect('/completed')
-    return render(request, 'pages/completed_list.html', {'completed_todos': completed_todos})
+        completed_todo=request.POST['completed_todo']
+        Todo.objects.filter(incompleted_todo=completed_todo)
+        return HttpResponseRedirect(reverse("todo:display_todo"))
