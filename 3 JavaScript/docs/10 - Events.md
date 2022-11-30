@@ -110,13 +110,13 @@ The `input` and `change` events can be used with `input` elements to detect when
 ```html
 <input id="user_input" type="text" />
 <script>
-  const user_input = document.getElementById("user_input");
+  const userInput = document.getElementById("user_input");
 
-  user_input.addEventListener("input", function () {
-    console.log("user entered some text: " + user_input.value);
+  userInput.addEventListener("input", function () {
+    console.log("user entered some text: " + userInput.value);
   });
-  user_input.addEventListener("change", function () {
-    console.log("user entered some text: " + user_input.value);
+  userInput.addEventListener("change", function () {
+    console.log("user entered some text: " + userInput.value);
   });
 </script>
 ```
