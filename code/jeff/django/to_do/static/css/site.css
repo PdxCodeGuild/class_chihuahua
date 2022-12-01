@@ -1,0 +1,72 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: rgb(235, 19, 19);
+  text-align: center;
+}
+
+h2 {
+  color: rgb(235, 19, 19);
+  text-align: center;
+}
+
+a {
+  font-family: verdana;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+li {
+  display:flex;
+  padding: 5pt;
+}
+
+form{
+  font-family: verdana;
+  font-size: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-form{
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.description-form{
+  width: 70%;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+    
+}
+
+.submit-form{
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input{
+  margin-top: 15px;
+}
+
+label{
+  margin-top: 15px;
+}
+

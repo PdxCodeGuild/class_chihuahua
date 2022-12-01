@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+<ul>
+
+    {% for todo in index_list %}
+ 
+    <li class="title">Title: {{ todo.title }}</li>
+    <li class="description">Description: {{ todo.description }}</li>
+    <li class="created">Created Date: {{todo.created_date}}</li>
+    <li class="completed">Completed Date: {{todo.completed_date}}</li>
+    <li> </li>
+    <li> </li>
+
+  {% endfor %}
+</ul>
+
+<a href="{% url 'home' %}">Go back home.</a>
+{% endblock %}
+

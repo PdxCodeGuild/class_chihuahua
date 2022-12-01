@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Welcome.</h1>
+<h2>To-do Application.</h2>
+
+<a href="{% url 'index' %}">List of to do items.</a>
+<a href="{% url 'new' %}">Create a new post.</a>
+<a href="{% url 'edit' %}">Edit a post.</a>
+<a href="{% url 'about' %}">About me.</a>
+
+{% endblock %}
