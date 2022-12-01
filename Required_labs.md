@@ -71,6 +71,18 @@ Todo
 
 due date: 11/14/2022
 
+# JavaScript
+
+Redux
+
+due date: 12/5/2022
+
+<hr>
+
+Todo
+
+due date: 12/12/2022
+
 # Videos
 
 10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing) <br>
