@@ -4,6 +4,7 @@ const trigger = document.getElementById("trigger");
 let incompleteUl = document.getElementById("incomplete");
 let incompleteList = document.getElementsByClassName("list_incomplete")
 const body = document.querySelector('body')
+const completedUl = document.getElementById("completed")
 
 trigger.addEventListener("click", function(event) {
     // add event listener to button id,
@@ -27,9 +28,10 @@ trigger.addEventListener("click", function(event) {
 
 body.addEventListener('click', function(event) {
     if (event.target.tagName == 'LI') {
-        event.target.remove('LI')
-        let completedItem
-        event.target.append
+        event.target.remove('LI');
+        let completedItem = document.createElement('li');
+        completedItem.innerText = event.target.innerText;
+        completedUl.appendChild(completedItem);
     }
 })
 
