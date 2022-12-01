@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Welcome to the URL Shortener</h1>
+
+<h3>What is the URL you would like to shorten?</h3>
+<form action="{% url 'shortened' %}" method = 'post'>
+    {% csrf_token %}
+    <label for="url">Enter the URL here:</label>
+    <input id ="url" name = "users_url" type="url">
+    <input type="submit" value="Submit">
+  </form>
+  <h4>Below is your shortened url link:</h4>
+  {% for url in url_list %}
+  <ul>
+  <li><a href= "{{url.long_url}}"> {{url.short_url}} </a></li>
+  </ul>
+  {% endfor %}
+{% endblock %}
