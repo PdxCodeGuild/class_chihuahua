@@ -1,8 +1,8 @@
 const textField = document.getElementById("thing_todo");
-const todo_item = document.getElementById("todo_item");
+// const todo_item = document.getElementById("todo_item");
 const trigger = document.getElementById("trigger");
 let incompleteUl = document.getElementById("incomplete");
-let incompleteList = document.getElementsByClassName("list_incomplete")
+// let incompleteList = document.getElementsByClassName("list_incomplete")
 const body = document.querySelector('body')
 const completedUl = document.getElementById("completed")
 
@@ -32,7 +32,14 @@ body.addEventListener('click', function(event) {
         let completedItem = document.createElement('li');
         completedItem.innerText = event.target.innerText;
         completedUl.appendChild(completedItem);
+    } 
+});
+
+completedUl.addEventListener('click', function(event) {
+    if (event.target.tagName == 'LI') {
+        completedUl.style.textDecoration = 'line-through';
     }
-})
+
+} )
 
 
