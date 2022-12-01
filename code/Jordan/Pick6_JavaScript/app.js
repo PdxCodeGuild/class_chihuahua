@@ -1,3 +1,6 @@
+let roi = document.getElementById("investment_return")
+let gains = document.getElementById("gains")
+
 function pick6() {
     let randomSix = []
     for(let index = 0; index < 6; index ++) {
@@ -36,3 +39,13 @@ while(i < 100000) {
     i++;
 }
 console.log(playerBalance)
+
+let expenseB = 100000 * 2
+function return_on_investment(earnings, expenses) {
+    let investmentReturn = (earnings - expenses) / expenses
+    return investmentReturn
+}
+console.log(return_on_investment(playerBalance, expenseB))
+
+roi.innerHTML = return_on_investment(playerBalance, expenseB)
+gains.innerHTML = `$${playerBalance}.00`
