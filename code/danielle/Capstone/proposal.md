@@ -16,10 +16,10 @@ Client information page would display the main information tab of name and birth
 Other possible feature: a tab of last know location which would show a map and pinpoint last locations during outreach engagements since clients experience homelessness
 
 Data Models:
-User
-Client
-Dashboard
-Notes
+User,
+Client,
+Dashboard,
+Notes,
 Deadlines
 
 Schedule
