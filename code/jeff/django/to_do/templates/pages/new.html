@@ -2,14 +2,16 @@
 {% block content %}
 <h1>Create a new to do list.</h1>
 
-
-
 <form action="{% url 'new' %}" method="post">
     <label for="title" class="title">List name: </label>
     <input id="title" type="text" name="title" class="title-form" >
     <label for="description" class="description">Description: </label>
     <input id="description" type="text" name="description" class="description-form">
+    <input type="date" name="created_date" >
+    <input type="date" name="completed_date" >
+    <input type="checkbox" value="True" name="completed_check" id="completed_check">
     <input type="submit" value="Submit" class="submit-form">
+    
 
     {% csrf_token %}
 
