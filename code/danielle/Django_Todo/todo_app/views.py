@@ -11,7 +11,7 @@ def create(request):
         return HttpResponseRedirect(reverse("todo:display_todo"))
 
 def display_todo(request):
-    completed_todos = Todo.objects.filter(incomplete_todo = True)
+    completed_todos = Todo.objects.filter(completed_todo = True)
     incomplete_todos = Todo.objects.filter(incomplete_todo = False)
     context = {
         "completed_todos": completed_todos,

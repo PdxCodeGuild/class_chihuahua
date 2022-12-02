@@ -7,6 +7,14 @@
     <input type="date" id="start" name="created_date" value="" min="2018-01-01" max="2030-12-31"><br />
     <input type="submit" />
 </form>
+    <div>
+        {% for x in completed_todos %}
+        {% if completed_todos %}
+            {{x}}
+        {% endif %}
+        {% endfor %}
+        test
+    </div>
     <div class="container mt-5">
         <h1>Complete</h1>
         {% for todo in completed_todos %} 
