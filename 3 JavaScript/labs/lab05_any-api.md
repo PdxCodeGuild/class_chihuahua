@@ -11,6 +11,7 @@ There are several APIs to get fake user data which can be used to develop and te
 - [randomuser.me](https://randomuser.me/documentation)
 - [reques.in](https://reqres.in/)
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
+- [chuck Norris](https://api.chucknorris.io/jokes/random)
 
 ## Other APIs
 
@@ -19,3 +20,23 @@ There are several APIs to get fake user data which can be used to develop and te
 - Photos: [flickr.com](https://www.flickr.com/services/api/) (requires key)
 - Astronomical Data: [api.nasa.gov](https://api.nasa.gov/#live_example)
 - USA Population Data: [datausa.io](https://datausa.io/about/api/)
+
+
+Here's how you make a Fetch request in JavaScript:
+
+
+```js
+
+     fetch('URL to Fetch')
+            .then(function (response) {
+                return response.json()
+            }).then(function (data) {
+                
+                //write asynchronous code here
+          
+            })
+            .catch(function (error) {
+                console.log(error)
+            })
+
+```
