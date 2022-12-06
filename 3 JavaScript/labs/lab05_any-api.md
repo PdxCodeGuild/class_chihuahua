@@ -11,7 +11,7 @@ There are several APIs to get fake user data which can be used to develop and te
 - [randomuser.me](https://randomuser.me/documentation)
 - [reques.in](https://reqres.in/)
 - [jsonplaceholder](https://jsonplaceholder.typicode.com/)
-- [chuck Norris](https://api.chucknorris.io/jokes/random)
+- [chuck Norris](https://api.chucknorris.io/)
 
 ## Other APIs
 
