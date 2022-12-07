@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url 'add' %}" method="POST">
+  {% csrf_token %} 
+  {{ form }}
+  {% comment %} title: <br /> {% endcomment %}
+  <input type="text" name="title" placeholder="enter todo title" /><br />
+  {% comment %} description:<br /> {% endcomment %}
+  <textarea name="text" id="" cols="30" rows="10">
+type todo description here</textarea><br />
+  {% comment %} status: <br /> {% endcomment %}
+  <select name="status">
+    {% comment %} <br /> {% endcomment %}
+    <option value="True">True</option>
+    <option value="False">False</option>
+  </select>
+  {% comment %} <br /> {% endcomment %}
+  <select name="status">
+    {% comment %} <br /> {% endcomment %}
+    <option value="True">add</option>
+    <option value="False">delete</option>
+  </select>
+  <input type="submit" value="add"  />
+  {% comment %} <input type="submit" value="completed" DateField.auto_now_add />   cant use datefieldin html {% endcomment %}
+</form>
+{% endblock %}
