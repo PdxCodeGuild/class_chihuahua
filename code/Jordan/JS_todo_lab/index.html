@@ -12,17 +12,20 @@
 
     <header>
         <h1>Todo List</h1>
-        <form id="new-task">
             <input type="text" id="new-task-input" placeholder="Type your todo item"/>
-            <input type="submit" id="task-submit" value="Add"/>
-        </form>
+            <button id="task-submit">Add</button>
     </header>
 
     <main>
         <section class="todo-list">
             <h2>Todo</h2>
-
-            <div id="todo"></div>
+            <ul id="todo">
+            </ul>
+        </section>
+        <section class="completed-items">
+            <h2>Completed Items</h2>
+            <ul id="completed">
+            </ul>
         </section>
     </main>
 
