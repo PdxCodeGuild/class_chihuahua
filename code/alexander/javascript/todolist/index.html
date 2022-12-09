@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>todo list JS</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="main.css " />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
   </head>
   <body>
-    <header>
-      <h1>Task List</h1>
-      <form id="new-task-form">
-        <input 
-          type="text" 
-          id="new-task-input"
-          placeholder="put it here" />
-        <input
-          type="button"
-          id="new-task-submit"
-          value="add task" />
-      </form>
-    </header>
-    
-    <main>
+    <h1>Todo List</h1>
+    <form>
+      <input type="text" id="todo-item">
+      <button type="button" id="add-button">Add</button>
+    </form>
+    <div id="todo-list"></div>
 
-      <section class="task-list">
 
-        <h2>Tasks</h2>
-        
-        <div> id="tasks"></div>
-      </section>
 
-    </main>
+    <script>
+      const todoList = document.getElementById("todo-list");
 
-    <script src="app.js"></script>
+      
+      function addTodo(item) {
+        const todoItem = document.createElement("div");
+        todoItem.innerHTML = `
+    <p>${item}</p>
+    <input type="checkbox">
+    <button type="button">Delete</button>
+  `;
+        todoList.appendChild(todoItem);
+      }
+
+      
+      function deleteTodo(item) {
+        item.remove();
+      }
+
+      
+      function markCompleted(item) {
+        const checkbox = item.querySelector('input[type="checkbox"]');
+        checkbox.checked = true;
+      }
+
+      
+      const addButton = document.getElementById("add-button");
+      addButton.addEventListener("click", () => {
+        const todoItem = document.getElementById("todo-item").value;
+        addTodo(todoItem);
+      });
+      todoList.addEventListener("click", (event) => {
+        if (event.target.tagName === "BUTTON") {
+          const todoItem = event.target.parentElement;
+          deleteTodo(todoItem);
+        } else if (event.target.tagName === "INPUT") {
+          const todoItem = event.target.parentElement;
+          markCompleted(todoItem);
+        }
+      });
+    </script>
   </body>
 </html>
