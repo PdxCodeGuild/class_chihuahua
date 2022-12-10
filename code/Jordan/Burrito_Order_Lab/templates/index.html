@@ -1,0 +1,152 @@
+{% extends "base.html" %}
+
+{% block content %}
+<nav class="navbar fixed-top navbar-dark bg-dark">
+    <p class="navbar-brand">Worlds Most Ok Burritos!!</p>
+</nav>
+<!--Tortilla selection-->
+<form action="https://webhook.site/26c16e95-814a-4790-a014-7adee1b68871" method="post">
+    <!--action should be the URL -->
+    <div id="content">
+        <div class = "jumbotron">
+            <div>
+                <img src="{{url_for('static', filename='Basic_burrito.jpeg')}}" alt="A picture of a burrito" id="img-burrito">
+            </div>
+            <div>
+                <label for="customer-name"></label>
+                <input type="text" id="customer-name" name="cname" placeholder="Username">
+                <br>
+                <label for="pwd"></label>
+                <input type="text" id="password" name="pwd" placeholder="Password">
+            </div>
+        </div>
+        <div class="separate">
+        <div id="tortilla-container" class="form-check">
+            <h4>Tortilla Options</h4>
+            <div>
+                <input class="form-check-input" type="radio" name="tortilla" id="flexRadioDefault1" value="White-Flour">
+                <!-- <input class="form-check-input" type="radio" name="tortillaValue" id="flexRadioDefault1" value="1"> -->
+                <label class="form-check-label" for="flexRadioDefault1">
+                    White Flour
+                </label>
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" name="tortilla" id="flexRadioDefault1" value="Wheat-Flour">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Wheat Flour
+                </label>
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" name="tortilla" id="flexRadioDefault1" value="Spinach">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Spinach
+                </label>
+            </div>
+            <div>
+                <input class="form-check-input" type="radio" name="tortilla" id="flexRadioDefault1" value="Corn">
+                <label class="form-check-label" for="flexRadioDefault1">
+                    Corn
+                </label>
+            </div>
+        </div>
+        <!--Meat selection-->
+        <div id="meat-container">
+            <h4>Protein Options</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="protein" id="inlineCheckbox1" value="Chicken">
+                <label class="form-check-label" for="inlineCheckbox1">Chicken</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="protein" id="inlineCheckbox2" value="Carnitas">
+                <label class="form-check-label" for="inlineCheckbox2">Carnitas</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="protein" id="inlineCheckbox3" value="Beef">
+                <label class="form-check-label" for="inlineCheckbox3">Beef</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="protein" id="inlineCheckbox4" value="Sofritas">
+                <label class="form-check-label" for="inlineCheckbox1">Sofritas</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="protein" id="inlineCheckbox5" value="Steak">
+                <label class="form-check-label" for="inlineCheckbox2">Steak</label>
+            </div>
+        </div>
+        <!-- Rice -->
+        <div id="extra-carbs">
+            <h4>Rice</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="ingredient" value="white-rice" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    White Rice
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="ingredient" value="brown-rice" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Brown Rice
+                </label>
+            </div>
+        </div>
+        <!--Beans-->
+        <div id="extra-fiber">
+            <h4>Beans</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Beans" value="black-beans" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Black Beans
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="Beans" value="brown-beans" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Brown Beans
+                </label>
+            </div>
+        <!--Additional ingredients-->
+        <div id="extra-ingredients">
+            <h4>Extra Ingredients</h4>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="extra-ingredient" value="Cheese" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Cheese
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="extra-ingredient" value="Salsa" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Salsa
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" name="extra-ingredient" value="Sour Cream"
+                    id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Sour Cream
+                </label>
+            </div>
+        </div>
+    </div>
+    <!--Delivery Instructions-->
+    <div id="extra-ingredients">
+        <h4>Delivery Instructions</h4>
+        <div>
+            <label for="deliver-instructions"></label>
+            <input type="text" id="deliver-instructions" name="dinstructions" placeholder="">
+        </div>
+    </div>
+
+    <div class="col-sm-10">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+</form>
+<!-- input -->
+<!--Total amount-->
+<!-- <div class="input-group mb-3">
+        <span class="input-group-text">$</span>
+        <span class="input-group-text">0.00</span>
+        <input type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+    </div> -->
+{% endblock %}

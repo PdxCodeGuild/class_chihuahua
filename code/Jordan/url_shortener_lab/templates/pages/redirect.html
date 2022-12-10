@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <center>
+        <h3>URL: "{{ obj.long_url }}"</h3>
+        <h6>The shortened version is: "{{ obj.short_url }}"</h6>
+        <a href="{{ obj.long_url }}"></a>
+    </center>
+{% endblock content %}

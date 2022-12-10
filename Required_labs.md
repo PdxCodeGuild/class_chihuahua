@@ -1,6 +1,5 @@
 # Lists of required labs
 
-# Python
 
 Unit Converter v1;v2;v3;v4
 
@@ -56,13 +55,43 @@ Company Lab
 
 due date: 10/21/2022
 
+<hr>
+
+# Flask
+
+Burrito
+
+due date: 11/1/2022
+
+<hr>
+
+# Django
+
+Todo
+
+due date: 11/14/2022
+
+# JavaScript
+
+Redux
+
+due date: 12/5/2022
+
+<hr>
+
+Todo
+
+due date: 12/12/2022
+
 # Videos
 
 10/7/22 - [Responsive Design](https://drive.google.com/file/d/11P502lk5HbawiUFqGGWqjfa9Yt29nWGO/view?usp=sharing) <br>
 10/11/22 - [Animations and Transitions](https://drive.google.com/file/d/16iU-oIWdWfQPH1kWKfuKz14tqJV7ebfu/view?usp=sharing) <br>
 10/12/22 - [Bootstrap](https://drive.google.com/file/d/1_OpUuVw51emDv8oVGrO9GqwNjhpAoMVn/view?usp=sharing) <br>
 10/17/22 - [Flask](https://drive.google.com/file/d/1ablBm_O1j1FWS7VUDsu91wvPRBG_TJGo/view?usp=sharing) <br>
-
+10/18/22 - [Flask Forms](https://drive.google.com/file/d/1aRumGVYMwFv3TZEICfKBdcSBfUq1BItX/view?usp=sharing) <br>
+10/19/2022 - [Flask Drinks API](https://drive.google.com/file/d/1A7W28GClhotgctgxl_sk5VYHMIOeZUdV/view?usp=sharing) <br>
+10/31/2022 - [Many to one Django](https://drive.google.com/file/d/1A6tFs9cahWF3aC_nTdJGuG5Vxqpvkt18/view?usp=share_link) 
 
 # Course breakdown
 
