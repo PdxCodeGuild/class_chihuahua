@@ -6,5 +6,6 @@ app_name = "todo"
 urlpatterns = [
     path('', views.display_todo, name="display_todo"),
     path('create/', views.create, name="create_todo"),
-    path('completed/', views.completed_list, name="completed_list")
+    path('update/<int:id>', views.todo_details, name="update_todo"),
+    path('completed/', views.completed_list, name="completed_list"),
 ]

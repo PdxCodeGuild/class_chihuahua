@@ -11,12 +11,18 @@ def create(request):
         return HttpResponseRedirect(reverse("todo:display_todo"))
 
 def display_todo(request):
+    todos = Todo()
+    form = request.POST
     completed_todos = Todo.objects.filter(completed_todo = True)
     incomplete_todos = Todo.objects.filter(incomplete_todo = False)
     context = {
         "completed_todos": completed_todos,
         "incomplete_todos": incomplete_todos
         }
+    print(request.POST['complete'], "testing form")
+    if form['complete'] == "on": #targeting form with value of complete (on/off should be value) Gotta remember boolean values
+        todos.completed_todo == True
+        todos.save()
     return render(request, 'pages/display_todo.html', context=context)
 
 def completed_list(request):
@@ -24,10 +30,3 @@ def completed_list(request):
         completed_todo=request.POST['completed_todo']
         Todo.objects.filter(incompleted_todo=completed_todo)
         return HttpResponseRedirect(reverse("todo:display_todo"))
-
-def todo_details(request, id):
-    todo = Todo.objects.get(id=id) 
-    context = {
-        "todo": todo
-    }
-    return render(request, 'pages/display_todo.html', context=context)
