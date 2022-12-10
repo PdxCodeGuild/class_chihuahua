@@ -19,4 +19,9 @@ def todo_list(request):
 
 def update(request, id):
     todo = Todo_Item.objects.get(id = id)
-    return render(request, 'todos/update.html', {"todo": todo})
+    return render(request, 'todo/update.html', {"todo": todo})
+
+def delete(request, id):
+    todo = Todo_Item.objects.get(id = id)
+    todo.delete()
+    return redirect('list')

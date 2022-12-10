@@ -1,5 +1,5 @@
-{% extends 'base.html' %} {% block content %}
+{% extends 'todo/base.html' %} {% block content %}
 <p>title: {{ todo.title }}</p>
 <p>description: {{ todo.text }}</p>
-<a href="">remove</a>
+<a href="{%url 'remove' todo.id %}">remove</a>
 {% endblock %}
