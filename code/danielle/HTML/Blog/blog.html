@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+    <style>
+        .header {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            margin: 10px;
+            padding: 10px;
+            background: rgb(190, 190, 248);
+            color:rgba(213, 41, 3, 0.844);
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .topnav {   
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            list-style: none;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background: grey
+        
+        }
+
+        .topnav a:hover {
+            background: rgba(199, 87, 13, 0.839);
+        }
+        
+        .topnav a { 
+            display: flex;
+            width: 100px;
+            height: 25px;
+            margin: 1px;
+            padding: 1px;
+            align-items:center;
+            justify-content: center;
+            color: rgb(252, 193, 110);
+            background: rgba(243, 106, 14, 0.839);
+            border-top: 1px solid white;
+            border-bottom: 1px solid white;
+            border-left: 1px solid white;
+            border-right: 1px solid white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        
+        .sidenav {
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            background: rgb(176, 174, 174);
+            height: 800px;
+            width: 100px;
+            list-style: none;
+        }
+        
+        .sidenav a {
+            display: flex;
+            margin: 10px;
+            padding: 10px;
+            flex-flow: column;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+
+        .section{
+            display: flex;
+            flex: auto;
+            height: 500;
+            width: 500;
+            background:palevioletred;
+            flex-direction: column;
+            margin: 150px;
+        }
+
+        .section a {
+            display: flex;
+            background: blue;
+            color: green;
+            
+        }
+
+    </style>
+
+    <header class="header">Blog Lab</header>
+
+    <ul class="topnav">
+        <li><a>Portfolio</a></li>
+        <li><a>About</a></li>
+        <li><a>Home</a></li>
+    </ul>
+
+    <section class="section">
+        <h1><a>Entry 1</a></h1>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Pariatur, dicta provident neque beatae rerum voluptate excepturi natus eum animi voluptas enim, fuga aperiam mollitia inventore nobis maxime repellat? Totam, saepe!
+        </p>
+    </section>
+
+    <ul class="sidenav">
+        <li><a>Entry 1</a></li>
+    </ul>
+
+</body>
+</html>

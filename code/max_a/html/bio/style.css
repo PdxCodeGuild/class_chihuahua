@@ -1,22 +1,41 @@
 html {
     background-color: green;
-    margin: auto;
     align-items: center;
     font-family: monospace;
+    margin: auto;
 }
 
 nav li {
     border-spacing: 2rem;
     border-style: ridge;
     display: inline;
+    background-color: saddlebrown;
+    transition: background-color;
+    animation-duration: 1s;
 }
 
 body {
+    padding: 1rem;
     background-color: darkolivegreen;
     justify-content: center;
 }
 
 p {
+    color: darkgreen;
+    background-color: yellowgreen;
+    border-style: groove;
+    border-color: lawngreen;
+}
+
+nav li:hover {
+    background-color: greenyellow
+}
+
+img {
+    border: 5px dashed darkgreen;
+  }
+
+span {
     color: darkgreen;
     background-color: yellowgreen;
     border-style: groove;

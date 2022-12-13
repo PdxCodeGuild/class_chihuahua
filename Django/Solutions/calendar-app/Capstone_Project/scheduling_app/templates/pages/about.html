@@ -1,0 +1,42 @@
+{% extends 'base.html' %} {% block content %}
+
+
+    <div class="aboutbody jumbotron jumbotron-fluid">
+        <h1 class="about_pg">View your previously added events and access your calender to add new events</h1>
+
+        <div class="container">
+            <div class="row">
+                {% for event in events%}
+                <div class="col-4">
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-header">
+                          {{event.start_time}}
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">{{event.title}}</li>
+                          <li class="list-group-item">{{event.length_of_set}}</li>
+                          <li class="list-group-item">{{event.gig_or_rehearsal}}</li>
+                        </ul>
+                      </div>
+                </div>
+                {%endfor%}
+               
+            </div>
+        </div> 
+
+    </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

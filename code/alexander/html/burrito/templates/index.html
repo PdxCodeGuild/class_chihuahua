@@ -1,0 +1,54 @@
+{% extends "layout.html" %} {% block body %}
+
+<h1>Burrito time (not officially a competitor to taco time)</h1>
+
+<form action="/success" method="post">
+  <input
+    autocomplete="off"
+    autofocus
+    name="name"
+    placeholder="Name"
+    type="text"
+  />
+  <input 
+    autocomplete="off" 
+    name="password" 
+    placeholder="password" 
+    type="text" />
+    <br>
+  <label for="tortilla">Tortilla</label><br>
+  <label><input type="radio" name="tortillaradio" value="White Flour" /> White Flour</label><br>
+  <label><input type="radio" name="tortillaradio" value="Wheat Flour" /> Wheat Flour</label><br>
+  <label><input type="radio" name="tortillaradio" value="Spinach" /> Spinach</label><br>
+  <label><input type="radio" name="tortillaradio" value="Corn" /> Corn</label>
+  <br>
+  <label for="rice">Rice</label><br>
+  <label><input type="radio" name="riceradio" value="White Rice" /> White Rice </label><br>
+  <label><input type="radio" name="riceradio" value="Brown Rice" /> Brown Rice </label>
+  <br>
+  <label for="beans">Beans</label><br>
+  <label><input type="radio" name="beansradio" value="Black Beans" /> Black Beans </label><br>
+  <label><input type="radio" name="beansradio" value="Pinto Beans" /> Pinto Beans </label>
+  <br>
+  <label for="protein">Protein</label><br>
+  <label><input type="radio" name="proteinradio" value="Carnitas" /> Carnitas </label><br>
+  <label><input type="radio" name="proteinradio" value="Chicken" /> Chicken </label><br>
+  <label><input type="radio" name="proteinradio" value="Sofritas" /> Sofritas </label><br>
+  <label><input type="radio" name="proteinradio" value="None" /> None </label>
+  <br>
+  <label for="additional ingredients">Additional Ingredients</label><br>
+  <label><input type="checkbox" name="additionalcheck" value="Cheese" /> Cheese </label><br>
+  <label><input type="checkbox" name="additionalcheck" value="Sour Cream" /> Sour Cream</label>
+  <br>
+  <label for="delivery instructions"><b>Delivery Instructions</b></label><br>
+  <textarea 
+    name="instructions"
+    placeholder="write additional delivery instructions here"></textarea>
+
+
+  
+
+  <input type="submit" value="submit order" />
+</form>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{%extends 'base.html'%} {%block content%}
+
+<h1> My fav drinks</h1>
+
+{% for fav in favs %}
+<p>{{fav.name}}</p>
+<img src="{{fav.thumbnail}}" />
+{% endfor %}
+{%endblock%}

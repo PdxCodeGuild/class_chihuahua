@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+
+h1 {
+    color:rgb(82, 47, 43);
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 6rem !important
+    
+
+  }
+
+h3{
+  color: rgb(9, 9, 8);
+  text-align: center;
+  font-size: 6rem !important;
+  font-family: 'Roboto Mono', monospace;
+  
+}
+.nav_font{
+  font-family: 'Work Sans', sans-serif !important;
+  
+
+}
+.nav-link{
+  font-family: 'Work Sans', sans-serif !important;
+}
+
+/* .footer{
+  position: absolute !important;
+  text-align: center !important;
+} */
+.footer{
+  z-index: 1;
+  order: 5;
+}
+
+
+
+
+.blue_rabbit{
+  width: 6vw !important;
+  height: 10vh !important;
+}
+
+.aboutbody{
+  background-image: url(https://images.unsplash.com/photo-1603815878781-536e057a3e7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80);
+  background-size:cover;
+  height:80rem;
+  min-height: 100%;
+}
+
+.register_body{
+  background-image: url(https://images.unsplash.com/photo-1603190287605-e6ade32fa852?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
+  background-size: cover;
+}
+.event_body{
+  background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2966&q=80);
+  background-size: cover;
+}
+.about_pg{
+  font-family: 'Work Sans', sans-serif;
+  font-size: 35px !important;
+  color: antiquewhite;
+}
+/* 
+.calendar_body{
+  background-image: url(https://images.unsplash.com/photo-1474540412665-1cdae210ae6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2966&q=80);
+  background-size: cover;
+} */
+.cal_pos{
+  z-index: 2;
+  order: 3;
+}
+
+.lorem{
+  order: 2;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+.welcome{
+  color: antiquewhite;
+  font-size: 2rem;
+  position: absolute; top:29rem; left:9px;
+  font-family: 'Work Sans', sans-serif;
+  
+}
+.welcome2{
+  color: antiquewhite;
+  font-size: 2rem;
+  position: absolute; top:32rem; left:9px;
+  font-family: 'Work Sans', sans-serif;
+}
+.welcome3{
+  color: antiquewhite;
+  font-size: 2rem;
+  position: absolute; top:35rem; left:9px;
+  font-family: 'Work Sans', sans-serif;
+
+}
+.login_img{
+  background-image: url(https://images.unsplash.com/photo-1593621198039-c87c6f91cbb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80);
+  background-size: cover;
+}
+.login_input{
+  color: antiquewhite;
+  align-content: flex-start;
+}
+
+  /* .calendar {
+    width: 98%;
+    margin: auto;
+    font-size: 13px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    
+  } */
+
+  .homebody{
+    background-image: url(https://images.unsplash.com/photo-1623081896756-606c15a4ea9a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2832&q=80) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50rem;
+  }
+  
+  /* .calendar tr, .calendar td {
+    border: 3px solid black;
+    
+  } */
+  
+  /* .calendar th {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+  } */
+  
+  /* .calendar td {
+    width: 200px;
+    height: 150px;
+    padding: 20px 0px 0px 5px;
+  }
+   */
+  /* .month {
+    font-size: 45px !important;
+    font-family: 'Roboto Mono', monospace;
+
+  }
+  
+  .date {
+    font-size: 16px;
+  }
+   */
+  ul {
+    height: 100%;
+    padding: 0px 5px 0px 20px;
+  }
+  
+  a {
+    color: #17a2b8;
+    font-family: 'Indie Flower', cursive;
+    font-size: large;
+  }
+ 
+/* 
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+} */
+
+.btn {
+  outline: none;
+  color: black;
+  background-color: transparent;
+  box-shadow: 0 0 0 0;
+}
+
+.btn-info{
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+/* .clearfix {
+  margin: 15px;
+} */
+
+/* .form {
+  margin: auto;
+} */
+.form-table{
+  font-family: 'Roboto Mono', monospace;
+}
+
+.form input, .form select, .form textarea {
+  border-radius: 5px;
+  border: 1px solid #17a2b8;
+  outline: none;
+  background: none;
+  padding: 5px;
+  width: 100%;
+}

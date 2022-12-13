@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+<p>title: {{ todo.title }}</p>
+<p>description: {{ todo.text }}</p>
+<p>status: {{ todo.status }}</p>
+<a href="{% url 'update' todo.id %}">update</a>
+<a href="{% url 'delete' todo.id %}">remove</a>
+{% comment %} <a href="{% url 'update' todo.id %}">update</a> {% endcomment %}
+{% comment %} <a href="{% url 'Completed' todo.id %}">Completed</a> {% endcomment %}
+
+{% comment %} <a href="{% url 'completion' todo.id %}">Completed</a>  {% endcomment %}
+
+{% comment %} <p> Date Completed: {{ todo.completion }}</p>  {% endcomment %}
+
+<a href ="{% url 'list' %}">Back to main todo list</a>
+{% endblock %}
