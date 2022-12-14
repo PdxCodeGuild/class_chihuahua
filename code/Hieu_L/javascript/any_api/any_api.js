@@ -1,1 +1,15 @@
-fetch('https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={eedc48688c60bb57fc72a154f84d724c}')
+var button = document.getElementById("information")
+
+button.addEventListener("click", function (event) {
+    fetch('https://datausa.io/api/data?drilldowns=Nation&measures=Population')
+        .then(function (response) {
+            return response.json()
+        }).then(function (data) {
+
+            //write asynchronous code here
+
+        })
+        .catch(function (error) {
+            console.log(error)
+        })
+})
