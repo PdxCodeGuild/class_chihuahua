@@ -1,0 +1,87 @@
+{% extends 'base.html' %} {% block content %}
+<div class="top">
+
+  <header class="title">
+    <h1>Portfolio & Profile</h1>
+
+  </header>
+
+
+  <section class="projects">
+    <h1>Projects</h1>
+    <div id="firstCarousel" class="carousel slide" data-bs-ride="true">
+
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#firstCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title One</h5>
+              <p class="card-text">Some ONE</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title TWO</h5>
+              <p class="card-text">Some TWO.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">Card title Three</h5>
+              <p class="card-text">Some THREE.</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#firstCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#firstCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      
+    </div>
+    </section>
+</div>
+
+<aside class="profile_bottom">
+  <h1 class="ptitle"> Isabel Coverdale</h1>
+  <h4 class="title-small">Entry Level</h4>
+  <h4 class="title-small1">Cybersecurity|Frontend|Backend</h4>
+  <div class="d-grid gap-2 col-6 mx-auto" id="list_to_do">
+    <button class="btn btn-primary" type="button">Projects</button>
+    <button class="btn btn-primary" type="button">Resume</button>
+    <button class="btn btn-primary" type="button">Contact</button>
+  </div>
+</aside>
+
+<div>
+
+  <footer class="studies">
+    <h3>Studies & Interests</h3>
+  </footer>
+
+</div>
+</div>
+{% endblock %}
