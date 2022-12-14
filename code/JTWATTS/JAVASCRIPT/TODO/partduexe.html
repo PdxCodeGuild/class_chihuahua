@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Make it work</title>
+</head>
+<body>
+   <h1>Lets create our to do list</h1> 
+
+
+   <input id="tasking" placeholder="Task" type="text"/>
+<script>
+    const name_input = document.querySelector('#tasking');
+    const name_value = name_input.value;
+    alert(name_value);
+    const name = prompt("Enter your new task");
+    alert("new task " + tasking + "has been added to the list");
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {  // the DOMContentLoaded function will wait till the whole html page has
+        //loaded before it tries to query.  Otherwise it could lead to an error
+
+    })
+</script>
+   <!-- <input type="text" value="" id="text-field" />
+   <button id="btn-list">click to Add to List</button>
+   <button id="btn-remove">click to Remove from List</button>
+   <div id="word"></div> -->
+
+   <!-- <p>Incomplete</p>
+   <ul id="list">
+     <li>snow</li>affdaf
+     <li>sleet</li>
+     <li>wind</li>
+   </ul> -->
+<button></button></h1>
+   <p>Complete List</p>
+   <ul id="completeList"></ul>
+   <script src="tasks_jq.js"></script>
+
+</body>
+</html>

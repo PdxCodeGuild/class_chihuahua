@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url 'add_posts' %}" method="POST">
+    {% csrf_token %} title: <br />
+    <input type="text" name="title" placeholder="enter blog post title" /><br /><br />
+    <textarea name="text" id="" cols="30" rows="10"></textarea><br />
+    <br />
+    <input type="submit" />
+</form>
+{% endblock %}

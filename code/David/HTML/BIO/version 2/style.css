@@ -1,0 +1,19 @@
+body {
+    background-image:url(106842.jpg);
+    text-align: center;
+    color:beige;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+ul {
+    text-align: center;
+    list-style-position: inside;
+}
+img.picture {
+    border: 5px solid gold;
+    background-color: darkred;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+
+  }

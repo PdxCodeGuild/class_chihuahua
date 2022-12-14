@@ -1,0 +1,14 @@
+head {
+    display:flex;
+    text-align: center;
+}
+
+body {
+    display:flex;
+    min-height:100px;
+}
+
+#completed {
+    text-decoration: line-through;
+    color: green;
+}

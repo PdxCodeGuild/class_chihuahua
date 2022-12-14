@@ -1,0 +1,129 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+img {
+  height: 15rem;
+  width: 20rem;
+  /* object-fit:  */
+}
+
+body {
+    /* border-image: round; */
+    background-color:rgb(213, 106, 106);
+    /* background: url("Static-Electricity.png"); */
+  
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
+   
+    /* background-color: #cccccc; */
+
+
+  }
+
+.container {
+  display: flex;
+  }
+.flex-container1 {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+}
+.item {
+  /* flex-direction: row; */
+    width: 900px;
+    height: 350px;
+    background: rgb(161, 39, 6);
+    text-align: center;
+    margin: 10px;  
+    padding: 0px; */
+   
+    /* flex-wrap: wrap; */
+   
+  }
+.flex-container2 {
+   display: flex;
+  /* flex-direction: row; */
+/* flex-wrap: wrap; */
+}
+.items {
+  width: 500px;
+  height: 800px;
+    background: rgb(166, 233, 225);
+    /* margin: 90px;  
+    padding: 0px; */
+    
+    
+   
+  }
+.flex-container3 {
+  display: flex;
+  /* flex-direction: row; */
+/* flex-wrap: wrap; */
+
+}
+.itemz {
+  width: 500px;
+  height: 800px;
+    background: rgb(81, 116, 5);
+    /* margin: 90px;  
+    padding: 0px; */
+  
+   
+  }
+.flex-container4 {
+  display: flex;
+  /* flex-direction: column; */
+/* flex-wrap: wrap; */
+                
+}  
+.iteme {
+  width: 500px;
+  height: 800px;
+    background: rgb(171, 30, 190);
+    /* margin: 90px;  
+    padding: 0px; */
+   
+  }            
+.flex-container5 {
+  display: flex;
+  width: 500px;
+  height: 500px;
+  /* display: flex; */
+  
+ 
+  background: #9f20ee;
+
+/* flex-wrap: wrap; */
+
+}
+.itemr {
+    width: 500px;
+    height: 800px;
+    background: #bcebd5;
+    /* margin: 90px;  
+    padding: 0px; */
+  
+   
+  }
+.flex-container6 {
+  display: flex;
+  /* flex-direction: column;
+  width:10px;
+  height:10px; */
+/* flex-wrap: wrap; */
+}
+.itemq {
+  width: 700px;
+  height: 800px;
+  background: rgb(198, 12, 231);
+  /* margin: 90px;  
+  padding: 0px; */
+  /* justify-content: flex-end;
+  flex-wrap: wrap; */
+ 
+}

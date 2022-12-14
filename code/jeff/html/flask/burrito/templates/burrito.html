@@ -1,0 +1,133 @@
+{% extends "base.html" %} {% block content %}
+<div class="container">
+    <img style="display: block; margin:auto" src="{{url_for('static', filename='burrito.jpg')}}" />
+
+    <form action="/" method="post">
+        <div class="row" class="input-group mb-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Enter name" name="name">
+            </div>
+            <div class="col">
+                <input type="email" class="form-control" placeholder="Enter e-mail" name="email">
+            </div>
+        </div>
+
+
+        <h2>Tortilla</h2>
+
+        <p>Please Select type of tortilla:</p>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio1" name="tortilla" value="Flour" checked>
+            <label class="form-check-label" for="radio1">Flour</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio2" name="tortilla" value="Corn">
+            <label class="form-check-label" for="radio2">Corn</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio3" name="tortilla" value="Wheat">
+            <label class="form-check-label">Wheat</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio4" name="tortilla" value="Spinach">
+            <label class="form-check-label">Spinach</label>
+        </div>
+
+        <div class="container mt-3"> </div>
+
+
+        <h2>Rice</h2>
+
+        <p>Please Select type of rice:</p>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio1" name="rice" value="White" checked>
+            <label class="form-check-label" for="radio1">White</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio2" name="rice" value="Brown">
+            <label class="form-check-label" for="radio2">Brown</label>
+        </div>
+
+        <div class="container mt-3"> </div>
+
+
+        <h2>Beans</h2>
+
+        <p>Please Select type of beans:</p>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio1" name="beans" value="Black" checked>
+            <label class="form-check-label" for="radio1">Black</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio2" name="beans" value="Pinto">
+            <label class="form-check-label" for="radio2">Pinto</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="radio" class="form-check-input" id="radio3" name="beans" value="None">
+            <label class="form-check-label" for="radio3">None</label>
+        </div>
+
+        <div class="container mt-3"> </div>
+
+
+        <h2>Protein</h2>
+        <p>Please select type of Protein (Additional <mark>$1</mark> per extra selection)</p>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check1" name="protein" value="Carnitas" checked>
+            <label class="form-check-label" for="check1">Carnitas</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check2" name="protein" value="Chicken">
+            <label class="form-check-label" for="check2">Chicken</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check3" name="protein" value="Safritas">
+            <label class="form-check-label" for="check3">Safritas</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check4" name="protein" value="None">
+            <label class="form-check-label" for="check4">None</label>
+        </div>
+
+
+
+        <h2>Extras</h2>
+        <p>Please select extra ingredients(Additional <mark>$0.50</mark> per selection)</p>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check1" name="extras" value="Cheese" checked>
+            <label class="form-check-label" for="check1">Cheese</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check2" name="extras" value="Sour Cream">
+            <label class="form-check-label" for="check2">Sour Cream</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check3" name="extras" value="Mild Salsa">
+            <label class="form-check-label" for="check3">Mild Salsa</label>
+        </div>
+
+        <div class="form-check" class="input-group mb-3">
+            <input type="checkbox" class="form-check-input" id="check4" name="extras" value="Verde Salsa">
+            <label class="form-check-label" for="check4">Verde Salsa</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-3" class="input-group mb-3">Submit</button>
+    </form>
+</div>
+{% endblock %}

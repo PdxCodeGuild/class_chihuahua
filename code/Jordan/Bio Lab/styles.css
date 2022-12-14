@@ -1,0 +1,36 @@
+body {
+    text-align: center;
+    padding: 2em;
+    margin: 10px;
+    font-family: Chewy-Regular;
+    background-image: url(https://img.freepik.com/free-vector/aesthetic-pink-background-line-art-dog-design-vector_53876-151374.jpg?w=2000);
+}
+
+p4 {
+    font-family: sans-serif;
+}
+
+img {
+    border: none;
+    border-radius: 50%;
+}
+
+li {
+    font-family: Chewy-Regular;
+    color: rgb(15, 10, 20);
+    content: "\f35a";
+}
+
+.link {
+    color: red;
+}
+
+.quote {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+ul {
+    text-align: center;
+    display: inline-block;
+    list-style: upper-roman;
+}

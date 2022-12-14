@@ -1,0 +1,20 @@
+{% extends 'base.html' %} {% block content %}
+
+<body class="register_body">
+
+    <div class = "container mt-3 w-25">
+        <form action="" method="POST">
+            <div id="author-form" class="form-group">
+                {% csrf_token %}
+                <label for="username">Username</label>
+                <input class="form-control" type="text" name="username" />
+                <label for="password">Password</label>
+                <input class="form-control" type="password" name="password" />
+                <label for="email">Email</label>
+                <input class="form-control" type="text" name="email" />
+                <button type="submit" class="btn btn-primary mb-2 mt-3">Submit</button>
+            </div>
+        </form> 
+    </div>
+</body>
+{% endblock %}

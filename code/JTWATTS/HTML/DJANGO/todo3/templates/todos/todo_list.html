@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<a href="{% url 'add' %}">add task</a>
+
+
+<div>
+<ul>
+  {% for todo in todos %}
+  <a href="{% url 'update' todo.id  %}">update task</a>
+  <a href="{% url 'delete' todo.id %}">remove task</a>
+  <a href="{% url 'details' todo.id %}">Check Details</a>
+  <a href="{% url 'completion' todo.id %}">Complete Date</a>
+  <p>Title: {{ todo.title }}</p>
+  <p>ID: {{ todo.id }}</p>
+  <p>Description: {{ todo.text }}</p>
+  <p> Date Started: {{ todo.date }}</p> 
+  <p> Date Finished: {{ todo.completion }}</p>
+  {% empty %}
+  <p>you have nothing to do.</p>
+  {% endfor %}
+</ul>
+</div>
+{% endblock %}
