@@ -2,7 +2,7 @@
 {% block content %}
 <h1>Create a new to do list.</h1>
 
-<form action="{% url 'new' %}" method="post">
+<form action="{% url 'new' %}" method="POST">
     <label for="title" class="title">List name: </label>
     <input id="title" type="text" name="title" class="title-form" >
     <label for="description" class="description">Description: </label>

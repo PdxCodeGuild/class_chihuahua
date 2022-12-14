@@ -17,11 +17,8 @@
       Completed Date: {{todo.completed_date}}
     </li>
 
-    <div class="btn-group">
-      <input type="checkbox" value="True" name="edit_check" id="edit_check">Edit?</input>
-      <input type="checkbox" value="True" name="delete_check" id="delete_check">Delete?</input>
-      <button type="button" value="Select" class="select_form">Select</button>
-    </div>
+
+
     <li></li>
     <li></li>
     <br />
@@ -29,6 +26,13 @@
     {% endfor %}
   </ul>
 </div>
+{% for todo in index_list %}
+<div>
+  <a href="{%url 'edit' todo.id%}">update</a>
+  <p>{{todo}}</p>
+</div>
+
+{% endfor %}
 <a href="{% url 'home' %}">Go back home.</a>
 {% endblock %}
 
