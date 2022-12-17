@@ -13,7 +13,7 @@ class Product(models.Model):
     description = models.CharField(max_length=100)
     price = models.IntegerField()
     cart = models.ForeignKey(Cart, on_delete=models.CASCADE, blank=True, null=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
+    seller = models.ForeignKey(User, on_delete=models.CASCADE, blank=True, null=True)
     
 
     def __str__(self):
