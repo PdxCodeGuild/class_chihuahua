@@ -1,0 +1,35 @@
+{% extends 'base.html' %} {% block content %}
+<div class="calendar_body">
+
+	<h1>Calendar</h1>
+	<div class="clearfix">
+		<a class="btn btn-info left" href="{% url 'calendar' %}?{{ prev_month }}"> Previous Month </a>
+		<a class="btn btn-info right" href="{% url 'calendar' %}?{{ next_month }}"> Next Month </a>
+		<a class="btn btn-info right" href="{% url 'event_new' %}"> New Event </a>
+	</div>
+
+<div class="container lorem">
+
+	
+	Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias illum consequatur eligendi vero quos tenetur explicabo repellat iste earum voluptate sint eos distinctio, molestias aliquid qui ullam rerum saepe reiciendis asperiores maiores sunt nemo iure dolore! Quisquam, dignissimos officia! Rem sed blanditiis, temporibus at, culpa similique quas adipisci accusamus totam dignissimos ea et vero cum in aut enim eligendi! Distinctio, sapiente provident cupiditate illo dolorem nihil cum accusantium cumque maxime eligendi nobis. A nobis natus omnis explicabo. Odio quisquam beatae excepturi error temporibus vero dolore repudiandae deleniti alias sit? Deleniti quod in temporibus voluptate praesentium, molestiae enim iste eum! Eaque repellat totam ea et, distinctio cupiditate ullam esse soluta tenetur nihil! Corrupti doloribus veniam ipsam praesentium neque accusamus magnam, temporibus adipisci nam cumque doloremque distinctio exercitationem necessitatibus laborum dolores deleniti accusantium, molestias, sapiente reiciendis. Id quia, minus atque eos hic doloremque fugit nisi voluptatibus nemo maiores placeat inventore perspiciatis totam voluptas et. Harum officiis accusamus in maiores odio veniam pariatur repellendus vero consectetur. Minus molestias animi voluptates velit fuga debitis quibusdam dignissimos, voluptas nisi veniam nulla eligendi nobis neque fugiat, expedita tempora est qui placeat ipsum hic perspiciatis. Architecto officia, non excepturi quia numquam earum facilis illum, facere id dolorem quis aliquid nostrum fuga laboriosam laudantium exercitationem neque optio iste esse! Excepturi, laboriosam libero. Eos rem iste, odio nesciunt, deserunt mollitia iusto consectetur accusantium et, quos quis. Harum eius laborum veniam, cumque dignissimos optio veritatis non explicabo vitae hic soluta rerum saepe commodi? Facilis tempore inventore, voluptas modi ex quis non velit harum aliquid fugiat similique molestias cumque, at repellendus et id omnis architecto distinctio incidunt magni rerum. Corrupti nisi vitae repudiandae, sequi autem molestias officiis, dolor doloribus harum numquam dolorum natus dolore architecto, recusandae suscipit consequuntur. Modi perferendis adipisci, eius perspiciatis amet esse voluptatum quae sed odio deleniti explicabo dolor voluptates quam ea impedit iusto officia eaque. Libero delectus fugit at a iste dignissimos quidem laboriosam laborum blanditiis, tempora ipsa quam non omnis eum quaerat? Delectus qui fugiat, quae deleniti, nam quas modi consequatur at maxime, a quisquam magnam nisi facere repellendus explicabo odit laborum mollitia perspiciatis tenetur odio hic est dicta nemo in! Exercitationem autem beatae possimus, accusamus atque minus. Iste facere explicabo, deleniti, est pariatur labore quo odio sapiente beatae molestias minima maxime quaerat obcaecati. Reprehenderit voluptatem, similique ad quis perferendis nesciunt distinctio, dolores eaque nemo nam asperiores eum. Maiores excepturi aspernatur, veritatis nisi veniam alias aperiam itaque atque placeat pariatur minima molestias vero et repellendus a sed architecto error ad dignissimos sint voluptate? Id veniam officiis quam est vel aut, neque consequuntur officia beatae libero provident nisi excepturi tenetur quo sapiente quod nostrum perferendis? Molestiae autem quaerat unde possimus asperiores quidem, aspernatur eveniet amet alias minus pariatur dolores. Cumque, veritatis? Corrupti aliquam voluptates id ex nam, corporis eaque, nobis atque deleniti magni repellat rerum alias beatae laudantium asperiores, nostrum possimus voluptas sapiente modi voluptate facilis? Exercitationem sapiente ducimus dolor fugit? Fugit, ad. Libero voluptatum tempore eum porro amet pariatur animi, labore a repellendus, voluptatem ducimus inventore!
+</div>
+<div id="cal_pos" class="container cal_pos">
+
+	{{ calendar }}
+
+</div>
+
+
+</div>
+<script>
+	document.addEventListener('DOMContentLoaded', (event) => {
+  const body = document.getElementsByTagName('body')[0]
+	const cal = document.getElementById('cal_pos')
+	const footer = document.getElementById('footer')
+	body.appendChild(footer);
+
+
+})
+
+</script>
+{% endblock %}

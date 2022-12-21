@@ -1,0 +1,23 @@
+{%extends 'base.html'%} {%block content%}
+
+<div class="container mt-4">
+  <h5 class="mb-5">Start from team, look for players</h5>
+  <div class="row">
+    {%for team in all_teams%}
+    <div class="col col-lg-4 mt-4">
+      <h5 class="mt-4"><b>{{team}}</b></h5>
+      {%for athlete in team.player_set.all%}
+      <hr />
+      <form action="" method="POST">
+        {% csrf_token%}
+        <p>{{athlete}}erg</p>
+        <button type="submit" class="mt-3 btn btn-primary mb-3">
+          Delete From team
+        </button>
+      </form>
+      {%endfor%}
+    </div>
+    {%endfor%} 
+  </div>
+</div>
+{%endblock%}

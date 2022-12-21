@@ -1,0 +1,15 @@
+.rectangle{
+    
+    background-color: chocolate;
+    padding-right: 100vh;
+    padding-bottom: 200px;
+}
+.sq1{
+    border-style: dashed;
+    border-color: black;
+    border-width: 2px;
+    width: 200px;
+    height: 100vh
+
+    
+}

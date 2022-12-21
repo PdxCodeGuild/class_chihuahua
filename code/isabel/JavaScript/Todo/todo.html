@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO: JavaScript</title>
+</head>
+
+<body id="body" style="background-color:bisque">
+<div class="input_field">
+    <label for="thing_todo">Enter TODO item to add to list</label><br>
+    <input id="thing_todo" name="thing_todo_enter" type="text">
+    <button id="trigger">submit</button>
+    <div id="todo_item"></div>
+</div>
+
+<div class="incomplete">
+    <br>
+    <br>
+    <h5 style="color:maroon">Instructions:  click on todo item if completed to move item to completed list.</h5>
+    <label for="list_incomplete">Incomplete TODO</label>
+    <ul class="list_incomplete" id="incomplete">
+        
+    </ul>
+</div>
+
+<div class="complete">
+    <br>
+    <br>
+    <h5 style="color:rgb(17, 99, 72)">Instructions:  click on completed todo item to strike through the item.</h5>
+    <label for="list_complete">Completed TODO</label>
+    <ul class="completed" id="completed">
+    </ul>
+</div>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>
