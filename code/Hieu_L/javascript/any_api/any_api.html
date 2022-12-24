@@ -7,10 +7,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello</h1>
-    <button id="information">push for text</button>
-    <div id="api_information">
-        <p>text information here</p>
+    <h1>weather api app</h1>
+    <label for="zip_code">enter zip code:</label>
+    <input type="text" id="zip_code"> 
+    <button id="submit_button">push for weather</button>
+    <div class='container' id="api_information">
+        <ul id="list">
+            <li id='main_weather'>main_weather</li>
+            <li id="temp_selector">temperature</li>
+            <li id="name">city</li>
+        </ul>
     </div>
 
     <script src="any_api.js"></script>
