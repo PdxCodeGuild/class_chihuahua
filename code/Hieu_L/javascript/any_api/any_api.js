@@ -3,7 +3,7 @@ var button = document.getElementById("submit_button")
 
 button.addEventListener("click", function (event) {
     let zip_code = document.querySelector("input").value;
-    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip_code}&appid=eedc48688c60bb57fc72a154f84d724c`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zip_code}&appid=eedc48688c60bb57fc72a154f84d724c&units=imperial`)
         .then(function (response) {
             return response.json()
         }).then(function(data) {
