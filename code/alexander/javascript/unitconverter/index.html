@@ -1,13 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <title>Unit Converter</title>
 </head>
 <body>
-    
-    <script src="app.js"></script>
+  <h1>Unit Converter</h1>
+  <p>Enter a value and select the unit to convert from:</p>
+  <input id="inputValue" type="number" />
+  <select id="inputUnit">
+    <option value="feet">Feet</option>
+    <option value="miles">Miles</option>
+    <option value="kilometers">Kilometers</option>
+    <option value="yards">Yards</option>
+    <option value="inches">Inches</option>
+  </select>
+  <br>
+  <br>
+  <p>Result:</p>
+  <output id="outputValue"></output>
+  <p>Meters</p>
+  <button id="convertButton" onclick="convert()">Convert</button>
+  <script src="converter.js"></script>
 </body>
 </html>
