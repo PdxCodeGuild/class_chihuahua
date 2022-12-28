@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Your Completed To Do List</h1>
+{% for todo in completed_todos %} 
+    <p>
+        To Do: {{todo.description}}
+    </p>
+    <p>
+        Date Created: {{todo.created_date}}
+{% endfor %}
+{% endblock %}

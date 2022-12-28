@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<form action="{% url 'todo:create_todo' %}" method="POST">
+    {% csrf_token %} To-do Item: <br />
+    <input type="text" name="description" placeholder="enter todo item" /><br /><br />
+    Date created: <br />
+    <input type="date" id="start" name="created_date" value="" min="2018-01-01" max="2030-12-31"><br />
+    <input type="submit" />
+</form>
+    <div>
+        {% for x in completed_todos %}
+        {% if completed_todos %}
+            {{x}}
+        {% endif %}
+        {% endfor %}
+        test
+    </div>
+    <div class="container mt-5">
+        <h1>Complete</h1>
+        {% for todo in completed_todos %} 
+        <p>
+            To Do: {{todo.description}}
+        </p>
+        <p>
+            Date Created: {{todo.created_date}}
+        </p>
+    <form action="{% url 'todo:completed_list' %}" method="POST">
+    </form>
+    {% endfor %}
+    <h1>Incomplete</h1>
+    {% for todo in incomplete_todos %} 
+            <p>
+                To Do: {{todo.description}}
+            </p>
+            <p>
+                Date Created: {{todo.created_date}}
+            </p>
+            <form action="{% url 'todo:display_todo' %}" method="POST">
+                {% csrf_token %}
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Completed
+                    </label>
+                </div>
+            </form>
+        {% endfor %}
+    </div>
+
+{% endblock %}

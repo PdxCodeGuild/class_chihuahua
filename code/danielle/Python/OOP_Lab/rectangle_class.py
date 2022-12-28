@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 28a5ab8527a406c2de2ec6719bb2230bfeed4894
 class Rectangle:
     def __init__(self, width, length):
         self.width = width
