@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>
+        <label>enter number in feet</label>
+        <input id="number_in_feet" tpye="number" oninput="convert_from_feet(this.value)" onchange="convert(this.value)">
+    </p>
+    <p>
+        <label>enter number in meters</label>
+        <input id="number_in_meters" tpye="number" oninput="convert_from_meters(this.value)" onchange="convert(this.value)">
+    </p>
+    <p>
+        <label>enter number in kilometers</label>
+        <input id="number_in_kilometers" tpye="number" oninput="convert_from_kilometers(this.value)" onchange="convert(this.value)">
+    </p>
+    <p>
+        <label>enter number in miles</label>
+        <input id="number_in_miles" tpye="number" oninput="convert_from_miles(this.value)" onchange="convert(this.value)">
+    </p>
+    <p>
+        <label>enter number in inches</label>
+        <input id="number_in_inches" tpye="number" oninput="convert_from_inches(this.value)" onchange="convert(this.value)">
+    </p>
+
+    <!-- <button tpye="submit" onclick="convert_to_meters(input)">convert</button> -->
+    <!-- <p>meters:<span id="output_in_meters"></span></p>
+        <p>kilometers:<span id="output_in_kilometers"></span></p>
+        <p>miles:<span id="output_in_miles"></span></p>
+        <p>yard:<span id="output_in_yards"></span></p>
+        <p>inches:<span id="output_in_meters"></span></p> -->
+    </p>
+    <script src="unit_converter.js"></script>
+</body>
+
+</html>

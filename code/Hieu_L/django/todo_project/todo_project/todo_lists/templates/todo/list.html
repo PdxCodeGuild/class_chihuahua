@@ -1,0 +1,13 @@
+{% extends "todo/base.html" %} {% block content %}
+<a href="{% url 'add' %}">add a chore</a>
+{% for todo_item in todo_items %}
+<p>
+    <a href="{% url 'update' todo_item.id %}">{{todo_item.title}}</a>
+</p>
+<ul>
+    <li>number: {{todo_item.id}} </li>
+    <li>chore: {{todo_item.text}}</li>
+</ul>
+{% empty %}
+<p>nothing</p>
+{% endfor %} {% endblock %}
