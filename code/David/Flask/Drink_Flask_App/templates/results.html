@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block image %}
+<div class="container text-center">
+    <div class="row">
+      <div class="col">
+        <img src="{{ r_drink_imgaine }}" class="img-thumbnail" alt="...">
+      </div>
+      <div class="col">
+        <h1>Your Drink Name</h1>
+        <br>
+        <p>{{ r_data_name }}</p>
+      {% endblock %}
+      {% block messure %}
+      </div>
+      <div class="col">
+        <h1>Messurments</h1>
+            {% for messure in ingred_messure %}
+                {% if r_data[messure] != None %}
+                <p>{{ r_data[messure] }}</p>
+                {% endif %}
+            {% endfor %}
+      </div>
+      {% endblock %}
+      {% block ingred %}
+      <div class="col">
+        <h1>Ingrediants</h1>
+            {% for ingred in ingred_list %}
+                {% if r_data[ingred] != None %}
+                <p>{{ r_data[ingred] }}</p>
+                {% endif %}
+            {% endfor %}
+      </div>
+    </div>
+  </div>
+  {% endblock %}

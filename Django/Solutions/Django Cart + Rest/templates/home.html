@@ -1,0 +1,75 @@
+{%extends 'base.html'%} {%block content%}
+
+user == {{user}} user id == {{user.id}}
+{{cart_session}}
+{% for x in all_users %}
+ <p>{{x.username}}, {{x.id}}</p>
+{% endfor %}
+<div class="container mt-5">
+  <div class="card-deck">
+      {% for product in products %}
+    <div class="card">
+      <img class="card-img-top" src="{{product.image.url}}" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{product.title}}</h5>
+        <p class="card-text">
+            ${{product.price}}
+        </p>
+        <p class="card-text">
+            {{product.description}}
+            {{product.id}}
+        </p>
+      </div>
+      <button onclick="addToCart('{{product.id}}')" class="btn btn-outline-success my-2 my-sm-0 cart-btn" type="submit">
+        Add to Cart
+      </button>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% csrf_token %}
+
+<script>
+    let products = []
+    document.addEventListener("DOMContentLoaded", function() {
+        fetch('http://localhost:8000/api/products/').then(res=>res.json()).then(data=>products.push(data))
+    });
+    //fix current id vs array ID. Add logic to PUT
+
+    function addToCart(productId){
+      console.log(products)
+        current_product_id = productId-1
+        current_product = products[0][productId-1]
+
+        const cart_session = parseInt('{{cart_session}}')
+        console.log('STATE & ID', cart_session)
+        
+        const csrftoken = document.querySelector('[name=csrfmiddlewaretoken]').value;
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append( 'X-CSRFToken', csrftoken);
+
+        var raw = JSON.stringify({
+        "description": current_product.description,
+        "title": current_product.title,
+        "session": cart_session 
+        });
+
+        var requestOptions = {
+        method: 'PUT',
+        headers: myHeaders,
+        body: raw
+        };
+
+        fetch(`http://localhost:8000/api/cart/${productId}`, requestOptions)
+        .then(response => response.json())
+        .then(result => console.log('RESPONSE', result))
+        .catch(error => console.log('error', error));
+    }
+
+</script>
+
+{%endblock%}
+
+ 

@@ -1,0 +1,171 @@
+{% extends "base.html" %} {% block content %}
+<!-- NAV BAR MUST BE OUTSIDE OF FORM. A FORM CAN RESIDE WITHIN A NAV BAR. -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" href="#">Burrito Bonanza</a>
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">My Account</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">About Our Food</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0" action="/burrito" method="POST">
+      <input class="form-control mr-sm-2" name="text" type="search" placeholder="Search" aria-label="Search" />
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        Submit
+      </button>
+    </form>
+  </div>
+</nav>
+
+<!-- ONLY ONE FORM FOR ENTIRE DOC; ONLY ONE BUTTON FOR ENTIRE FORM: FOUND AT BOTTOM OF DOC -->
+<form class="entire" action="/burrito" method="POST">
+
+  <figure class="burrito-pics">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQpwiY3XVYkjTs4CIRy2YJs6B5AyyJPFKVg&usqp=CAU" alt="traditional burrito" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQpwiY3XVYkjTs4CIRy2YJs6B5AyyJPFKVg&usqp=CAU" alt="traditional burrito" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQpwiY3XVYkjTs4CIRy2YJs6B5AyyJPFKVg&usqp=CAU" alt="traditional burrito" />
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUQpwiY3XVYkjTs4CIRy2YJs6B5AyyJPFKVg&usqp=CAU" alt="traditional burrito" />
+  </figure>
+
+  <fieldset class="info-title">
+    <h5>
+      Steps: <br />
+      1) Please enter your email and password so we can match burrito to person!
+      <br />
+      2) Choose your burrito options! <br />
+      3) Pick up burrito and enjoy!
+    </h5>
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp"
+        placeholder="Enter email" />
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Password" />
+    </div>
+  </fieldset>
+
+
+  <!-- RADIO BUTTON: NAME MUST BE THE SAME FOR ALL, TYPE MUST BE RADIO FOR ALL, SAME NAME USED IN APP.PY -->
+  <fieldset class="choices">
+    <h5>What size burrito do you want?</h5>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radio" id="chico" value="chico">
+      <label class="form-check-label" for="chico" value="chico"> Chico </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radio" id="grande" value="grande">
+      <label class="form-check-label" for="Grande" value="grande"> Grande </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="radio" id="Americano" value="americano" checked>
+      <label class="form-check-label" for="Americano"> Americano </label>
+    </div>
+  </fieldset>
+
+
+  <fieldset class="form-inline">
+    <h5>What type of burrito do you want?</h5>
+    <select name="stuff" class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" multiple aria-label="multiple select">
+    <!-- <select name="stuff" class="form-select" multiple aria-label="multiple select"> -->
+      <option selected>Choose type of BuRrItO</option>
+      <option value="1">bowl aka no tortilla</option>
+      <option value="2">traditional tortilla</option>
+      <option value="3">mo' veggie aka lettuce wrap</option>
+      <option value="4">flammin' aka if you have to ask...</option>
+      <optino value="5">blue corn tortilla</optino>
+    </select>
+  </fieldset>
+
+  <fieldset class="proteins">
+    <select class="custom-select my-1 mr-sm-2" name="proteins" multiple>
+    <!-- <select name="proteins" class="form-select my-1 mr-sm-2" multiple aria-label="multiple select example"> -->
+      <option selected>Choose your protein</option>
+      <option value="1">carne asada</option>
+      <option value="2">pollo</option>
+      <option value="3">tofu</option>
+      <option value="4">beans</option>
+      <option value="5">cheese</option>
+    </select>
+  </fieldset>
+
+  <!-- MUST HAVE NAME AND VALUE WITHIN INPUT FOR MULTICHECK BOXES -->
+  <fieldset class="top_toppings">
+    <h5 class="toppings">What fillings do you want?</h5>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="cheese" name="toppings" value="value">
+      <label class="form-check-label" for="cheese">cheese</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="jalapenos" name="toppings" value="jalapenos">
+      <label class="form-check-label" for="jalapenos">jalapenos</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="ghost pepper" name="toppings" value="ghost pepper">
+      <label class="form-check-label" for="ghost pepper">ghost pepper</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="rice" name="toppings" value="rice">
+      <label class="form-check-label" for="rice">rice</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="black beans" name="toppings" value="black beans">
+      <label class="form-check-label" for="black beans">black beans</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="corn chips" name="toppings" value="corn chips">
+      <label class="form-check-label" for="corn chips">corn chips</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="avocado" name="toppings" value="avocado">
+      <label class="form-check-label" for="avocado">avocado</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="lettuce" name="toppings" value="lettuce">
+      <label class="form-check-label" for="lettuce">lettuce</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="tomatoe" name="toppings" value="tomatoe">
+      <label class="form-check-label" for="tomatoe">tomatoe</label>
+    </div>
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" id="sour cream" name="toppings" value="sour cream">
+      <label class="form-check-label" for="sour cream">sour cream</label>
+    </div>
+  </fieldset>
+
+  <fieldset class="spicy">
+    <label for="customRange3" class="form-label">How Spicy?<br /></label>
+    <section class="range-scaling">
+      <span class="weak">Nah I'm good</span>
+      <span class="strong">Ouch!</span>
+    </section>
+    <section class="range-field w-25">
+      <input type="range" class="form-range" min="0" max="10" step="0.5" id="customRange3">
+  
+  </section>
+  </fieldset>
+
+
+  <section class="checkout">
+    <h5>Ready to Checkout? Click the Button!</h5>
+  
+  <button type="submit" class="btn btn-primary btn-lg btn-block">
+    Get In My Belly
+  </button>
+  </section>
+</form>
+{% endblock content %}

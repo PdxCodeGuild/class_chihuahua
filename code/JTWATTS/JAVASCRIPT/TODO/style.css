@@ -1,0 +1,15 @@
+h1 {
+    color: rgb(18, 28, 220);
+  }
+  
+  body {
+    border-image: round;
+    background-color:rgb(163, 145, 245);
+    /* background: url("Static-Electricity.png"); */
+  
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: cursive;
+   
+    /* background-color: #cccccc; */
+  }

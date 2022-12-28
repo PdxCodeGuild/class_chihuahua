@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Event
+{% endblock %}
+
+{% block content %}
+<body class="event_body">
+  <div class="clearfix">
+    <a class="btn btn-info left" href="{% url 'calendar' %}"> Calendar </a>
+    
+ 
+  </div>
+
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <table class="form form-table">
+      {{ form }}
+      <tr><td colspan="2"><button type="submit formnovalidate" class="btn btn-info right"> Submit </button></td></tr>
+    </table>
+  </form>
+  {%if event_id is not none%}
+  <form method=POST action="{% url 'event_delete' event_id %}" class="form-inline my-2 my-lg-0">
+    {% csrf_token %}
+    <button id="remove" class="btn btn-info" >Remove Event</button>
+  
+    
+  </form>
+  {%endif%}
+</body>
+{% endblock %}

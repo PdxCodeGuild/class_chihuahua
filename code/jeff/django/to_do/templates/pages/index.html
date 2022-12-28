@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block content %}
+
+<div class="card" style="width: 18rem" >
+  <div class="card-header">List of Items</div>
+
+  <ul class="list-group list-group-flush">
+    {% for todo in index_list %}
+
+    <li class="title" class="list-group-item">Title: {{ todo.title }}</li>
+    <li class="description" class="list-group-item">
+      Description: {{ todo.description }}
+    </li>
+    <li class="created" class="list-group-item">
+      Created Date: {{todo.created_date}}
+    </li>
+    <li class="completed" class="list-group-item">
+      Completed Date: {{todo.completed_date}}
+    </li>
+
+
+
+    <li></li>
+    <li></li>
+    <br />
+
+    {% endfor %}
+  </ul>
+</div>
+{% for todo in index_list %}
+<div>
+  <a href="{%url 'edit' todo.id%}">update</a>
+  <p>{{todo}}</p>
+</div>
+
+{% endfor %}
+<a href="{% url 'home' %}">Go back home.</a>
+{% endblock %}
+

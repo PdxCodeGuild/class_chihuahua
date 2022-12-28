@@ -1,0 +1,9 @@
+{% extends 'base.html' %} {% block content %}
+<h1>This is my to do list</h1>
+<p>
+    <input
+        value="Add a new list"
+        type="button"
+        onclick="location.href='{% url "list-add" %}'"/>
+</p>
+{% endblock %}
