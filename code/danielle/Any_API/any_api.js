@@ -8,18 +8,23 @@ btn.addEventListener('click', function () {
     if (number == '') {
         return
     }
-    getData(number)
+    // getData(number)
+    results = getData(number)
+    console.log(results, "testing response")
 
     })
 
     function getData(number) {
         fetch(`http://numbersapi.com/${number}/trivia`) // ${}
             .then(function (response) {
-                console.log(response)
+                console.log(response, "testing response")
                 return response.text()
             })
             .then(function (data) {
-                console.log(data)
+                console.log(data, "test")
+                const div = document.querySelector("#test")
+                div.innerHTML = data
+                return data
             })
             .catch(function (error) {
                 console.log(error)
@@ -27,3 +32,14 @@ btn.addEventListener('click', function () {
             })
 
     }
+    let input = document.getElementById("numberInput");
+        console.log(numberInput)
+    let btn1 = document.getElementById("btn");
+    test = document.querySelector("#numberInput");
+    test.innerHTML = "test";
+    btn1.addEventListener("click", function(){
+        console.log("hello")
+        console.log(input.value)
+    })
+    
+    
