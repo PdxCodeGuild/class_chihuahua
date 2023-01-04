@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method='POST' action="{% url 'editVM' %}">
+      {% csrf_token %}
+        <div class="form-group">
+          <select name="vmName" id="vmName">
+            {% for vm in vm_list %}
+            <option value="{{ vm }}">{{ vm }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">CPU Cores</label>
+          <select class="form-control" id="coreCount" name='coreCount'>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect2">RAM Amount in GB</label>
+          <select class="form-control" id="ramCount" name='ramCount'>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+          </select>
+        </div>
+        <div>
+        <button type="submit" class="createVM">Edit VM</button>
+        </div>
+    </form>
+</body>
+</html>
