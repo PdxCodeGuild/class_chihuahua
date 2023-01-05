@@ -10,10 +10,13 @@
     <h1>Delete Virtual Machine</h1>
     <form method='POST' action="{% url 'deleteVM' %}">
       {% csrf_token %}
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Virutal Machine Name</label>
-          <input type="name" class="form-control" id="vmName" placeholder="My VM Name" name='vmName'>
-        </div>
+      <div class="form-group">
+        <select name="vmName" id="vmName">
+          {% for vm in vm_list %}
+          <option value="{{ vm }}">{{ vm }}</option>
+          {% endfor %}
+        </select>
+      </div>
         <div>
             <button type="submit" class="deleteVM">Delete a VM</button>
         </div>

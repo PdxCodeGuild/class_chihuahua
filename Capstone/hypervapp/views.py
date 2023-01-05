@@ -9,13 +9,40 @@ def home(request):
     return render(request, 'pages/home.html')
 
 def about(request):
+    vm_list = []
+    spath = "static\\scripts\\vminfo.ps1"
+    p = subprocess.run(["powershell.exe",
+                        spath
+                        
+    ])
+    vminfo = pd.read_csv('static\\scripts\\report.csv')
+    position = 0
+    for vm in vminfo['VMName']:
+        vm = vminfo['VMName'][position]
+        vm_list.append(vm)
+        position += 1
+    print(vm_list)
+    
     return render(request, 'pages/about.html')
 
 def create(request):
     return render(request, 'pages/create.html')
 
 def delete(request):
-    return render(request, 'pages/delete.html')
+    vm_list = []
+    spath = "static\\scripts\\vminfo.ps1"
+    p = subprocess.run(["powershell.exe",
+                        spath
+                        
+    ])
+    vminfo = pd.read_csv('static\\scripts\\report.csv')
+    position = 0
+    for vm in vminfo['VMName']:
+        vm = vminfo['VMName'][position]
+        vm_list.append(vm)
+        position += 1
+    print(vm_list)
+    return render(request, 'pages/delete.html', {'vm_list':vm_list})
 
 def createVM(request):
     vm_name = request.POST['vmName']
@@ -52,7 +79,7 @@ def deleteVM(request):
             f"Stop-VM -Name '{vm_name}' -force\n",
             f"Remove-VM -Name '{vm_name}' -force\n",
             f'Remove-Item "D:\Hyper-V\Virtual Hard Disks\{vm_name}.*" -force\n',
-            f'Remove-Item "D:\Hyper-V\VM\Virtual Machines\{vm_name}" -force\n'
+            f'Remove-Item "D:\Hyper-V\VM\Virtual Machines\{vm_name}" -force -Confirm:$false\n',
         ],
         stdout=sys.stdout)
     collectVM(request)
@@ -101,7 +128,7 @@ def edit(request):
         vm_list.append(vm)
         position += 1
     print(vm_list)
-    return render(request, 'pages/edit.html')
+    return render(request, 'pages/edit.html', {'vm_list':vm_list})
 
 def editVM(request):
     vmname = request.POST['vmName']
@@ -109,8 +136,8 @@ def editVM(request):
     cpu_count = request.POST['coreCount']
     p = subprocess.run([
         'powershell.exe',
-        f'Stop-VM {vmname}',
-        f'Set-VM -StaticMemory -Name {vmname} -ProcessorCount {cpu_count} -MemoryStartupBytes {vm_ram}GB',
-        f'Start-VM {vmname}'
+        f'Stop-VM {vmname}\n',
+        f'Set-VM -StaticMemory -Name {vmname} -ProcessorCount {cpu_count} -MemoryStartupBytes {vm_ram}GB\n',
+        f'Start-VM {vmname}\n'
     ])
     return render(request, 'pages/about.html')
