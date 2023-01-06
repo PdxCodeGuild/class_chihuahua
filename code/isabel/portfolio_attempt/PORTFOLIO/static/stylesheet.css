@@ -1,0 +1,144 @@
+.title {
+
+    height: 6rem;
+    width: 100%;
+    background-image: repeating-radial-gradient(rgb(239, 119, 239), rgb(178, 73, 178), rgb(203, 26, 203), rgb(242, 10, 242), purple);
+    opacity: 0.5;
+}
+
+.title>h1 {
+    color: rgb(71, 6, 71);
+    font-family: brush script mt, cursive;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.projects {
+    /* display: box; */
+    /* height: 75%; */
+    /* width: 75%; */
+    text-align: center;
+    justify-content: right;
+    background-image: linear-gradient(rgb(247, 141, 247) 45deg, rgb(244, 16, 244) 90deg, rgb(156, 11, 156) 210deg);
+    opacity: 0.8;
+    margin-left: 55rem;
+    margin-right: 5rem;
+    padding-left: 0;
+
+}
+
+aside.profile_bottom {
+    background-image: conic-gradient(rgb(203, 26, 129) 45deg, rgb(152, 14, 152) 90deg, rgb(116, 15, 116) 210deg) !important;
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    align-items: center;
+    padding: 0;
+    margin-top: 1rem; 
+    overflow: hidden;
+}
+
+
+
+.btn-bd-primary {
+    --bs-btn-font-weight: 600;
+    --bs-btn-color: var(--bs-white);
+    --bs-btn-bg: var(--bd-violet);
+    --bs-btn-border-color: var(--bd-violet);
+    --bs-btn-border-radius: .5rem;
+    --bs-btn-hover-color: var(--bs-white);
+    --bs-btn-hover-bg: #{shade-color($bd-violet, 10%)};
+    --bs-btn-hover-border-color: #{shade-color($bd-violet, 10%)};
+    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
+    --bs-btn-active-color: var(--bs-btn-hover-color);
+    --bs-btn-active-bg: #{shade-color($bd-violet, 20%)};
+    --bs-btn-active-border-color: #{shade-color($bd-violet, 20%)};
+    align-items: center;
+
+}
+.carousel-indicators > .btn-primary {
+    align-items: center;
+    margin-left: 15rem !important;
+    margin-right: 15rem !important;
+}
+.d-grid > .btn-primary {
+    align-items: center;
+    margin-left: 15rem !important;
+    margin-right: 15rem !important;
+}
+.nav-link {
+    animation: color_moves 14s linear infinite;
+}
+@keyframes color_moves {
+    0% {color: rgb(248, 169, 242)}
+    25% {color: rgb(228, 99, 183)}
+    50% {color: rgb(193, 16, 190)}
+    100% {color: rgb(110, 5, 117)}
+}
+
+.carousel-inner {
+    right: 24rem;
+}
+
+body{
+    background-image: url(https://www.nasa.gov/sites/default/files/thumbnails/image/archives_raquarii.jpg);
+    background-repeat: repeat-x;
+    background-size:contain;
+
+}
+
+
+.title-small {
+    color: rgb(87, 11, 87);
+    /* left: -800px; */
+    position: relative;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    animation-name: text-left;
+    animation-duration: 8s;
+    animation-fill-mode: forwards;
+}
+
+.btn {
+    background-color: rgb(128, 33, 244) !important;
+    color: rgb(70, 15, 82) !important;
+}
+
+#list_to_do {
+    margin-bottom: 1rem !important;
+}
+
+@keyframes text-left {
+     0% {
+        left: -800px
+    }
+
+    100% {
+        left: 0%
+    } 
+
+}
+
+.card {
+    margin: auto;
+}
+
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background:rgb(203, 26, 129);
+    height: 8rem !important;
+    opacity: 0.8;
+
+}
+.carousel-indicator [data-bs-target], button.active, button {
+    background-color: rgb(239, 119, 239) !important;
+    opacity: 0.8;
+}
+
+.carousel-indicators {
+    margin-right: 150% !important;
+    margin-left: -28% !important;
+    right:auto !important;
+    margin-bottom: -0.5rem !important;
+}
+
+
