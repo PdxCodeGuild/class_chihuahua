@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 import subprocess, sys
 import pandas as pd
 
@@ -8,22 +8,21 @@ import pandas as pd
 def home(request):
     return render(request, 'pages/home.html')
 
-def about(request):
-    vm_list = []
-    spath = "static\\scripts\\vminfo.ps1"
-    p = subprocess.run(["powershell.exe",
-                        spath
-                        
-    ])
-    vminfo = pd.read_csv('static\\scripts\\report.csv')
+def vmlist(request):
+    view = pd.read_csv("static\\scripts\\report.csv")
+
+    vm_list =[]
+    vm_dict = {}
     position = 0
-    for vm in vminfo['VMName']:
-        vm = vminfo['VMName'][position]
-        vm_list.append(vm)
-        position += 1
-    print(vm_list)
     
-    return render(request, 'pages/about.html')
+    for item in view['VMName']:
+            vm_dict = {'VM': view['VMName'][position],
+                    'CPU': view['CPUCount'][position],
+                    'RAM': view['RAM'][position]}
+            vm_list.append(vm_dict)
+            position += 1
+    
+    return render(request, 'pages/vmlist.html', {'vm_list':vm_list})
 
 def create(request):
     return render(request, 'pages/create.html')
@@ -69,7 +68,7 @@ def createVM(request):
             stdout=sys.stdout)
     collectVM(request)
     print(vm_name, cpu_count, vm_ram, version)
-    return render(request, 'pages/about.html')
+    return render(request, 'pages/vmlist.html')
 
 def deleteVM(request):
     vm_name = request.POST['vmName']
@@ -79,11 +78,16 @@ def deleteVM(request):
             f"Stop-VM -Name '{vm_name}' -force\n",
             f"Remove-VM -Name '{vm_name}' -force\n",
             f'Remove-Item "D:\Hyper-V\Virtual Hard Disks\{vm_name}.*" -force\n',
-            f'Remove-Item "D:\Hyper-V\VM\Virtual Machines\{vm_name}" -force -Confirm:$false\n',
+            f'Remove-Item "D:\Hyper-V\VM\Virtual Machines\{vm_name}" -force -Recurse\n',
         ],
         stdout=sys.stdout)
+    spath = "static\\scripts\\vminfo.ps1"
+    p = subprocess.run(["powershell.exe",
+                        spath
+                        
+    ])
     collectVM(request)
-    return render(request, 'pages/about.html')
+    return redirect('vmlist')
 
 def collectVM(request):
     spath = "static\\scripts\\vminfo.ps1"
@@ -91,29 +95,37 @@ def collectVM(request):
                         spath
                         
     ])
-    vminfo = pd.read_csv('static\\scripts\\report.csv')
-    for vm in vminfo['VMName']:
-        position = 0
-        vm = vminfo['VMName'][position]
-        vm_dict = {vm:[vminfo['CPUCount'][position], vminfo['RAM'][position]]}
-        position += 1
-    print(vm_dict)
+    view = pd.read_csv('static\\scripts\\report.csv')
+    vm_list =[]
+    vm_dict = {}
+    position = 0
     
-    return render(request, 'pages/about.html')
+    for item in view['VMName']:
+            vm_dict = {'VM': view['VMName'][position],
+                    'CPU': view['CPUCount'][position],
+                    'RAM': view['RAM'][position]}
+            vm_list.append(vm_dict)
+            position += 1
+    
+    return redirect('vmlist')
 
-def powerOn(request):
-    vmname = request.POST['vmName']
+def powerOn(request, vm):
+    print(vm)
+    vm = request.POST['VM']
     p = subprocess.run([
         'powershell.exe',
-        f'Start-VM {vmname}'
-        
+        f'Start-VM {vm}'
+    
     ])
-def powerOff(request):
-    vmname = request.POST['vmName']
+    return redirect('vmlist')
+def powerOff(request, vm):
+    vm = request.POST['VM']
+    print(vm)
     p = subprocess.run([
         'powershell.exe',
-        f'Stop-VM {vmname}'
+        f'Stop-VM {vm}'
     ])
+    return redirect('vmlist')
 def edit(request):
     vm_list = []
     spath = "static\\scripts\\vminfo.ps1"
@@ -140,4 +152,9 @@ def editVM(request):
         f'Set-VM -StaticMemory -Name {vmname} -ProcessorCount {cpu_count} -MemoryStartupBytes {vm_ram}GB\n',
         f'Start-VM {vmname}\n'
     ])
-    return render(request, 'pages/about.html')
+    spath = "static\\scripts\\vminfo.ps1"
+    p = subprocess.run(["powershell.exe",
+                        spath
+                        
+    ])
+    return redirect('vmlist')
