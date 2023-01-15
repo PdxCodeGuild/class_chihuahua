@@ -8,13 +8,13 @@
     <form method='POST' action="{%url 'powerOn' vm.VM%}">
         {% csrf_token %}
         <div>
-            <button type="submit" class="powerOn" value='{{ vm.VM }}' name='VM'>Power ON{{ vm.VM }}</button>
+            <button type="submit" class="powerOn" value='{{ vm.VM }}' name='VM'>Power ON</button>
         </div>
     </form>
     <form method='POST' action="{%url 'powerOff' vm.VM%}">
         {% csrf_token %}
         <div>
-            <button type="submit" class="powerOff" value='{{ vm.VM }}' name='VM'>Power OFF{{ vm.VM }}</button>
+            <button type="submit" class="powerOff" value='{{ vm.VM }}' name='VM'>Power OFF</button>
         </div>
     </form>
     {% endfor %}

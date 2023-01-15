@@ -68,7 +68,7 @@ def createVM(request):
             stdout=sys.stdout)
     collectVM(request)
     print(vm_name, cpu_count, vm_ram, version)
-    return render(request, 'pages/vmlist.html')
+    return redirect('vmlist')
 
 def deleteVM(request):
     vm_name = request.POST['vmName']
