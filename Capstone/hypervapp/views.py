@@ -15,12 +15,15 @@ def vmlist(request):
     vm_dict = {}
     position = 0
     
-    for item in view['VMName']:
+    try:
+        for item in view['VMName']:
             vm_dict = {'VM': view['VMName'][position],
                     'CPU': view['CPUCount'][position],
                     'RAM': view['RAM'][position]}
             vm_list.append(vm_dict)
             position += 1
+    finally:
+        pass
     
     return render(request, 'pages/vmlist.html', {'vm_list':vm_list})
 
@@ -81,12 +84,6 @@ def deleteVM(request):
             f'Remove-Item "D:\Hyper-V\VM\Virtual Machines\{vm_name}" -force -Recurse\n',
         ],
         stdout=sys.stdout)
-    spath = "static\\scripts\\vminfo.ps1"
-    p = subprocess.run(["powershell.exe",
-                        spath
-                        
-    ])
-    collectVM(request)
     return redirect('vmlist')
 
 def collectVM(request):
