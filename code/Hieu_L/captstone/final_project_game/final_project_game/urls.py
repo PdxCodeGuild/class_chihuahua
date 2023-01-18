@@ -15,7 +15,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from main_game_app import views
+from main_game_app.views import inventory
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('',views.landing, name='landing'),
+    path('inventory/', inventory.as_view(), name='inventory_page'),
+    path('fight/', views.fight, name='fight_page'),
+    path('move_data/', views.move_data, name="move_data"),
+    path('login/', views.login_page, name="login" ),
+    path('register/', views.register, name="register"),
+    path('profile/', views.profile, name='profile'),
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
