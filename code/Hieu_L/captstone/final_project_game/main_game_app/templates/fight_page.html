@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<h1 class="text-center">FIGHT PAGE</h1>
+<div class="text-center" id="enemy"> 
+<p>enemy equipment: </p>
+<p>{{ random_item_1.name }}, {{ random_item_2.name }}</p>
+<p id="enemy_attack">enemy attack: {{ ai_attack }}</p>
+<p id="enemy_defense">enemy defense: {{ ai_defense }}</p>
+</div>
+
+<div class="d-flex justify-content-center">
+<p>user equipment area</p>
+{% for item in data_model %}
+    {{ item.name }}
+{% endfor %}
+</div>
+
+<button onclick="compareNumbers(enemy_attack.val, enemy_defense.val)" type="button" class="btn btn-primary"style="margin: 0 auto; display: table;">fight action</button>
+<script src="{% static 'fight.js' %}"></script>
+{% endblock %}
